@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('components/layout/head.html')
+</head>
+
+<body>
+    @@include('components/layout/header.html')
+    @@include('components/layout/breadcrumb-mini.html')
+    <div class="layout">
+        <div class="container">
+            <div class="layout-sidebar">
+                @@include('components/layout/sidebar.html')
+            </div>
+            <div class="layout-content">
+                <div class="text-group">
+                    <h4>Commitment to Global Academic Excellence</h4>
+                    <div class="hr"></div>
+                    <p>Tashkent University of Technology (TTU) is committed to upholding the highest academic and
+                        institutional excellence
+                        standards. As part of this commitment, we are actively pursuing both institutional and
+                        program-level accreditation to
+                        ensure our degrees meet global recognition and quality benchmarks. Our accreditation journey
+                        reflects our dedication to
+                        continuous improvement, innovation, and alignment with international best practices.
+                        Through strategic partnerships with globally recognized institutions such as the Massachusetts
+                        Institute of Technology
+                        (MIT), and the Technical University of Munich (TUM), we implement best practices in academic
+                        quality assurance,
+                        research, and student learning experiences.
+                        Institutional Accreditation
+                        TTU is currently working towards institutional accreditation through the Quality Assurance
+                        Agency for Higher Education
+                        (QAA), following the European Standards and Guidelines (ESG). This process ensures that our
+                        university adheres to
+                        internationally accepted standards of governance, academic integrity, and quality assurance.
+                        Program Accreditation
+                        In addition to institutional accreditation, TTU is in the process of securing program-specific
+                        accreditations to enhance
+                        the global recognition of our academic offerings. Our goal is to obtain accreditation for each
+                        program from the most
+                        relevant accrediting bodies, ensuring our graduates meet international industry and academic
+                        standards. We are actively
+                        working towards:
+                        ABET (Accreditation Board for Engineering and Technology) for Engineering and Computing
+                        programs.
+                        ASCB (Accreditation Service for International Schools, Colleges & Universities) and other
+                        specialized accrediting
+                        agencies for business, social sciences, and applied sciences.
+                        Additional accreditation bodies based on global best practices and industry alignment.
+                        By securing these accreditations, we aim to strengthen TTU’s reputation as a world-class
+                        institution that prepares
+                        students for academic and professional success.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('components/layout/social-media.html')
+    @@include('components/layout/footer.html')
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.ttechnology-header');
+            if (!header) return;
+
+            function onScroll() {
+                header.classList.remove('inset');
+            }
+
+            onScroll();
+            window.addEventListener('scroll', onScroll);
+        });
+    </script>
+</body>
+
+</html>

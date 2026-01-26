@@ -1,0 +1,134 @@
+<div class="rector-reception">
+    <div class="text-group">
+        <h4>Checking application</h4>
+        <div class="hr"></div>
+        <div class="rector-reception__top">
+            <div class="rector-reception__top--input">
+                <label>Password *</label>
+                <input type="number" placeholder="Enter" />
+            </div>
+            <div class="rector-reception__top--input">
+                <label>Password *</label>
+                <input type="password" placeholder="Enter" />
+            </div>
+            <div class="rector-reception__top--btn">
+                <button>Checking</button>
+            </div>
+        </div>
+    </div>
+    <div class="text-group">
+        <h4>Send a request</h4>
+        <div class="hr"></div>
+        <div class="rector-reception__body">
+            <div class="rector-reception__body--element">
+                <div class="rector-reception__top--input">
+                    <label>Password *</label>
+                    <input type="number" placeholder="Enter" />
+                </div>
+                <div class="rector-reception__top--input">
+                    <label>Password *</label>
+                    <input type="password" placeholder="Enter" />
+                </div>
+                <div class="rector-reception__top--input">
+                    <label>Password *</label>
+                    <input type="password" placeholder="Enter" />
+                </div>
+            </div>
+            <div class="rector-reception__body--element">
+                <div class="rector-reception__top--input">
+                    <label>Password *</label>
+                    <input type="number" placeholder="Enter" />
+                </div>
+                <div class="rector-reception__top--input">
+                    <label>Password *</label>
+                    <input type="password" placeholder="Enter" />
+                </div>
+                <div class="rector-reception__top--input">
+                    <label>Password *</label>
+                    <input type="password" placeholder="Enter" />
+                </div>
+            </div>
+            <div class="rector-reception__body--element">
+                <div class="rector-reception__top--input">
+                    <label>Password *</label>
+                    <input type="number" placeholder="Enter" />
+                </div>
+                <div class="rector-reception__top--input">
+                    <label>Password *</label>
+                    <input type="password" placeholder="Enter" />
+                </div>
+                <div class="rector-reception__top--input">
+                    <label>Password *</label>
+                    <input type="password" placeholder="Enter" />
+                </div>
+            </div>
+            <div class="rector-reception__body--element">
+                <div class="rector-reception__top--input">
+                    <label>Password *</label>
+                    <input type="number" placeholder="Enter" />
+                </div>
+                <div class="rector-reception__top--input">
+                    <label>Password *</label>
+                    <input type="password" placeholder="Enter" />
+                </div>
+                <div>
+
+                    <label>File *</label>
+                    <div class="admission-process__personal--info-form-upload-item">
+                        <label for="uploadBoxFile">
+                            <span>📎 Click to upload</span>
+                            <p>or drag and drop</p>
+                        </label>
+                        <input id="uploadBoxFile" type="file" accept=".pdf">
+                        <div class="files-names-file">
+                            <ul class="files-list">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rector-reception__body--message ">
+                <label>Password *</label>
+                <input type="text" placeholder="Enter" />
+            </div>
+            <div class="rector-reception__body--btn">
+                <button>Sen Application</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const uploadFileInput = document.getElementById('uploadBoxFile');
+    const fileList = document.querySelector('.files-names-file .files-list');
+
+    uploadFileInput.addEventListener('change', function () {
+        fileList.innerHTML = '';
+
+        Array.from(this.files).forEach((file, index) => {
+            const li = document.createElement('li');
+
+            li.innerHTML = `
+            <span>${file.name}</span>
+            <i class="fa-solid fa-trash" data-index="${index}"></i>
+        `;
+
+            fileList.appendChild(li);
+        });
+    });
+
+    // delete qilish
+    fileList.addEventListener('click', function (e) {
+        if (!e.target.classList.contains('fa-trash')) return;
+
+        const index = e.target.dataset.index;
+        const dt = new DataTransfer();
+
+        Array.from(uploadFileInput.files).forEach((file, i) => {
+            if (i != index) dt.items.add(file);
+        });
+
+        uploadFileInput.files = dt.files;
+        uploadFileInput.dispatchEvent(new Event('change'));
+    });
+
+</script>

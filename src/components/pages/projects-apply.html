@@ -1,0 +1,449 @@
+<script src="@/assets/js/imask.js"></script>
+<div class="projects__apply">
+    @@include('../layout/breadcrumb-mini.html',{
+    "title": "Bosh sahifa",
+    'headline': "Bosh sahifa"
+    })
+    <div class="projects__apply-wrapper content">
+        <h2 class="title">Ishtirok etish uchun ariza yuborish</h2>
+
+        <form class="apply-form">
+            <div class="form-row form-row--name-date">
+                <div class="form-field">
+                    <label for="fullname">Iltimos F.I.SH.ni to'liq kiriting:</label>
+                    <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Kiriting"
+                        required>
+                </div>
+                <div class="form-field">
+                    <label for="birthdate">Tug'ilgan sana:</label>
+                    <input type="date" id="birthdate" placeholder="DD-MM-YYYY" name="birthdate" class="form-control"
+                        required>
+                </div>
+            </div>
+
+            <div class="form-row form-row--three">
+                <div class="form-field form-field--select">
+                    <label for="gender">Jinsi:</label>
+                    <div class="select-wrapper">
+                        <select id="gender" name="gender" class="form-control" required>
+                            <option value="" disabled selected>Tanlang</option>
+                            <option value="male">Erkak</option>
+                            <option value="female">Ayol</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="example@gmail.com"
+                        required>
+                </div>
+                <div class="form-field">
+                    <label for="phone">Telefon raqamingiz:</label>
+                    <div class="phone-dropdown">
+                        <button type="button" class="phone-toggle">
+                            <img src="https://greenuniversity.uz/assets/public/apply/flags/uz.png" data-code="+998">
+                            <i class="i-dropdown"></i>
+                        </button>
+
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+
+                        <div class="phone-menu">
+                            <div class="phone-search">
+                                <i class="i-search"></i>
+                                <input type="text" placeholder="Search">
+                            </div>
+                            <ul>
+                                <li data-code="+7" data-flag="@/images/flags/us.png">
+                                    <img src="@/images/flags/us.png">
+                                    <span>USA</span>
+                                    <small>+7</small>
+                                </li>
+                                <li data-code="+998" data-flag="@/images/flags/uz.png">
+                                    <img src="@/images/flags/uz.png">
+                                    <span>Uzbekistan</span>
+                                    <small>+998</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', () => {
+                            const phoneInput = document.getElementById('phone')
+                            const toggle = document.querySelector('.phone-toggle')
+                            const menu = document.querySelector('.phone-menu')
+                            const search = document.querySelector('.phone-search input')
+                            if (!phoneInput || !toggle || !menu || !search) {
+                                console.error('Required DOM elements missing')
+                                console.groupEnd()
+                                return
+                            }
+                            document.addEventListener('click', e => {
+                                if (!menu.classList.contains('active')) return
+                                if (e.target.closest('.phone-dropdown')) return
+                                menu.classList.remove('active')
+                                console.log('menu closed by outside click')
+                            })
+                            let mask
+
+                            const masks = {
+                                '+998': '+998 00-000-00-00',
+                                '+7': '+7 000 000-00-00'
+                            }
+
+                            const setMask = code => {
+                                mask && mask.destroy()
+                                phoneInput.value = ''
+
+                                mask = IMask(phoneInput, {
+                                    mask: masks[code] || '+000 00-000-00-00',
+                                    lazy: false
+                                })
+
+                                mask.value = ''
+                                phoneInput.focus()
+                                phoneInput.blur()
+                            }
+
+                            setMask('+998')
+
+                            toggle.onclick = () => {
+                                menu.classList.toggle('active')
+                            }
+
+                            menu.onclick = e => {
+                                const li = e.target.closest('li')
+                                if (!li) {
+                                    return
+                                }
+
+
+                                toggle.querySelector('img').src = li.dataset.flag
+                                toggle.querySelector('img').dataset.code = li.dataset.code
+                                setMask(li.dataset.code)
+                                menu.classList.remove('active')
+                            }
+
+                            search.oninput = () => {
+                                const v = search.value.toLowerCase()
+
+                                menu.querySelectorAll('li').forEach(li => {
+                                    const visible = li.querySelector('span').textContent.toLowerCase().includes(v)
+                                    li.style.display = visible ? 'flex' : 'none'
+                                })
+                            }
+
+                            console.groupEnd()
+                        })
+                    </script>
+
+                </div>
+            </div>
+
+            <div class="form-row form-row--two">
+                <div class="form-field form-field--select">
+                    <label for="country">Istiqomat qilayotgan davlatingiz:</label>
+                    <div class="select-wrapper">
+                        <select id="country" name="country" class="form-control" required>
+                            <option value="" disabled selected>Tanlang</option>
+                            <option value="uzbekistan">O'zbekiston</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-field form-field--select">
+                    <label for="city">Shahar/tuman:</label>
+                    <div class="select-wrapper">
+                        <select id="city" name="city" class="form-control" required>
+                            <option value="" disabled selected>Tanlang</option>
+                            <option value="tashkent">Toshkent</option>
+                            <option value="fergana">Fargona</option>
+                            <option value="sirdaryo">Sirdaryo</option>
+                            <option value="jizzakh">Jizzax</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row form-row--two">
+                <div class="form-field">
+                    <label for="workplace">Ish joyi:</label>
+                    <input type="text" id="workplace" name="workplace" class="form-control" placeholder="Kiriting"
+                        required>
+                </div>
+                <div class="form-field">
+                    <label for="position">Lavozimi:</label>
+                    <input type="text" id="position" name="position" class="form-control" placeholder="Kiriting"
+                        required>
+                </div>
+            </div>
+
+            <div class="form-row form-row--two">
+                <div class="form-field">
+                    <label for="education">Ma'lumoti:</label>
+                    <input type="text" id="education" name="education" class="form-control" placeholder="Kiriting">
+                </div>
+                <div class="form-field">
+                    <label for="specialization">Mutaxassisligi:</label>
+                    <input type="text" id="specialization" name="specialization" class="form-control"
+                        placeholder="Kiriting">
+                </div>
+            </div>
+
+            <div class="form-row form-row--three">
+                <div class="form-field">
+                    <label for="telegram">Telegram:</label>
+                    <input type="text" id="telegram" name="telegram" class="form-control" placeholder="Kiriting">
+                </div>
+                <div class="form-field">
+                    <label for="instagram">Instagram:</label>
+                    <input type="text" id="instagram" name="instagram" class="form-control" placeholder="Kiriting">
+                </div>
+                <div class="form-field">
+                    <label for="whatsapp">WhatsApp:</label>
+                    <input type="text" id="whatsapp" name="whatsapp" class="form-control" placeholder="Kiriting">
+                </div>
+            </div>
+
+            <div class="form-field form-field--upload">
+                <label for="file-input">Fayl:</label>
+                <div class="upload-area" id="upload-area">
+                    <div class="upload-area__text" id="upload-text">
+                        <span class="upload-area__title">
+                            <img src="@/images/upload.svg" alt="Upload icon">
+                            Upload or drag file
+                        </span>
+                        <p class="upload-area__description">Video, rasm, hujjat, PDF, docx, excel va boshqalar</p>
+                    </div>
+                    <div class="file-list" id="file-list"></div>
+                </div>
+                <input id="file-input" name="files" type="file" multiple hidden
+                    accept="video/*,image/*,.pdf,.doc,.docx," required>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">
+                    <img src="@/images/send.svg" alt="Send icon">
+                    <span>Yuborish</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="@/assets/flatpickr/flatpickr.js"></script>
+<script>
+
+    function datePicker(selector) {
+        flatpickr.localize({
+            weekdays: {
+                shorthand: ['Yak', 'Du', 'Se', 'Ch', 'Pa', 'Ju', 'Sha'],
+                longhand: ['Yakshanba', 'Dushanba', 'Seshanba', 'Chorshanba', 'Payshanba', 'Juma', 'Shanba']
+            },
+            months: {
+                shorthand: ['Yan', 'Fev', 'Mar', 'Apr', 'May', 'Iyn', 'Iyl', 'Avg', 'Sen', 'Okt', 'Noy', 'Dek'],
+                longhand: ['Yanvar', 'Fevral', 'Mart', 'Aprel', 'May', 'Iyun', 'Iyul', 'Avgust', 'Sentabr', 'Oktabr', 'Noyabr', 'Dekabr']
+            },
+            firstDayOfWeek: 1,
+            rangeSeparator: ' — ',
+            weekAbbreviation: 'Hafta',
+            scrollTitle: 'O‘zgartirish uchun aylantiring',
+            toggleTitle: 'Ochiq/Yopiq'
+        })
+
+        flatpickr(selector, {
+            mode: "single",
+            dateFormat: "d-m-Y",
+            position: "below",
+            placeholder: "DD-MM-YYYY",
+        })
+    }
+
+    datePicker("#birthdate");
+
+    (function () {
+        'use strict';
+
+        // Constants
+        const CONFIG = {
+            MAX_FILE_SIZE: 10 * 1024 * 1024, // 10MB
+            MAX_FILES: 5,
+            ALLOWED_TYPES: [
+                'image/jpeg', 'image/png', 'image/gif', 'image/webp',
+                'video/mp4', 'video/mpeg', 'video/quicktime',
+                'application/pdf',
+                'application/msword',
+                'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                'application/vnd.ms-excel',
+                'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+            ],
+            BG_COLORS: {
+                DEFAULT: '#EFF3F9',
+                HOVER: '#dde5f5'
+            }
+        };
+
+        // DOM Elements
+        const elements = {
+            fileInput: document.getElementById('file-input'),
+            uploadArea: document.getElementById('upload-area'),
+            uploadText: document.getElementById('upload-text'),
+            fileList: document.getElementById('file-list')
+        };
+
+        // State
+        let currentFiles = [];
+
+        // UI Functions
+        function toggleError(show = true) {
+            elements.uploadArea.classList.toggle('error', show);
+        }
+
+        function updateUploadTextVisibility() {
+            const hasFiles = currentFiles.length > 0;
+            elements.uploadText.style.opacity = hasFiles ? '0.6' : '1';
+            elements.uploadText.style.marginBottom = hasFiles ? '24px' : '0';
+        }
+
+        function createFileItem(file, index) {
+            const sizeKB = (file.size / 1024).toFixed(1);
+            const item = document.createElement('div');
+            item.className = 'file-item';
+            item.innerHTML = `
+            <span class="file-name" title="${file.name}">${file.name}</span>
+            <span class="file-size">${sizeKB} KB</span>
+            <button type="button" class="remove-file" aria-label="Remove file">×</button>
+        `;
+
+            item.querySelector('.remove-file').addEventListener('click', (e) => {
+                e.stopPropagation();
+                removeFile(index);
+            });
+
+            return item;
+        }
+
+        function renderFileList() {
+            elements.fileList.innerHTML = '';
+            toggleError(false);
+            updateUploadTextVisibility();
+
+            if (currentFiles.length === 0) return;
+
+            currentFiles.forEach((file, index) => {
+                elements.fileList.appendChild(createFileItem(file, index));
+            });
+        }
+
+        // File Management
+        function removeFile(index) {
+            currentFiles.splice(index, 1);
+            renderFileList();
+            updateFileInput();
+        }
+
+        function updateFileInput() {
+            const dataTransfer = new DataTransfer();
+            currentFiles.forEach(file => dataTransfer.items.add(file));
+            elements.fileInput.files = dataTransfer.files;
+        }
+
+        function isFileDuplicate(file) {
+            return currentFiles.some(f =>
+                f.name === file.name &&
+                f.size === file.size &&
+                f.lastModified === file.lastModified
+            );
+        }
+
+        function validateFile(file) {
+            if (isFileDuplicate(file)) {
+                return `"${file.name}" allaqachon yuklangan.`;
+            }
+
+            if (file.type && !CONFIG.ALLOWED_TYPES.includes(file.type)) {
+                return `"${file.name}" ruxsat etilmagan formatda.`;
+            }
+
+            if (file.size > CONFIG.MAX_FILE_SIZE) {
+                return `"${file.name}" juda katta (maksimum 10 MB).`;
+            }
+
+            return null;
+        }
+
+        function addFiles(newFiles) {
+            toggleError(false);
+
+            if (currentFiles.length + newFiles.length > CONFIG.MAX_FILES) {
+                toggleError(true);
+                return false;
+            }
+
+            let errorMessage = null;
+
+            for (const file of newFiles) {
+                const error = validateFile(file);
+                if (error) {
+                    errorMessage = error;
+                    break;
+                }
+                currentFiles.push(file);
+            }
+
+            if (errorMessage) {
+                toggleError(true);
+                return false;
+            }
+
+            return true;
+        }
+
+        // Event Handlers
+        function handleFileInputChange(e) {
+            e.stopPropagation();
+            const files = Array.from(elements.fileInput.files);
+            if (files.length > 0 && addFiles(files)) {
+                renderFileList();
+                updateFileInput();
+            }
+        }
+
+        function handleUploadAreaClick(e) {
+            if (!e.target.classList.contains('remove-file')) {
+                e.stopPropagation();
+                elements.fileInput.click();
+            }
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            elements.uploadArea.style.backgroundColor = CONFIG.BG_COLORS.HOVER;
+        }
+
+        function handleDragLeave(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            elements.uploadArea.style.backgroundColor = CONFIG.BG_COLORS.DEFAULT;
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            elements.uploadArea.style.backgroundColor = CONFIG.BG_COLORS.DEFAULT;
+
+            const files = Array.from(e.dataTransfer.files);
+            if (files.length > 0 && addFiles(files)) {
+                renderFileList();
+                updateFileInput();
+            }
+        }
+
+        // Event Listeners
+        elements.fileInput.addEventListener('change', handleFileInputChange);
+        elements.uploadArea.addEventListener('click', handleUploadAreaClick);
+        elements.uploadArea.addEventListener('dragover', handleDragOver);
+        elements.uploadArea.addEventListener('dragleave', handleDragLeave);
+        elements.uploadArea.addEventListener('drop', handleDrop);
+    })();
+</script>

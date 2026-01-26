@@ -1,0 +1,116 @@
+.rector-reception {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__top {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 135px;
+        gap: 16px;
+
+        &--input {
+            margin-top: 0;
+
+            input {
+                background-color: #FFFFFF;
+                margin-top: 6px;
+                height: 44px;
+            }
+
+            label {
+                @include font500(#414651, 14px);
+            }
+        }
+
+        &--btn {
+            margin-top: 30px;
+
+            button {
+                width: 100%;
+
+                background: linear-gradient(to right, #E54519, #FF8C6C);
+                @include font500(#FFFFFF, 16px);
+                border: none;
+                border-radius: 8px;
+                height: 44px;
+            }
+        }
+    }
+
+    &__body {
+
+        &--element {
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+
+
+        }
+
+        &--message {
+            width: 100%;
+            margin-top: 16px;
+
+            input {
+                height: 100px;
+                margin-top: 6px;
+                background-color: #FFFFFF;
+            }
+        }
+
+        &--btn {
+            display: flex;
+            justify-content: end;
+            margin-top: 16px;
+
+            button {
+                width: 145px;
+                background: linear-gradient(to right, #E54519, #FF8C6C);
+                @include font500(#FFFFFF, 16px);
+                border: none;
+                border-radius: 8px;
+                height: 44px;
+            }
+        }
+
+        &--file {
+            label {
+                @include font500(#414651, 14px);
+            }
+
+            input {
+                display: none;
+            }
+
+            &-label {
+                height: 44px;
+                display: flex;
+                align-items: center;
+                padding: 10px 0;
+                border: 1px dashed #D5D7DA;
+                border-radius: 8px;
+                margin-top: 6px;
+                gap: 4px;
+                justify-content: center;
+
+                i {
+                    font-size: 20px;
+                    color: #414651;
+                }
+
+                span {
+                    margin-left: 6px;
+                    @include font600(#E54519, 14px);
+                }
+
+                p {
+                    margin-top: 0;
+                    @include font400(#535862, 14px);
+                }
+            }
+        }
+    }
+}

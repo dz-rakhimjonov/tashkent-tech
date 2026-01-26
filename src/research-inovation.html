@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('components/layout/head.html')
+</head>
+
+<body>
+    @@include('components/layout/header.html')
+    @@include('components/layout/breadcrumb-mini.html')
+    <div class="layout">
+        <div class="container">
+            <div class="layout-sidebar">
+                @@include('components/layout/sidebar.html')
+            </div>
+            <div class="layout-content">
+                <div class="text-group">
+                    <h4>Innovation Hub</h4>
+                    <div class="hr"></div>
+                    <p>
+                        The Innovation Hub at TTU is a dynamic platform for nurturing creativity, technology, and
+                        entrepreneurship. Our hub
+                        supports startups, innovators, and researchers by providing them with the resources and
+                        mentorship needed to turn ideas
+                        into impactful ventures. With a focus on sustainable technologies, social enterprises, and
+                        digital transformation, the
+                        hub is a catalyst for innovation that aligns with our vision of creating a knowledge-driven
+                        economy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('components/layout/social-media.html')
+    @@include('components/layout/footer.html')
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.ttechnology-header');
+            if (!header) return;
+
+            function onScroll() {
+                header.classList.remove('inset');
+            }
+
+            onScroll();
+            window.addEventListener('scroll', onScroll);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+.directions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+
+    @include devices(sm) {
+        grid-template-columns: 1fr;
+    }
+
+    &__card {
+        background-color: #EFF4FF;
+        border-radius: 12px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        @include devices(sm) {
+            padding: 12px;
+        }
+
+        &--img {
+            display: flex;
+            justify-content: space-between;
+
+            &-logo {
+                background-color: #FFFFFF;
+                border-radius: 8px;
+                padding: 9px;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 32px;
+                }
+            }
+
+        }
+
+        &--num {
+            @include font600(var(--black), 50px);
+            line-height: 1;
+            background: linear-gradient(180deg, #DCE4F6 0%, #EFF4FF 100%);
+            background-clip: border-box, border-box, border-box;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+
+        &--text {
+            @include font600(var(--black), 16px);
+            line-height: 24px;
+            letter-spacing: -0.02em;
+        }
+    }
+}

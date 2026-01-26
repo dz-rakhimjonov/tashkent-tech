@@ -1,0 +1,16 @@
+.graduation {
+    border: 1px solid #E9EAEB;
+    border-radius: 14px;
+    background-color: #FFFFFF;
+    padding: 16px;
+    margin-top: 20px;
+
+    h4 {
+        @include font500(#181D27, 20px)
+    }
+
+    p {
+        @include font500(#181D27, 16px);
+        margin-top: 10px;
+    }
+}

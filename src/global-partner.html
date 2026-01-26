@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('components/layout/head.html')
+</head>
+
+<body>
+    @@include('components/layout/header.html')
+    @@include('components/layout/breadcrumb-mini.html')
+    <div class="layout">
+        <div class="container">
+            <div class="layout-sidebar">
+                @@include('components/layout/sidebar.html')
+            </div>
+            <div class="layout-content">
+                <div class="text-group">
+                    <h4>Overview</h4>
+                    <div class="hr"></div>
+                    <p>“At Tashkent University of Technology, global partnership is not just a value — it is the
+                        foundation of our entire
+                        strategy. From day one, we have brought the world to Uzbekistan by focusing on what matters
+                        most: people. Our team is
+                        made up of faculty members, researchers, and professionals who have received their education and
+                        training from leading
+                        universities in more than 20 countries, including the United States, the United Kingdom,
+                        Germany, Japan, South Korea,
+                        France, Malaysia, and many others.
+                        They bring not only academic excellence but also a global perspective, cross-cultural
+                        understanding, and a deep
+                        commitment to transforming education and science. Thanks to them, New Uzbekistan University has
+                        already become a space
+                        where global ideas, intellectual traditions, and best practices come together.
+                        On this strong foundation, we are building long-term strategic partnerships with some of the
+                        world’s most renowned
+                        institutions, including MIT (USA), the University of Cambridge (UK), and the Technical
+                        University of Munich (Germany).
+                        These alliances allow us not just to adopt best practices, but to co-create new models of
+                        education and research —
+                        collaboratively, equitably, and with a shared vision for the future of Uzbekistan and the wider
+                        region.
+                        Our goal is to become a globally recognized university, one that unites talent, knowledge, and
+                        technology to tackle the
+                        world’s most pressing challenges.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('components/layout/social-media.html')
+    @@include('components/layout/footer.html')
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.ttechnology-header');
+            if (!header) return;
+
+            function onScroll() {
+                header.classList.remove('inset');
+            }
+
+            onScroll();
+            window.addEventListener('scroll', onScroll);
+        });
+    </script>
+</body>
+
+</html>

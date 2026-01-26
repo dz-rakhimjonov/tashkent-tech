@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('components/layout/head.html')
+</head>
+
+<body>
+    @@include('components/layout/header.html')
+    @@include('components/layout/breadcrumb-mini.html')
+    <div class="layout">
+        <div class="container">
+            <div class="layout-sidebar">
+                @@include('components/layout/sidebar.html')
+            </div>
+            <div class="layout-content">
+                <div class="live-statistics__tab toggle-button">
+                    <button class="active">
+                        <p>
+                            Live Statistics Overview
+                        </p>
+                    </button>
+                    <button>
+                        <p>Schools</p>
+                    </button>
+                    <button>
+                        <p>Programs</p>
+                    </button>
+                    <button>
+                        <p>Application, Quota, Reserved</p>
+                    </button>
+                    <button>
+                        <p>State Grants and Tuition-Fee Basis</p>
+                    </button>
+                </div>
+                <div class="tab-contents">
+                    <div class="live-statistics__content active">
+                        @@include('components/pages/live-statistics.html')
+                    </div>
+
+                    <div class="live-statistics__content">
+                        @@include('components/pages/school.html')
+                    </div>
+                    <div class="live-statistics__content">
+                        @@include('components/pages/programs.html')
+                    </div>
+                    <div class="live-statistics__content">
+                        @@include('components/pages/number-of-app.html')
+                    </div>
+                    <div class="live-statistics__content">
+                        @@include('components/pages/state-grants.html')
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    @@include('components/layout/social-media.html')
+    @@include('components/layout/footer.html')
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.ttechnology-header');
+            if (!header) return;
+
+            function onScroll() {
+                header.classList.remove('inset');
+            }
+
+            onScroll();
+            window.addEventListener('scroll', onScroll);
+        });
+        const liveButtons = document.querySelectorAll('.live-statistics__tab button');
+        const liveContents = document.querySelectorAll('.live-statistics__content');
+
+        liveButtons.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+
+                liveButtons.forEach(b => b.classList.remove('active'));
+                liveContents.forEach(c => c.classList.remove('active'));
+
+                btn.classList.add('active');
+                liveContents[index].classList.add('active');
+            });
+        });
+
+    </script>
+</body>
+
+</html>

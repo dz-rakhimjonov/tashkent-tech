@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('components/layout/head.html')
+</head>
+
+<body class="index">
+    @@include('components/layout/header.html')
+    @@include('components/sections/hero.html')
+    @@include('components/sections/decree.html')
+    @@include('components/sections/univer-news.html')
+    @@include('components/sections/about.html')
+    @@include('components/sections/academics.html')
+    @@include('components/sections/carousel.html')
+    @@include('components/sections/partners.html')
+    @@include('components/sections/upcoming.html')
+    @@include('components/layout/social-media.html')
+    @@include('components/layout/footer.html')
+
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const header = document.querySelector('.ttechnology-header');
+        if (!header) return;
+
+        function onScroll() {
+            header.classList.toggle('inset', window.scrollY <= 30);
+        }
+
+        onScroll();
+        window.addEventListener('scroll', onScroll);
+    });
+
+
+
+</script>
+
+</html>

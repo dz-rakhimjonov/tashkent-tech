@@ -1,0 +1,27 @@
+.live-statistics {
+
+    &__tab {
+        margin-bottom: 20px;
+    }
+
+    &__table {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+
+    ul {
+        li {
+            margin-top: 10px;
+        }
+    }
+
+    &__content {
+        display: none;
+    }
+
+    &__content.active {
+        display: block;
+    }
+}

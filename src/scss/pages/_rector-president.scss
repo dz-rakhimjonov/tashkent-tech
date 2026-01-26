@@ -1,0 +1,117 @@
+.rector {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    &__info {
+        position: relative;
+        background-color: #FFFFFF;
+        padding: 16px;
+        z-index: 1;
+        border: 1px solid #E9EAEB;
+        border-radius: 14px;
+        overflow: hidden;
+
+        &--tttop {
+            position: absolute;
+            right: -180px;
+            top: -30px;
+            z-index: 2;
+            opacity: 0.1;
+        }
+
+        h3 {
+            position: relative;
+            z-index: 3;
+            @include font600(#000000, 22px)
+        }
+
+        &--hr {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right,
+                    #E54519 0%,
+                    #E54519 70%,
+                    transparent 100%);
+        }
+
+        &--text {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            p {
+                @include font400(#252B37, 16px)
+            }
+        }
+
+        &--ttbottom {
+            position: absolute;
+            left: -50px;
+            bottom: -40px;
+            z-index: 2;
+            opacity: 0.1;
+        }
+    }
+
+    &__img {
+        width: 350px;
+        flex-shrink: 0;
+        background-color: #FFFFFF;
+        border-radius: 14px;
+        padding: 15px;
+        border: 1px solid #E9EAEB;
+
+        &--images {
+            width: 100%;
+            height: 330px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &--text {
+            margin-top: 10px;
+            padding-left: 5px;
+
+            &-top {
+                display: flex;
+                justify-content: space-between;
+
+                &-left {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+
+                    &-line {
+                        width: 4px;
+                        height: 25px;
+                        background-color: #E54519;
+                        border-radius: 16px;
+                    }
+
+                    &-p {
+                        @include font500(#181D27, 16px)
+                    }
+                }
+
+                img {
+                    width: 37px;
+                }
+            }
+
+            &-name {
+                margin-top: 10px;
+                @include font600(#000000, 24px)
+            }
+        }
+    }
+}

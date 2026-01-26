@@ -1,0 +1,111 @@
+.decree {
+    width: 100%;
+    margin-top: 50px;
+
+
+    &__wrapper {
+        position: relative;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 14px;
+        overflow: hidden;
+
+        &--img {
+            width: 100%;
+            z-index: 1;
+            position: relative;
+            z-index: 5;
+        }
+
+        &--text {
+            padding-left: 16px;
+            padding-top: 16px;
+            overflow: hidden;
+            border: 2px solid red;
+
+            &-gerb {
+                position: absolute;
+                width: 215px;
+                height: 215px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 3;
+            }
+
+            >p:first-of-type {
+                @include font600(#000000, 28px);
+                position: relative;
+                z-index: 3;
+                line-height: 1.1;
+
+                @include devices(lg) {
+                    font-size: 24px;
+                }
+
+                @include devices(md) {
+                    font-size: 20px;
+                }
+
+                @include devices(sm) {
+                    font-size: 16px;
+                }
+            }
+
+            >p:nth-of-type(2) {
+                margin-top: 15px;
+                @include font400(#000000, 20px);
+                position: relative;
+                z-index: 3;
+                line-height: 1.1;
+
+                @include devices(lg) {
+                    font-size: 16px;
+                }
+
+                @include devices(md) {
+                    font-size: 12px;
+                    line-height: 1.2;
+                }
+
+                @include devices(sm) {
+                    line-height: 1;
+                    margin-top: 5px;
+                }
+            }
+
+            &-backimg {
+                width: 375px;
+                height: 400px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 2;
+
+                div {
+                    position: absolute;
+                    z-index: 3;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    right: 0;
+                    background: linear-gradient(to right,
+                            #fff 0%,
+                            rgba(255, 255, 255, 0.3) 40%,
+                            rgba(255, 255, 255, 0.5) 70%,
+                            transparent 100%);
+                }
+
+
+
+                img {
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+
+
+}

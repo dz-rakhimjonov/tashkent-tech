@@ -1,0 +1,133 @@
+.univer-govermance {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+
+    &__card {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        border-radius: 14px;
+        border: 1px solid #E9EAEB;
+        display: flex;
+        background-color: #FFFFFF;
+
+        &--tt {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 2;
+
+            img {
+                width: 100px;
+                opacity: 0.1;
+            }
+        }
+
+        &--img {
+            position: relative;
+            z-index: 3;
+            padding: 10px 0px 10px 10px;
+            display: flex;
+            flex-shrink: 0;
+
+            img {
+                width: 246px;
+                height: 260px;
+                border-radius: 8px;
+            }
+
+            &-before {
+                position: relative;
+                // right: 0;
+                // top: 0px;
+
+                &-line {
+                    position: absolute;
+                    left: -8px;
+                    width: 6px;
+                    height: 260px;
+                    background: linear-gradient(to bottom, #E54519, #FF6A2B);
+                    border-top-right-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                }
+
+                &-circle {
+                    position: absolute;
+                    width: 36px;
+                    height: 36px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    outline: 6px solid #FF6A2B;
+                    left: -22px;
+                    top: 100px;
+                    background-color: #FFFFFF;
+
+                    img {
+                        width: 25px;
+                    }
+                }
+            }
+        }
+
+        &--info {
+            padding: 16px 16px 16px 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &-top {
+                p {
+                    @include font600(#181D27, 22px);
+                }
+
+                &-element {
+                    margin-top: 9px;
+                    display: flex;
+                    gap: 5px;
+
+
+                    div {
+                        width: 4px;
+                        height: 18px;
+                        border-radius: 16px;
+                        background-color: #E54519;
+                        flex-shrink: 0;
+                    }
+
+                    p {
+                        @include font400(#181D27, 14px)
+                    }
+                }
+            }
+
+            &-bottom {
+                p {
+                    @include font400(#181D27, 14px);
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+
+                    i {
+                        font-size: 18px;
+                        color: #5454E3;
+                        width: 18px;
+                    }
+                }
+            }
+        }
+
+        &--bottomtt {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            img {
+                width: 100px;
+                opacity: 0.1;
+            }
+        }
+    }
+}

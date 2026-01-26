@@ -1,0 +1,95 @@
+.social-media {
+    margin-top: 80px;
+    margin-bottom: 110px;
+
+    &__content {
+        position: relative;
+        background: linear-gradient(to right, #FF8C42, #E54519);
+        border-radius: 14px;
+        height: 355px;
+        padding: 40px 50px;
+        overflow: hidden;
+        z-index: 1;
+
+        &--overlay {
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            top: 0;
+        }
+
+        &--text {
+            width: 400px;
+            position: relative;
+            z-index: 3;
+
+            h3 {
+                @include font600(#FFFFFF, 38px);
+            }
+
+            p {
+                @include font400(#FFFFFF, 24px);
+                margin-top: 12px;
+            }
+
+            &-img {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 25px;
+                gap: 10px;
+
+                &-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    justify-content: center;
+                    background-color: rgba(255, 255, 255, 0.25);
+
+                    border-radius: 12px;
+                    width: 150px;
+                    padding: 10px 0;
+
+
+                    i {
+                        font-size: 24px;
+                        width: 24px;
+                        color: #FFFFFF;
+                    }
+
+                    p {
+                        @include font500(#FFFFFF, 16px);
+                        height: 100%;
+
+                    }
+                }
+            }
+        }
+
+        &--tel {
+
+            &-ins {
+                position: absolute;
+                top: 0;
+                right: 168px;
+            }
+
+            &-ins2 {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            &-fac {
+                position: absolute;
+                bottom: 0;
+                right: 198px;
+            }
+
+            &-tg {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+}

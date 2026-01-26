@@ -1,0 +1,87 @@
+@import "./mixins/breakpoints";
+
+@mixin line-clamp($limit) {
+    display: -webkit-box;
+    -webkit-line-clamp: $limit;
+    line-clamp: $limit;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@for $i from 1 through 5 {
+    .line-clamp-#{$i} {
+        @include line-clamp($i);
+    }
+}
+
+.blurred {
+    filter: saturate(0.5) brightness(0.8);
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+@mixin font100($color: var(--black), $size: var(--size-text-18)) {
+    color: $color;
+    font-size: $size;
+    font-style: normal;
+    font-weight: 100;
+}
+
+@mixin font200($color: var(--black), $size: var(--size-text-18)) {
+    color: $color;
+    font-size: $size;
+    font-style: normal;
+    font-weight: 200;
+}
+
+@mixin font300($color: var(--black), $size: var(--size-text-18)) {
+    color: $color;
+    font-size: $size;
+    font-style: normal;
+    font-weight: 300;
+}
+
+@mixin font400($color: var(--black), $size: var(--size-text-18)) {
+    color: $color;
+    font-size: $size;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin font500($color: var(--black), $size: var(--size-text-18)) {
+    color: $color;
+    font-size: $size;
+    font-style: normal;
+    font-weight: 500;
+}
+
+@mixin font600($color: var(--black), $size: var(--size-text-18)) {
+    color: $color;
+    font-size: $size;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@mixin font700($color: var(--black), $size: var(--size-text-18)) {
+    color: $color;
+    font-size: $size;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@mixin font800($color: var(--black), $size: var(--size-text-18)) {
+    color: $color;
+    font-size: $size;
+    font-style: normal;
+    font-weight: 800;
+}
+
+@mixin font900($color: var(--black), $size: var(--size-text-18)) {
+    color: $color;
+    font-size: $size;
+    font-style: normal;
+    font-weight: 900;
+}

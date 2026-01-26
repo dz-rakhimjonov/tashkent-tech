@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('components/layout/head.html')
+</head>
+
+<body>
+    @@include('components/layout/header.html')
+    @@include('components/layout/breadcrumb-mini.html')
+    <div class="layout">
+        <div class="container">
+            <div class="layout-sidebar">
+                @@include('components/layout/sidebar.html')
+            </div>
+            <div class="layout-content">
+                <div class="central-asia">
+                    <div class="central-asia__text text-group">
+                        <h4>First Central Asia Conference on Sports Science invites extended abstract submissions to the
+                            inaugural
+                            meeting, taking place at The New Uzbekistan University</h4>
+                        <div class="hr"></div>
+                        <div class="central-asia__text--info">
+                            <div>First Central Asia Conference on Sports Science invites extended abstract submissions
+                                to the inaugural
+                                meeting, taking place at The New Uzbekistan University, Tashkent from April 28 to 30,
+                                2026. The
+                                conference aims to showcase high-quality research in sports science and foster
+                                collaboration between
+                                academics and practitioners. Conference Sponsor: Sports Economics Review Conference
+                                Partners: University
+                                of Reading; UK Molde University College, Norway
+                                We welcome researchers to submit extended abstracts (3 pages) for presentation on a
+                                variety of topics
+                                within sports science, including but not limited to: 
+                                <ul>
+                                    <li>• Sports Economics</li>
+                                    <li>• Sports Management</li>
+                                    <li>• Operations
+                                        Research in Sports</li>
+                                    <li>• Sports Analytics</li>
+                                    <li>• Computer Science in Sports</li>
+                                    <li>• Computer Science in Sports</li>
+                                    <li>• Sports Psychology</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <span>
+                                    Key Dates:
+                                </span>
+                                • Extended Abstract Submission Deadline: January 25, 2026 (submit via
+                                link https://forms.gle/N7Ykb4co1yrSM78cA ) • Registration will open in February, 2026 •
+                                Conference
+                                Dates: April 28 - 30, 2026
+                            </div>
+                        </div>
+                    </div>
+                    <div class="central-asia__date">
+                        <div class="central-asia__date--top">
+                            <div class="central-asia__date--top-item">
+                                <i class="i-eye"></i>
+                                <p>356</p>
+                            </div>
+                            <div class="central-asia__date--top-item">
+                                <i class="i-share"></i>
+                                <p>Share</p>
+                            </div>
+                        </div>
+                        <div class="central-asia__date--body">
+                            <span><i class="i-calendar"></i> Today</span>
+                            <p>17:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('components/layout/social-media.html')
+    @@include('components/layout/footer.html')
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.ttechnology-header');
+            if (!header) return;
+
+            function onScroll() {
+                header.classList.remove('inset');
+            }
+
+            onScroll();
+            window.addEventListener('scroll', onScroll);
+        });
+    </script>
+</body>
+
+</html>

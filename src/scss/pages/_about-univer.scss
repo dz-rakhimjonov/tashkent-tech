@@ -1,0 +1,240 @@
+.about-univer {
+    &__info {
+        position: relative;
+        border-radius: 14px;
+        background-color: #FFFFFF;
+        padding: 20px;
+        z-index: 1;
+        overflow: hidden;
+
+
+        &--tt {
+            position: absolute;
+            right: -2px;
+            top: -2px;
+            z-index: 2;
+            opacity: 0.1;
+
+        }
+
+        h3 {
+            position: relative;
+            z-index: 3;
+            @include font600(#000000, 22px)
+        }
+
+        p {
+            position: relative;
+            z-index: 3;
+            margin-top: 10px;
+            @include font400(#000000, 16px)
+        }
+
+        &--card {
+            position: relative;
+            z-index: 3;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+
+
+            &-item.student {
+                background: linear-gradient(to right, #E54519CC, #FFA288);
+
+                .about-univer__info--card-item-img {
+                    background: linear-gradient(to right, #FFA288, #E54519CC);
+                }
+            }
+
+            &-item.staff {
+                background: linear-gradient(to right, #039855E5, #32D583CC);
+
+                .about-univer__info--card-item-img {
+                    background: linear-gradient(to right, #32D583CC, #039855E5);
+                }
+            }
+
+            &-item.school {
+                background: linear-gradient(to right, #444CE7E5, #8098F9E5);
+
+                .about-univer__info--card-item-img {
+                    background: linear-gradient(to right, #8098F9E5, #444CE7E5);
+                }
+            }
+
+            &-item.faculty {
+                background: linear-gradient(to right, #1C7776E5, #34DDDBCC);
+
+                .about-univer__info--card-item-img {
+                    background: linear-gradient(to right, #34DDDBCC, #1C7776E5);
+                }
+            }
+
+
+            &-item {
+                width: 230px;
+                padding: 15px;
+                display: flex;
+                gap: 12px;
+
+                border-radius: 14px;
+
+                &-img {
+                    padding: 15px;
+                    border-radius: 8px;
+
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+
+                &-text {
+                    p {
+                        @include font600(#FFFFFF, 20px);
+                    }
+
+                    span {
+                        @include font500(#FFFFFFE5, 14px)
+                    }
+                }
+            }
+        }
+    }
+
+    &__images {
+        margin-top: 16px;
+        width: 100%;
+        height: 300px;
+        border-radius: 14px;
+
+        img {
+            border-radius: 14px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__mission {
+        margin-top: 16px;
+        display: flex;
+        gap: 16px;
+
+        &--item {
+            border-radius: 14px;
+            background-color: #F4D2BA4D;
+            position: relative;
+            padding: 20px;
+            z-index: 1;
+
+            &-tt {
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 2;
+            }
+
+            h4 {
+                position: relative;
+                z-index: 3;
+                @include font600(#000000, 24px)
+            }
+
+            p {
+                margin-top: 10px;
+                position: relative;
+                z-index: 3;
+                @include font400(#414651, 16px)
+            }
+        }
+    }
+
+    &__values {
+        margin-top: 40px;
+        text-align: center;
+
+        h4 {
+            @include font600(#000000, 22px);
+        }
+
+        &--top {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        &--bottom {
+            margin-top: 16px;
+            display: grid;
+            gap: 16px;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    &__card {
+        position: relative;
+        border-radius: 14px;
+        padding: 20px;
+        background-color: #FFFFFF;
+
+        &--top {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            &-img {
+                width: 38px;
+                height: 38px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                flex-shrink: 0;
+                background-color: #E54519;
+            }
+
+            h5 {
+                text-align: start;
+                @include font500(#000000, 22px);
+            }
+        }
+
+        p {
+            margin-top: 8px;
+            position: relative;
+            z-index: 1;
+            text-align: start;
+            margin-left: 52px;
+            @include font400(#414651, 16px)
+        }
+
+        &--back {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+    }
+
+    &__guiding {
+        margin-top: 40px;
+        text-align: center;
+
+        &--top {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        &--bottom {
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+        }
+    }
+}

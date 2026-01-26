@@ -1,0 +1,82 @@
+.central-asia {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 220px;
+
+    &__text {
+
+        &--info {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            div {
+                @include font400(#252B37, 16px);
+
+                span {
+                    @include font500(#252B37, 18px)
+                }
+            }
+        }
+    }
+
+    &__date {
+        width: 220px;
+
+        &--top {
+            display: flex;
+            justify-content: space-between;
+
+            &-item {
+                padding: 10px 16px;
+                display: flex;
+                align-items: center;
+                background-color: #FFFFFF;
+                border-radius: 8px;
+                border: 1px solid #E9EAEB;
+                gap: 8px;
+
+                i {
+                    font-size: 20px;
+
+                    color: #5454E3;
+                }
+
+                p {
+                    @include font500(#252B37, 16px);
+                }
+            }
+        }
+
+        &--body {
+            padding: 20px 30px;
+            border-radius: 1px solid #E9EAEB;
+            border-radius: 14px;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 8px;
+
+            span {
+                @include font500(#535862, 16px);
+                display: flex;
+                gap: 4px;
+                align-items: center;
+
+                i {
+                    color: #5454E3;
+                    font-size: 20px;
+                }
+            }
+
+            p {
+                margin-top: 5px;
+                @include font600(#181D27, 24px);
+            }
+        }
+    }
+}

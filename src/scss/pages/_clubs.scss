@@ -1,0 +1,87 @@
+.clubs {
+    h2 {
+        @include font600(#000000, 22px);
+    }
+
+    &__wrap {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 16px;
+
+
+        &--item {
+            position: relative;
+
+            &-head {
+                border: 1px solid #E9EAEB;
+                background-color: #FFFFFF;
+                padding: 16px;
+                border-radius: 8px;
+                position: relative;
+                z-index: 2;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                p {
+                    @include font500(#000000, 20px)
+                }
+
+                &-img {
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 50%;
+                    background-color: #E545191A;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                &-dropdown {
+                    position: absolute;
+                    width: 24px;
+                    height: 24px;
+                    border: 1px solid #E9EAEB;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: -15px;
+                    z-index: 3;
+                    background-color: #FFFFFF;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            &-body {
+                margin-top: 4px;
+                border: 1px solid #E9EAEB;
+                border-radius: 8px;
+                background-color: #FFFFFF;
+                position: relative;
+                z-index: 1;
+
+                ul {
+                    padding: 6px 16px;
+
+                    li {
+                        border-bottom: 1px solid #E9EAEB;
+                        padding: 10px;
+                        @include font400(#181D27, 16px);
+                        padding-left: 0;
+
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

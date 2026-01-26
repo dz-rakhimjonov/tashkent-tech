@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('components/layout/head.html')
+</head>
+
+<body>
+    @@include('components/layout/header.html')
+    @@include('components/layout/breadcrumb-mini.html')
+    <div class="layout">
+        <div class="container">
+            <div class="contact__maps">
+                <div class="contact-us__src">
+                    @@include('components/pages/contact-us.html')
+                </div>
+                <div class="contact-us__map">
+                    <iframe src="https://yandex.uz/map-widget/v1/?um=constructor%3A..." width="100%" height="250"
+                        frameborder="0">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+        @@include('components/layout/social-media.html')
+        @@include('components/layout/footer.html')
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const header = document.querySelector('.ttechnology-header');
+                if (!header) return;
+
+                function onScroll() {
+                    header.classList.remove('inset');
+                }
+
+                onScroll();
+                window.addEventListener('scroll', onScroll);
+            });
+        </script>
+</body>
+
+</html>

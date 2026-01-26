@@ -1,0 +1,166 @@
+<div class="academics container">
+    <h2 class="components-title">Academics & <span>Program</span></h2>
+    <div class="academics__carousel">
+        <div class="academics__carousel--left">
+            <button class="active" data-tab="undergraduate">
+                <p>Undergraduate</p>
+            </button>
+            <button data-tab="graduate">
+                <p>Graduate</p>
+            </button>
+            <button data-tab="phd">
+                <p>Phd and DSc</p>
+            </button>
+            <button data-tab="courses">
+                <p>Courses</p>
+            </button>
+        </div>
+        <div class="about__wrapper--univer-text-btn">
+            <button>See All <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+    <div class="tab-contents">
+        <div class="tab-content active" data-content="undergraduate">
+            <div class="academics__card">
+                <div class="academics__card--item">
+                    <img src="../../images/academics-1.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>B.Sc. Chemical & Materials Engineering</p>
+                </div>
+                <div class="academics__card--item">
+                    <img src="../../images/academics-2.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>M.Sc. in Mechanical Engineering</p>
+                </div>
+                <div class="academics__card--item">
+                    <img src="../../images/academics-3.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>PhD Programmes</p>
+                </div>
+                <div class="academics__card--item">
+                    <img src="../../images/academics-4.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>SAT Math</p>
+                </div>
+                <div class="academics__card--item">
+                    <img src="../../images/academics-5.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>M.Sc. in Sustainable Chemical Engineering & Materials</p>
+                </div>
+                <div class="academics__card--item">
+                    <img src="../../images/academics-6.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>SAT English</p>
+                </div>
+                <div class="academics__card--item">
+                    <img src="../../images/academics-7.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>B.Sc. Cyber Security</p>
+                </div>
+                <div class="academics__card--item">
+                    <img src="../../images/academics-8.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>DSc Programmes</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content" data-content="graduate">
+            <div class="academics__card">
+
+                <div class="academics__card--item">
+                    <img src="../../images/academics-5.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>M.Sc. in Sustainable Chemical Engineering & Materials</p>
+                </div>
+                <div class="academics__card--item">
+                    <img src="../../images/academics-6.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>SAT English</p>
+                </div>
+                <div class="academics__card--item">
+                    <img src="../../images/academics-7.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>B.Sc. Cyber Security</p>
+                </div>
+                <div class="academics__card--item">
+                    <img src="../../images/academics-8.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>DSc Programmes</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content" data-content="phd">
+            <div class="academics__card">
+                <div class="academics__card--item">
+                    <img src="../../images/academics-1.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>B.Sc. Chemical & Materials Engineering</p>
+                </div>
+                <div class="academics__card--item">
+                    <img src="../../images/academics-2.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>M.Sc. in Mechanical Engineering</p>
+                </div>
+                <div class="academics__card--item">
+                    <img src="../../images/academics-3.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>PhD Programmes</p>
+                </div>
+                <div class="academics__card--item">
+                    <img src="../../images/academics-4.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>SAT Math</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="tab-content" data-content="courses">
+            <div class="academics__card">
+                <div class="academics__card--item">
+                    <img src="../../images/academics-1.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>B.Sc. Chemical & Materials Engineering</p>
+                </div>
+                <div class="academics__card--item">
+                    <img src="../../images/academics-2.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>M.Sc. in Mechanical Engineering</p>
+                </div>
+
+                <div class="academics__card--item">
+                    <img src="../../images/academics-7.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>B.Sc. Cyber Security</p>
+                </div>
+                <div class="academics__card--item">
+                    <img src="../../images/academics-8.jpg">
+                    <div class="academics__card--item-overlay"></div>
+                    <p>DSc Programmes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+    console.log("alaloo");
+    const buttons = document.querySelectorAll('.academics__carousel--left button');
+    const contents = document.querySelectorAll('.tab-content');
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const tab = btn.dataset.tab;
+
+            contents.forEach(content => {
+                content.classList.toggle(
+                    'active',
+                    content.dataset.content === tab
+                );
+            });
+        });
+    });
+</script>

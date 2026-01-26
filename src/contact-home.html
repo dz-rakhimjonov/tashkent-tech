@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('components/layout/head.html')
+</head>
+
+<body>
+    @@include('components/layout/header.html')
+    <div class="layout">
+        <div class="contact-home">
+            <div class="contact-home__overlay"></div>
+            <div class="container">
+                <div class="contact-home__title">
+                    <h1>Contact Us</h1>
+                    @@include('components/layout/breadcrumb-mini.html')
+                </div>
+
+            </div>
+            <div class="contact-home__images">
+                <img src="./images/contact-home.png">
+                <div class="contact-home__images--tt">
+                    <div class="contact-home__images--tt-logo">
+                        <img src="./images/logo-tt.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="contact-info">
+                <div class="contact-info__title">
+                    <h2>Get in Touch With Us</h2>
+                    <p>You can reach us through the following contact details or visit our office during working hours.
+                    </p>
+                </div>
+                <div class="contact-info__wrap">
+                    <div class="contact-info__wrap--item">
+                        <div class="contact-info__wrap--item-img">
+                            <i class="i-phone1"></i>
+                        </div>
+                        <div class="contact-info__wrap--item-text">
+                            <p>
+                                Phone Number
+                            </p>
+                            <span>+998 (77) 288 82 82</span>
+                        </div>
+                    </div>
+                    <div class="contact-info__wrap--item">
+                        <div class="contact-info__wrap--item-img">
+                            <i class="i-calendar"></i>
+                        </div>
+                        <div class="contact-info__wrap--item-text">
+                            <p>
+                                Phone Number
+                            </p>
+                            <span>Mon - Fri: 09:00 - 18:00</span>
+                        </div>
+                    </div>
+                    <div class="contact-info__wrap--item">
+                        <div class="contact-info__wrap--item-img">
+                            <i class="i-location"></i>
+                        </div>
+                        <div class="contact-info__wrap--item-text">
+                            <p>
+                                Phone Number
+                            </p>
+                            <span>2/1 Universitetskaya Street</span>
+                        </div>
+                    </div>
+                    <div class="contact-info__wrap--item">
+                        <div class="contact-info__wrap--item-img">
+                            <i class="i-mail"></i>
+                        </div>
+                        <div class="contact-info__wrap--item-text">
+                            <p>
+                                Phone Number
+                            </p>
+                            <span>info@tashkenttech-edu.uz</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="send-app">
+                <h2>Send an Application</h2>
+                <p>Please fill out the form below and provide the necessary details. Our team will contact you shortly.
+                </p>
+                <div class="send-app__wrap">
+                    <div class="send-app__wrap--left">
+                        <div class="send-app__wrap--left-input">
+                            <label>Full name *</label>
+                            <input type="text" />
+                        </div>
+                        <div class="send-app__wrap--left-input">
+                            <label>Phone number *</label>
+                            <input type="tel" />
+                        </div>
+                        <div class="send-app__wrap--left-input message">
+                            <label>Message *</label>
+                            <input type="text" />
+                        </div>
+                        <div class="send-app__wrap--left-btn">
+                            <button>Sen Application</button>
+                        </div>
+                        <div class="send-app__wrap--left-city">
+                            <img src="./images/contact-city.png">
+                        </div>
+                    </div>
+                    <div class="send-app__wrap--right">
+                        <img src="./images/con-school.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="location-info">
+                <h2>Our Location on the Map</h2>
+                <p>Use the map below to easily find our office and plan your visit.</p>
+            </div>
+        </div>
+        <div class="location-maps">
+            <iframe src="https://yandex.uz/map-widget/v1/?um=constructor%3A..." width="100%" height="250"
+                frameborder="0">
+            </iframe>
+        </div>
+    </div>
+
+    @@include('components/layout/social-media.html')
+    @@include('components/layout/footer.html')
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.ttechnology-header');
+            if (!header) return;
+
+            function onScroll() {
+                header.classList.remove('inset');
+            }
+
+            onScroll();
+            window.addEventListener('scroll', onScroll);
+        });
+    </script>
+</body>
+
+</html>

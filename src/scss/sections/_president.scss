@@ -1,0 +1,128 @@
+.president {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-top {
+        margin-bottom: 96px;
+
+        @include devices(md) {
+            margin-bottom: 40px;
+        }
+
+        @include devices(sm) {
+            margin-bottom: 0px;
+        }
+
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 8px;
+        width: 100%;
+        background: #F9FAFB;
+        box-shadow: 0px 10px 10px 0px #0000001A;
+        padding: 44px 0 0 44px;
+        border-radius: 24px;
+
+        @include devices(lg) {
+            flex-direction: column-reverse;
+            padding: 24px 0 0 24px;
+        }
+
+        @include devices(md) {
+            padding: 0;
+        }
+    }
+
+    &__left {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        min-width: 530px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        margin-top: -150px;
+        overflow: hidden;
+        border-radius: 24px;
+
+        @include devices(lg) {
+            min-width: 100%;
+            height: 350px;
+            margin-top: unset;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: contain;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        @include devices(md) {
+            padding: 16px;
+        }
+
+        &--text {
+            @include font700(var(--black), 22px);
+            line-height: 44px;
+            transition: all 0.2s ease;
+            margin-bottom: 32px;
+
+            @include devices(md) {
+                font-size: 20px;
+                line-height: 32px;
+                margin-bottom: 24px;
+            }
+
+            @include devices(xs) {
+                font-size: 18px;
+                line-height: 28px;
+                margin-bottom: 16px;
+            }
+        }
+
+        &--name {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            @include font600(var(--black), 18px);
+            line-height: 24px;
+            transition: all 0.2s ease;
+            margin-bottom: 4px;
+
+            @include devices(md) {
+                margin-bottom: 8px;
+            }
+
+        }
+
+        &--position {
+            @include font400(#667085, 16px);
+            line-height: 24px;
+
+            @include devices(lg) {
+                margin-bottom: 24px;
+
+            }
+        }
+
+    }
+}

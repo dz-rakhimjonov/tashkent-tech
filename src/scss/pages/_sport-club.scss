@@ -1,0 +1,77 @@
+.sport-club {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+
+    &__item {
+        padding: 10px;
+        border-radius: 14px;
+        border: 1px solid #E9EAEB;
+        position: relative;
+        background-color: #FFFFFF;
+        overflow: hidden;
+
+        &--img {
+            border-radius: 8px;
+
+            img {
+                border-radius: 8px;
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+            }
+        }
+
+        &--text {
+            margin-top: 10px;
+            padding: 0px 6px;
+
+            p {
+                @include font600(#181D27, 20px)
+            }
+
+            &-hr {
+                width: 100%;
+                height: 1px;
+                position: relative;
+                margin-top: 8px;
+                background: linear-gradient(to right,
+                        #E54519 0%,
+                        #E54519 40%,
+                        rgba(229, 69, 25, 0.5) 50%,
+                        rgba(229, 69, 25, 0.2) 80%,
+                        transparent 100%);
+            }
+        }
+
+
+        &--btn {
+            margin-top: 10px;
+            display: flex;
+            justify-content: end;
+            padding: 6px;
+
+            button {
+                display: flex;
+                gap: 8px;
+                padding: 8px 16px;
+                border-radius: 8px;
+                background-color: #F5F5F5;
+
+                border: none;
+                @include font500(#252B37, 14px);
+            }
+        }
+
+        &--tt {
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+
+            img {
+                width: 84px;
+                opacity: 0.1;
+            }
+        }
+    }
+}

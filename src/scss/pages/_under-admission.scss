@@ -1,0 +1,67 @@
+.under-admission {
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+        margin-top: 16px;
+
+        &--card {
+            padding: 16px;
+            position: relative;
+            z-index: 1;
+            border-radius: 8px;
+            background-color: #FFFFFF;
+
+            p {
+                @include font500(#E54519, 20px);
+            }
+
+            span {
+                margin-top: 8px;
+                @include font400(#414651, 16px);
+            }
+
+            &-hr {
+                width: 100%;
+                height: 1px;
+                position: relative;
+                z-index: 3;
+                margin-top: 15px;
+
+                background: linear-gradient(to right,
+                        #E54519 0%,
+                        #E54519 40%,
+                        rgba(229, 69, 25, 0.5) 50%,
+                        rgba(229, 69, 25, 0.2) 80%,
+                        transparent 100%);
+            }
+
+            &-tt {
+                position: absolute;
+                z-index: 2;
+                left: 0;
+                bottom: 0;
+
+                img {
+                    width: 84px;
+                    opacity: 0.1;
+                }
+            }
+
+            &-btn {
+                display: flex;
+                justify-content: end;
+                margin-top: 15px;
+
+                button {
+                    padding: 8px 16px;
+                    display: flex;
+                    gap: 8px;
+                    background-color: #F5F5F5;
+                    border-radius: 8px;
+                    border: none;
+                }
+            }
+        }
+    }
+}

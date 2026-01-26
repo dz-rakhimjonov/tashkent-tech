@@ -1,0 +1,85 @@
+.research-global {
+    &__wrap {
+        display: flex;
+        gap: 16px;
+        margin-top: 16px;
+        align-items: flex-start;
+
+        &--cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 16px;
+
+            &-item {
+                border-radius: 8px;
+                border: 1px solid #E9EAEB;
+                padding: 16px;
+
+                &-top {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 10px;
+
+                    span {
+                        @include font600(#181D27, 32px);
+                    }
+                }
+
+                &-top-icon {
+                    width: 44px;
+                    height: 44px;
+                    background-color: #E545191A;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    i {
+                        font-size: 24px;
+                        color: #E54519;
+                    }
+                }
+
+                p {
+                    @include font400(#414651, 16px);
+                    margin-top: 10px;
+                }
+
+                &:hover {
+                    background: linear-gradient(to right, #444CE7E5, #8098F9E5);
+
+                    span,
+                    i,
+                    p {
+                        color: #fff;
+                    }
+
+                    .hr {
+                        background: linear-gradient(to right,
+                                #FFFFFF 0%,
+                                #FFFFFF 40%,
+                                rgba(255, 255, 255, 0.5) 50%,
+                                rgba(255, 255, 255, 0.2) 80%,
+                                transparent 100%);
+                    }
+
+                    .research-global__wrap--cards-item-top-icon {
+                        background-color: #5454E38F;
+                    }
+
+                    &-top-icon {
+                        background-color: #5454E38F;
+                    }
+
+                }
+            }
+        }
+
+        &--img {
+            margin-top: 11px;
+
+        }
+    }
+}

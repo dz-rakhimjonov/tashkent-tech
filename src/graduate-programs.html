@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('components/layout/head.html')
+</head>
+
+<body>
+    @@include('components/layout/header.html')
+    @@include('components/layout/breadcrumb-mini.html')
+    <div class="layout">
+        <div class="container">
+            <div class="layout-sidebar">
+                @@include('components/layout/sidebar.html')
+            </div>
+            <div class="layout-content">
+                <div class="software-engineering__wrapper">
+                    <div class="text-group">
+                        <h4>B.Sc. Software Engineering</h4>
+                        <div class="hr"></div>
+                        <p>Our department offers knowledge of computation, information, and automation via theoretical
+                            disciplines
+                            and applied disciplines. For the theoretical disciplines, it includes algorithms, theory of
+                            computation,
+                            and information theory. Whereas applied disciplines, including the design and implementation
+                            of hardware
+                            and software. Each discipline is extended to the way of programming, cryptography, and
+                            security. For
+                            more detail, programming language theory provides different ways to describe the computation
+                            process,
+                            and the database concerns the management of data. Operating systems, networks, and embedded
+                            systems
+                            explore the principle and design of complex systems, computer architecture describes the
+                            construction of
+                            computer components and equipment. Based on computer structure and algorithm development,
+                            artificial
+                            intelligence and machine learning have become the main part of computer science nowadays. It
+                            is applied
+                            to computer vision, and natural language to understand and process textual and linguistic
+                            data.</p>
+                        <div class="tt"><img src="../../images/logo-tt.svg"></div>
+                    </div>
+                    <div class="software-engineering__wrapper--img">
+                        <img src="../../images/computing.png">
+                    </div>
+                </div>
+                <div class="software-engineering__toggle-btn toggle-button">
+                    <button class="active" data-tab="course">
+                        <p>Course Structure</p>
+                    </button>
+                    <button data-tab="entry">
+                        <p>Entry Requirements</p>
+                    </button>
+                    <button data-tab="graduation">
+                        <p>Exam Format</p>
+                    </button>
+                    <button data-tab="fees">
+                        <p>Fees & Funding</p>
+                    </button>
+                    <button data-tab="jobs">
+                        <p>Calculator</p>
+                    </button><button data-tab="jobs">
+                        <p>Exam Date</p>
+                    </button><button data-tab="jobs">
+                        <p>Career Prespectives</p>
+                    </button><button data-tab="jobs">
+                        <p>Apply</p>
+                    </button>
+                </div>
+                <div class="tab-contents">
+                    <div class="tab-content active" data-content="course">
+                        @@include('components/pages/software-engineering.html')
+                    </div>
+
+                    <div class="tab-content" data-content="entry">
+                        @@include('components/pages/entry-requirements.html')
+                    </div>
+                    <div class="tab-content" data-content="graduation">
+                        @@include('components/pages/graduation.html')
+                    </div>
+                    <div class="tab-content" data-content="fees">
+                        @@include('components/pages/fees-funding.html')
+                    </div>
+                    <div class="tab-content" data-content="jobs">
+                        @@include('components/pages/job-opurtunites.html')
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    @@include('components/layout/social-media.html')
+    @@include('components/layout/footer.html')
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.ttechnology-header');
+            if (!header) return;
+
+            function onScroll() {
+                header.classList.remove('inset');
+            }
+
+            onScroll();
+            window.addEventListener('scroll', onScroll);
+        });
+        const buttons = document.querySelectorAll('.toggle-button button');
+        const contents = document.querySelectorAll('.tab-content');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const tab = btn.dataset.tab;
+
+                contents.forEach(content => {
+                    content.classList.toggle(
+                        'active',
+                        content.dataset.content === tab
+                    );
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

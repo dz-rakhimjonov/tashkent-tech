@@ -1,0 +1,92 @@
+.albert-flores {
+    &__info {
+        &--contact {
+            display: flex;
+            align-items: center;
+
+            &-icon {
+                display: flex;
+                gap: 30px;
+
+
+                p {
+                    @include font400(#000000, 16px);
+                    display: flex;
+                    align-items: center;
+                    gap: 0px;
+
+                    i {
+                        font-size: 20px;
+                        color: #5454E3;
+                    }
+                }
+            }
+
+            &-link {
+                margin-left: 44px;
+                display: flex;
+                gap: 10px;
+
+                i {
+                    font-size: 24px;
+                    width: 24px;
+                    color: #E54519;
+
+                }
+            }
+        }
+
+        &--body {
+            margin-top: 30px;
+        }
+    }
+
+    &__images {
+        padding: 15px;
+        background-color: #FFFFFF;
+        border-radius: 14px;
+        flex-shrink: 0;
+        position: sticky;
+        top: calc(10px + var(--height-header) + 16px);
+        border: 1px solid #E9EAEB;
+
+        &--top {
+            flex-shrink: 0;
+
+            img {
+                width: 324px;
+                border-radius: 8px;
+            }
+        }
+
+        &--text {
+            &-top {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+
+                &-element {
+                    display: flex;
+                    align-items: center;
+                    gap: 7px;
+
+                    div {
+                        width: 4px;
+                        height: 25px;
+                        border-radius: 16px;
+                        background-color: #E54519;
+                    }
+                }
+
+                img {
+                    width: 30px;
+                }
+            }
+
+            h3 {
+                margin-top: 10px;
+                @include font600(#000000, 24px)
+            }
+        }
+    }
+}

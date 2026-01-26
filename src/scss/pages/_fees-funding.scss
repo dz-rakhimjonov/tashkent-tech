@@ -1,0 +1,139 @@
+.fees-funding {
+    margin-top: 20px;
+
+
+    &__top {
+        border: 1px solid #E9EAEB;
+        background-color: #FFFFFF;
+        padding: 16px;
+        border-radius: 14px;
+
+        h4 {
+            @include font500(#181D27, 20px);
+        }
+
+        &--wrap {
+            margin-top: 20px;
+            display: flex;
+            gap: 16px;
+            border-radius: 8px;
+
+
+            &-card {
+                position: relative;
+                z-index: 1;
+                padding: 16px;
+                border: 1px solid #E9EAEB;
+                border-radius: 8px;
+                max-width: 400px;
+
+                &-tt {
+                    position: absolute;
+                    z-index: 2;
+                    right: 0;
+                    top: 0;
+
+                    img {
+                        width: 59px;
+                        opacity: 0.1;
+                    }
+
+                }
+
+                h5 {
+                    @include font500(#181D27, 20px);
+                    position: relative;
+                    z-index: 3;
+                    margin-bottom: 15px;
+                }
+
+                &-hr {
+                    width: 100%;
+                    height: 1px;
+                    background: linear-gradient(to right,
+                            #E54519 0%,
+                            #E54519 40%,
+                            rgba(229, 69, 25, 0.5) 50%,
+                            rgba(229, 69, 25, 0.2) 80%,
+                            transparent 100%);
+                }
+
+                p {
+                    margin-top: 15px;
+                    @include font500(#414651, 20px);
+
+                    span {
+                        color: #E54519;
+                    }
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        border: 1px solid #E9EAEB;
+        background-color: #FFFFFF;
+        padding: 16px;
+        border-radius: 14px;
+        margin-top: 20px;
+
+        h4 {
+            @include font500(#181D27, 20px);
+        }
+
+        p {
+            margin-top: 10px;
+            @include font400(#252B37, 16px)
+        }
+
+        &--wrap {
+            margin-top: 30px;
+            display: flex;
+            gap: 16px;
+
+            &-card {
+                padding: 16px;
+                border: 1px solid #E9EAEB;
+                position: relative;
+                z-index: 1;
+                border-radius: 8px;
+                max-width: 370px;
+
+                h6 {
+                    @include font500(#E54519, 20px)
+                }
+
+                p {
+                    @include font400(#414651, 16px);
+                    margin-top: 8px;
+                    margin-bottom: 15px;
+                }
+
+                &-img {
+                    margin-top: 15px;
+                    display: flex;
+                    justify-content: end;
+
+                    button {
+                        border-radius: 8px;
+                        background-color: #F5F5F5;
+                        padding: 8px 16px;
+                        border: none;
+                    }
+                }
+
+                &-tt {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    z-index: 2;
+
+                    img {
+                        width: 84px;
+                        opacity: 0.1;
+                    }
+                }
+            }
+        }
+    }
+}

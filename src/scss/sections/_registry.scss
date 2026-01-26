@@ -1,0 +1,125 @@
+.registry {
+    display: flex;
+    flex-direction: row;
+    border-radius: 16px;
+    padding: 12px;
+    background: #fff;
+    flex: 1;
+    gap: 12px;
+
+    &__title {
+        line-height: 130%;
+        @include font700(#061422, 24px);
+    }
+
+    &__img {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        &--wrapper {
+            height: 100%;
+            width: 200px;
+            min-width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border-radius: 12px;
+            border: 1px solid rgba(223, 228, 237, 1);
+            background: #e5f4f4;
+            padding: 24px;
+
+            img {
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+                object-position: center;
+                border-radius: 12px;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        &--title {
+            line-height: 130%;
+            @include font700
+        }
+
+        &--desc {
+            line-height: 140%;
+            @include font500(#3D4B5D, 17px);
+        }
+    }
+
+    &__info {
+        &--wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            align-items: flex-start;
+
+            @media(max-width:1279px) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        &--item {
+            line-height: 140%;
+            @include font500(#3D4B5D, 17px);
+            background: #e5f4f4;
+            padding: 12px;
+            border-radius: 12px;
+            display: flex;
+            gap: 4px;
+            flex-direction: column;
+
+            &.big {
+                grid-column: span 2;
+            }
+
+            div {
+                display: flex;
+
+                img {
+                    margin-left: auto;
+                }
+            }
+        }
+
+        &--title {
+            @include font700(#3D4B5D, 18px);
+            line-height: 140%;
+        }
+
+        &--link {
+            line-height: 140%;
+            @include font700(#25575A, 18px);
+            background: #e5f4f4;
+            padding: 12px;
+            border-radius: 12px;
+            width: 100%;
+
+            a {
+                color: #25575A;
+                text-decoration: underline;
+            }
+
+            div {
+                display: flex;
+
+                img {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+    hr {
+        border: 1px solid #25575A;
+        opacity: 1;
+        width: 50px;
+        margin: 8px 0;
+    }
+}

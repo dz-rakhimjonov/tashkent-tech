@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('components/layout/head.html')
+</head>
+
+<body>
+    @@include('components/layout/header.html')
+    @@include('components/layout/breadcrumb-mini.html')
+    <div class="layout">
+        <div class="container">
+            <div class="layout-sidebar">
+                @@include('components/layout/sidebar.html')
+            </div>
+            <div class="layout-content">
+                <div class="under-admission">
+                    <div class="text-group">
+                        <h4>Supporting Your Journey to Success</h4>
+                        <div class="hr"></div>
+                        <p>At New Uzbekistan University, student success is our top priority. Our Student Services team
+                            is here to guide you
+                            through every aspect of university life. From academic advising and career counseling to
+                            mental health support and
+                            personal development programs, we provide a wide range of services designed to help you
+                            thrive. Whether you need
+                            assistance with coursework, internships, or personal matters, our dedicated staff is here to
+                            support your educational
+                            and professional goals.</p>
+                        <div class="tt182">
+                            <img src="../../images/logo-tt.svg">
+                        </div>
+                    </div>
+                    <div class="under-admission__wrap">
+                        <div class="under-admission__wrap--card">
+                            <p>Mental health & Wellbeing</p>
+                            <span>We care about your mental well-being and provide professional...</span>
+                            <div class="under-admission__wrap--card-hr"></div>
+                            <div class="under-admission__wrap--card-tt">
+                                <img src="../../images/logo-tt.svg">
+                            </div>
+                            <div class="under-admission__wrap--card-btn">
+                                <button>See More</button>
+                            </div>
+                        </div>
+                        <div class="under-admission__wrap--card">
+                            <p>Health</p>
+                            <span>TTU, ensures students have access to essential healthcare services for..</span>
+                            <div class="under-admission__wrap--card-hr"></div>
+                            <div class="under-admission__wrap--card-tt">
+                                <img src="../../images/logo-tt.svg">
+                            </div>
+                            <div class="under-admission__wrap--card-btn">
+                                <button>See More</button>
+                            </div>
+                        </div>
+                        <div class="under-admission__wrap--card">
+                            <p>Tutoring Services</p>
+                            <span>At Tashkent University of Technology, each course has an.</span>
+                            <div class="under-admission__wrap--card-hr"></div>
+                            <div class="under-admission__wrap--card-tt">
+                                <img src="../../images/logo-tt.svg">
+                            </div>
+                            <div class="under-admission__wrap--card-btn">
+                                <button>See More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('components/layout/social-media.html')
+    @@include('components/layout/footer.html')
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.ttechnology-header');
+            if (!header) return;
+
+            function onScroll() {
+                header.classList.remove('inset');
+            }
+
+            onScroll();
+            window.addEventListener('scroll', onScroll);
+        });
+    </script>
+</body>
+
+</html>

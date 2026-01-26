@@ -1,0 +1,24 @@
+.gl-partners-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__item {
+        &--logo {
+            display: flex;
+            gap: 16px;
+            margin-top: 16px;
+
+            &-item {
+                border-radius: 15px;
+                width: 186px;
+                height: 112px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #F5F5F5;
+                border: 1px solid #E9EAEB;
+            }
+        }
+    }
+}

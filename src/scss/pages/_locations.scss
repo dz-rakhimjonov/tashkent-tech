@@ -1,0 +1,88 @@
+.locations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .select-wrapper {
+        width: 300px;
+
+        select {
+            background: #fff;
+            width: 300px;
+
+        }
+    }
+
+    #map {
+        width: 100%;
+        height: auto;
+
+        g {
+            cursor: pointer;
+            transition: all 0.2s ease;
+
+            path {
+                fill: #F2F4F7;
+                stroke: #B8C5DA;
+                stroke-width: 1;
+                transition: all 0.1s ease;
+            }
+
+            &:hover {
+                path {
+                    fill: #123F99;
+                    opacity: .7;
+                }
+            }
+
+            &.active {
+                path {
+                    fill: #123F99;
+                    stroke-width: 1.5;
+                }
+
+                &:hover {
+                    path {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .map-point {
+        height: 36px;
+        position: relative;
+        cursor: pointer;
+        pointer-events: all;
+    }
+
+    .pinpoint {
+        background: #002266;
+        border-radius: 6px;
+        padding: 2px 4px;
+        @include font500(#fff, 10px);
+        line-height: 20px;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+        width: fit-content;
+        white-space: nowrap;
+        cursor: pointer;
+
+        &::after {
+            content: url("../images/tip.svg");
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translate(-50%, -2px);
+            width: 16px;
+            height: 16px;
+            z-index: 0;
+        }
+    }
+}

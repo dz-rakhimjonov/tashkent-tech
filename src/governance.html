@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('components/layout/head.html')
+</head>
+
+<body>
+    @@include('components/layout/header.html')
+    @@include('components/layout/breadcrumb-mini.html')
+    <div class="layout">
+        <div class="container">
+            <div class="layout-sidebar">
+                @@include('components/layout/sidebar.html')
+            </div>
+            <div class="layout-content">
+                <div class="text-group">
+                    <h4>Guided by Visionary Leadership</h4>
+                    <div class="hr"></div>
+                    <p>Tashkent University of Technology (TTU) operates under a governance model that emphasizes
+                        transparency, accountability,
+                        and strategic vision. Our leadership is composed of distinguished academicians, researchers, and
+                        industry leaders who
+                        are committed to the mission of creating a world-class research university in Central Asia. This
+                        diverse governance
+                        structure ensures that the university remains dynamic, responsive, and aligned with the
+                        educational needs of Uzbekistan
+                        and beyond.</p>
+                    <div class="governance__item">
+                        <h4>Board of Trustees</h4>
+                        <div class="hr"></div>
+                        <p>Tashkent University of Technology (TTU) operates under a governance model that emphasizes
+                            transparency, accountability,
+                            and strategic vision. Our leadership is composed of distinguished academicians, researchers,
+                            and industry leaders who
+                            are committed to the mission of creating a world-class research university in Central Asia.
+                            This diverse governance
+                            structure ensures that the university remains dynamic, responsive, and aligned with the
+                            educational needs of Uzbekistan
+                            and beyond.</p>
+                    </div>
+                    <div class="governance__item">
+                        <h4>Board of Trustees</h4>
+                        <div class="hr"></div>
+                        <p>Tashkent University of Technology (TTU) operates under a governance model that emphasizes
+                            transparency,
+                            accountability,
+                            and strategic vision. Our leadership is composed of distinguished academicians, researchers,
+                            and industry
+                            leaders who
+                            are committed to the mission of creating a world-class research university in Central Asia.
+                            This diverse
+                            governance
+                            structure ensures that the university remains dynamic, responsive, and aligned with the
+                            educational needs of
+                            Uzbekistan
+                            and beyond.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('components/layout/social-media.html')
+    @@include('components/layout/footer.html')
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.ttechnology-header');
+            if (!header) return;
+
+            function onScroll() {
+                header.classList.remove('inset');
+            }
+
+            onScroll();
+            window.addEventListener('scroll', onScroll);
+        });
+    </script>
+</body>
+
+</html>

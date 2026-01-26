@@ -1,0 +1,41 @@
+.students-dormitories {
+    &__text {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        div {
+            @include font400(#252B37, 16px);
+
+            span {
+                @include font500(#252B37, 18px);
+
+            }
+        }
+    }
+
+    &__img {
+        margin-top: 16px;
+
+        &--wrap {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+
+            &-item {
+                border-radius: 8px;
+                height: 270px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 8px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

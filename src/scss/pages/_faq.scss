@@ -1,0 +1,135 @@
+.faq {
+    min-height: 110%;
+
+    .faq-item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 16px;
+        background-color: #fff;
+        border: 1px solid #fff;
+        width: 100%;
+        cursor: pointer;
+        box-sizing: border-box;
+        transition: all 0.5s ease;
+
+        @include devices(md) {
+            padding: 16px;
+        }
+
+        @include devices(sm) {
+            padding: 12px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+
+        &:hover {
+            opacity: 0.9;
+            transform: none;
+        }
+
+
+        .question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+            transition: all 0.5s ease;
+            text-align: start;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            @include font600(var(--black), 18px);
+            line-height: 28px;
+
+            @include devices(sm) {
+                font-size: 16px;
+
+            }
+
+            .toggle-btn {
+                font-size: 20px;
+                transition: all 0.5s ease;
+                color: var(--primary);
+                background-color: #EFF4FF;
+                margin-bottom: auto;
+                width: 32px;
+                height: 32px;
+                flex: 0 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8px;
+
+                &::before {
+                    transition: all 0.5s ease;
+
+                }
+            }
+        }
+
+
+
+        hr {
+            margin: 0;
+            border-top: 0 solid white;
+            transition: all 0.5s ease;
+            width: 0;
+            border: 0;
+        }
+
+        .answer {
+            color: #080E1B;
+            text-align: start;
+            transition: all 0.5s ease;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            @include font500(#475467, 16px);
+            line-height: 24px;
+
+            @include devices(sm) {
+                font-size: 14px;
+            }
+        }
+
+
+        &.active {
+            background-color: white;
+            box-shadow: 0px 0px 30px 0px #080E1B0D;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            hr {
+                width: 100%;
+                opacity: 0.2;
+                border-top: 1px solid #080E1B;
+            }
+
+            .question {
+                color: #080E1B;
+                margin-bottom: 16px;
+
+                .toggle-btn {
+
+                    &::before {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+            .answer {
+                color: #080E1B;
+                opacity: 0.8;
+            }
+        }
+    }
+}

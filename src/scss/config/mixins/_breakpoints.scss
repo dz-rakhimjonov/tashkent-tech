@@ -1,0 +1,113 @@
+@mixin devices($breakpoint, $type: "max") {
+    @if $breakpoint ==xxl {
+        @if $type =="max" {
+            @media only screen and (max-width: 1712px) {
+                @content;
+            }
+        }
+
+        @else if $type =="min" {
+            @media only screen and (min-width: 1712px) {
+                @content;
+            }
+        }
+    }
+
+    @else if $breakpoint ==xl {
+        @if $type =="max" {
+            @media only screen and (max-width: 1400px) {
+                @content;
+            }
+        }
+
+        @else if $type =="min" {
+            @media only screen and (min-width: 1400px) {
+                @content;
+            }
+        }
+    }
+
+    @else if $breakpoint ==lg {
+        @if $type =="max" {
+            @media only screen and (max-width: 1199px) {
+                @content;
+            }
+        }
+
+        @else if $type =="min" {
+            @media only screen and (min-width: 1199px) {
+                @content;
+            }
+        }
+    }
+
+    @else if $breakpoint ==md {
+        @if $type =="max" {
+            @media only screen and (max-width: 991px) {
+                @content;
+            }
+        }
+
+        @else if $type =="min" {
+            @media only screen and (min-width: 991px) {
+                @content;
+            }
+        }
+    }
+
+    @else if $breakpoint ==sm {
+        @if $type =="max" {
+            @media only screen and (max-width: 768px) {
+                @content;
+            }
+        }
+
+        @else if $type =="min" {
+            @media only screen and (min-width: 768px) {
+                @content;
+            }
+        }
+    }
+
+    @else if $breakpoint ==xs {
+        @if $type =="max" {
+            @media only screen and (max-width: 574px) {
+                @content;
+            }
+        }
+
+        @else if $type =="min" {
+            @media only screen and (min-width: 574px) {
+                @content;
+            }
+        }
+    }
+
+    @else if $breakpoint ==xxs {
+        @if $type =="max" {
+            @media only screen and (max-width: 350px) {
+                @content;
+            }
+        }
+
+        @else if $type =="min" {
+            @media only screen and (min-width: 350px) {
+                @content;
+            }
+        }
+    }
+
+    @else {
+        @if $type =="max" {
+            @media only screen and (max-width: $breakpoint) {
+                @content;
+            }
+        }
+
+        @else if $type =="min" {
+            @media only screen and (min-width: $breakpoint) {
+                @content;
+            }
+        }
+    }
+}

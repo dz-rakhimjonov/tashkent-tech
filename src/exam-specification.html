@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('components/layout/head.html')
+</head>
+
+<body>
+    @@include('components/layout/header.html')
+    @@include('components/layout/breadcrumb-mini.html')
+    <div class="layout">
+        <div class="container">
+            <div class="layout-sidebar">
+                @@include('components/layout/sidebar.html')
+            </div>
+            <div class="layout-content">
+                <div class="text-group">
+                    <h4>Exam Specification</h4>
+                    <div class="hr"></div>
+                    <p>The Tashkent University of Technology Entrance Exam is conducted in collaboration with Cambridge
+                        University Press &
+                        Assessment. This exam is designed to assess candidates’ mathematical skills and logical thinking
+                        abilities to determine
+                        their eligibility for admission.
+                        <span>What’s Included in the Exam Specification?</span>
+                        <span>The Exam Specification document provides detailed information on:</span>
+                    <ol>
+                        <li>Test structure and format</li>
+                        <li>Topics covered in the exam</li>
+                        <li>Sample questions to help candidates prepare effectively</li>
+                    </ol>
+                    </p>
+                    <a>Download Exam Specification (PDF)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('components/layout/social-media.html')
+    @@include('components/layout/footer.html')
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.ttechnology-header');
+            if (!header) return;
+
+            function onScroll() {
+                header.classList.remove('inset');
+            }
+
+            onScroll();
+            window.addEventListener('scroll', onScroll);
+        });
+    </script>
+</body>
+
+</html>

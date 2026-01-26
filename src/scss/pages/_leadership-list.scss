@@ -1,0 +1,99 @@
+.leadership-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__item {
+        display: flex;
+        background-color: #FFFFFF;
+        border-radius: 14px;
+        position: relative;
+        z-index: 1;
+
+        &--tt {
+            position: absolute;
+            right: 10px;
+            top: 0;
+            opacity: 0.1;
+            z-index: 2;
+
+            img {
+                width: 95px;
+            }
+        }
+
+        &--img {
+            padding: 10px 0 10px 10px;
+            flex-shrink: 0;
+
+            img {
+                width: 180px;
+                border-radius: 8px;
+            }
+        }
+
+        &--info {
+            padding: 16px;
+            margin-left: 5px;
+
+            &-top {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                div {
+                    width: 4px;
+                    height: 18px;
+                    background-color: #E54519;
+                    border-radius: 16px;
+                }
+
+                span {
+                    @include font400(#181D27, 14px)
+                }
+            }
+
+            h3 {
+                margin-top: 9px;
+                @include font600(#181D27, 22px)
+            }
+
+            p {
+                margin-top: 8px;
+                @include font400(#414651, 14px)
+            }
+
+            &-hr {
+                margin-top: 27px;
+                width: 100%;
+                height: 1px;
+                background: linear-gradient(to right,
+                        #E54519 0%,
+                        #E54519 70%,
+                        transparent 100%);
+
+            }
+
+            &-contact {
+                margin-top: 16px;
+                display: flex;
+                gap: 50px;
+
+                p {
+                    display: flex;
+                    gap: 6px;
+                    align-items: center;
+
+                    @include font400(#000000, 14px);
+
+                    i {
+                        font-size: 18px;
+                        width: 18px;
+                        color: #5454E3;
+                    }
+                }
+            }
+
+        }
+    }
+}

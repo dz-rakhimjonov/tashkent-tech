@@ -1,0 +1,99 @@
+.school {
+    &__wrap {
+        margin-top: 20px;
+
+        h4 {
+            @include font600(#000000, 22px);
+            margin-top: 20px;
+        }
+
+        &--select {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+
+            h4 {
+                margin-top: 0;
+            }
+        }
+
+        &--con {
+            margin-top: 20px;
+            display: flex;
+            gap: 16px;
+
+
+            &-card {
+                display: flex;
+                padding: 10px;
+                border: 1px solid #E9EAEB;
+                border-radius: 14px;
+                background-color: #FFFFFF;
+                max-width: 320px;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+
+                &-img {
+                    width: 146px;
+                    height: 100%;
+                    border: 1px solid #E9EAEB;
+                    border-radius: 8px;
+                    flex-shrink: 0;
+                    margin-bottom: 0;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 8px;
+                    }
+                }
+
+                &-info {
+                    padding: 6px;
+                    margin-left: 10px;
+
+                    h5 {
+                        @include font500(#000000, 18px);
+                    }
+
+                    &-hr {
+                        margin-top: 5px;
+                        width: 100%;
+                        height: 1px;
+                        background: linear-gradient(to right,
+                                #E54519 0%,
+                                #E54519 40%,
+                                rgba(229, 69, 25, 0.5) 50%,
+                                rgba(229, 69, 25, 0.2) 80%,
+                                transparent 100%);
+                    }
+
+                    p {
+                        @include font400(#535862, 14px);
+                        margin-top: 5px;
+
+                        span {
+                            margin-left: 2px;
+                            @include font500(#252B37, 14px);
+                        }
+                    }
+
+
+                }
+
+                &-tt {
+                    position: absolute;
+                    right: 0;
+                    bottom: -30px;
+                    z-index: 2;
+
+                    img {
+                        width: 84px;
+                        opacity: 0.1;
+                    }
+                }
+            }
+        }
+    }
+}

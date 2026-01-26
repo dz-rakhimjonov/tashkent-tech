@@ -1,0 +1,174 @@
+// Offcanvas Menu Styles
+.offcanvas {
+    --bs-offcanvas-width: 320px;
+    --bs-offcanvas-bg: var(--white);
+
+    &-header {
+        background: var(--primary);
+        color: var(--white);
+        padding: 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        .offcanvas-title {
+            @include font700(var(--white), 20px);
+            margin: 0;
+        }
+
+        .btn-close {
+            filter: invert(1);
+            opacity: 0.8;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &-body {
+        padding: 0;
+        overflow-y: auto;
+    }
+}
+
+// Menu inside offcanvas
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+
+    .menu-item {
+        list-style: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .menu-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            color: var(--black1);
+            text-decoration: none;
+            @include font700(var(--black1), 18px);
+            transition: all 0.2s ease;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            width: 100%;
+            text-align: left;
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.05);
+                color: var(--primary);
+            }
+
+            i {
+                font-size: 18px;
+                transition: transform 0.2s ease;
+                color: var(--muted);
+            }
+        }
+
+        // Dropdown state
+        &--dropdown {
+            .menu-link[aria-expanded="true"] {
+                background: rgba(0, 0, 0, 0.05);
+                color: var(--primary);
+
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    // Submenu styles
+    .submenu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background: rgba(0, 0, 0, 0.02);
+
+        &.collapse {
+            &:not(.show) {
+                display: none;
+            }
+        }
+
+        .submenu-item {
+            list-style: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .submenu-link {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 12px 20px 12px 40px;
+                color: var(--black1);
+                text-decoration: none;
+                @include font500(var(--black1), 18px);
+                transition: all 0.2s ease;
+                cursor: pointer;
+                background: transparent;
+                border: none;
+                width: 100%;
+                text-align: left;
+
+                &:hover {
+                    background: rgba(0, 0, 0, 0.05);
+                    color: var(--primary);
+                }
+
+                i {
+                    font-size: 18px;
+                    transition: transform 0.2s ease;
+                    color: var(--muted);
+                }
+            }
+
+            // Nested submenu
+            &--dropdown {
+                .submenu-link[aria-expanded="true"] {
+                    background: rgba(0, 0, 0, 0.05);
+                    color: var(--primary);
+
+                    i {
+                        transform: rotate(90deg);
+                    }
+                }
+
+                // Third level submenu
+                .submenu {
+                    background: rgba(0, 0, 0, 0.04);
+
+                    .submenu-item {
+                        .submenu-link {
+                            padding-left: 60px;
+                            @include font500(var(--black1), 17px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Mobile responsiveness
+@include devices(md) {
+    .offcanvas {
+        --bs-offcanvas-width: 280px;
+    }
+}
+
+@include devices(sm) {
+    .offcanvas {
+        --bs-offcanvas-width: 100vw;
+    }
+}

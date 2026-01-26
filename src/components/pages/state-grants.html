@@ -1,0 +1,116 @@
+<div class="state-grants">
+    <div class="state-grants__top">
+        <div class="state-grants__top--tab toggle-button">
+            <button class="active">
+                <p>4 - years State Grants</p>
+            </button>
+            <button>
+                <p>1-year Tiered State Grants</p>
+            </button>
+            <button>
+                <p>Tuition-Fee Basis</p>
+            </button>
+        </div>
+        <div class="state-grants__top--select">
+            <select>
+                <option>ALL</option>
+                <option>bfbr</option>
+                <option>hbfhewf</option>
+                <option>dwbf</option>
+            </select>
+        </div>
+    </div>
+    <div class="state-grants__wrap">
+        <div class="state-grants__wrap--card">
+            <div class="state-grants__wrap--card-left orange">
+                <p>Graduates of Presidential Schools</p>
+            </div>
+            <div class="state-grants__wrap--card-right">
+                <p>Quota:<span> 25</span></p>
+                <p>Reserved:<span> 0</span></p>
+            </div>
+            <div class="state-grants__wrap--card-tt">
+                <img src="../../images/logo-tt.svg">
+            </div>
+        </div>
+        <div class="state-grants__wrap--card">
+            <div class="state-grants__wrap--card-left orange">
+                <p>Graduates of Presidential Schools</p>
+            </div>
+            <div class="state-grants__wrap--card-right">
+                <p>Quota:<span> 25</span></p>
+                <p>Reserved:<span> 0</span></p>
+            </div>
+            <div class="state-grants__wrap--card-tt">
+                <img src="../../images/logo-tt.svg">
+            </div>
+        </div>
+        <div class="state-grants__wrap--card">
+            <div class="state-grants__wrap--card-left blue">
+                <p>Graduates of Presidential Schools</p>
+            </div>
+            <div class="state-grants__wrap--card-right">
+                <p>Quota:<span> 25</span></p>
+                <p>Reserved:<span> 0</span></p>
+            </div>
+            <div class="state-grants__wrap--card-tt">
+                <img src="../../images/logo-tt.svg">
+            </div>
+        </div>
+        <div class="state-grants__wrap--card">
+            <div class="state-grants__wrap--card-left blue">
+                <p>Graduates of Presidential Schools</p>
+            </div>
+            <div class="state-grants__wrap--card-right">
+                <p>Quota:<span> 25</span></p>
+                <p>Reserved:<span> 0</span></p>
+            </div>
+            <div class="state-grants__wrap--card-tt">
+                <img src="../../images/logo-tt.svg">
+            </div>
+        </div>
+        <div class="state-grants__wrap--card">
+            <div class="state-grants__wrap--card-left green">
+                <p>Graduates of Presidential Schools</p>
+            </div>
+            <div class="state-grants__wrap--card-right">
+                <p>Quota:<span> 25</span></p>
+                <p>Reserved:<span> 0</span></p>
+            </div>
+            <div class="state-grants__wrap--card-tt">
+                <img src="../../images/logo-tt.svg">
+            </div>
+        </div>
+        <div class="state-grants__wrap--card">
+            <div class="state-grants__wrap--card-left green">
+                <p>Family Members Included in the Unified Social Protection</p>
+            </div>
+            <div class="state-grants__wrap--card-right">
+                <p>Quota:<span> 25</span></p>
+                <p>Reserved:<span> 0</span></p>
+            </div>
+            <div class="state-grants__wrap--card-tt">
+                <img src="../../images/logo-tt.svg">
+            </div>
+        </div>
+    </div>
+    <div class="state-grants__tt">
+        <img src="../../images/logo-tt.svg">
+    </div>
+</div>
+<script>
+    const buttons = document.querySelectorAll('.state-grants__top--tab button');
+    const contents = document.querySelectorAll('.tab-content');
+
+    buttons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+
+            buttons.forEach(b => b.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+
+            btn.classList.add('active');
+            contents[index].classList.add('active');
+        });
+    });
+
+</script>

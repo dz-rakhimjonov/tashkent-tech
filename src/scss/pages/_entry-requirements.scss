@@ -1,0 +1,25 @@
+.entry-requirements {
+    background-color: #FFFFFF;
+    border-radius: 14px;
+    border: 1px solid #E9EAEB;
+    margin-top: 20px;
+    padding: 16px;
+
+    &__info {
+        margin-bottom: 30px;
+
+        h3 {
+            @include font500(#181D27, 20px);
+        }
+
+        ul {
+            li {
+                @include font400(#414651, 16px);
+
+                span {
+                    @include font500(#181D27, 16px);
+                }
+            }
+        }
+    }
+}

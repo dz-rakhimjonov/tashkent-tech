@@ -1,0 +1,101 @@
+.albert-flores {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    &__img {
+        width: 302px;
+        padding: 15px;
+        background-color: #FFFFFF;
+        border: 1px solid #E9EAEB;
+        border-radius: 14px;
+
+        &--images {
+            width: 272px;
+            height: 266px;
+            overflow: hidden;
+            border-radius: 8px;
+
+            img {
+                width: 100%;
+                border-radius: 8px;
+            }
+        }
+
+        &--text {
+
+            &-top {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+
+                &-element {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    div {
+                        width: 4px;
+                        height: 18px;
+                        border-radius: 16px;
+                        background-color: #E54519;
+                    }
+
+                    span {
+                        @include font400(#181D27, 14px)
+                    }
+                }
+
+                img {
+                    width: 30px;
+                }
+            }
+
+            h3 {
+                margin-top: 9px;
+                @include font600(#181D27, 24px)
+            }
+
+            &-info {
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+
+                p {
+                    display: flex;
+                    gap: 6px;
+                    align-items: center;
+                    @include font400(#000000, 16px);
+
+                    i {
+                        font-size: 20px;
+                        width: 20px;
+                        color: #5454E3;
+                    }
+                }
+            }
+
+            &-link {
+                margin-top: 20px;
+                display: flex;
+                gap: 10px;
+
+                i {
+                    font-size: 28px;
+                    color: #E54519;
+                    width: 28px;
+                }
+            }
+        }
+    }
+
+    &__info {
+
+        &--experience {
+            margin-top: 20px;
+
+        }
+    }
+
+}

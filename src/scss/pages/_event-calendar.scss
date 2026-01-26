@@ -1,0 +1,52 @@
+.event-calendar {
+    &__data {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        padding: 10px 0px 20px 0px;
+
+        &--left {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+
+            &-btn {
+                display: flex;
+                gap: 5px;
+
+                button {
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 8px;
+                    background-color: #F5F5F5;
+                    border: none;
+                }
+            }
+
+            p {
+                margin-top: 0;
+                @include font500(#181D27, 20px);
+            }
+        }
+
+        &--right {
+            display: flex;
+            gap: 16px;
+
+            input,
+            select {
+                background-color: transparent;
+                height: 44px;
+            }
+        }
+    }
+
+    &__img {
+        margin-top: 10px;
+
+        img {
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+}

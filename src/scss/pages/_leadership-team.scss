@@ -1,0 +1,163 @@
+.leadership {
+    &__top {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+
+        &--card {
+            display: flex;
+            position: relative;
+            z-index: 1;
+            border-radius: 14px;
+            background-color: #FFFFFF;
+            overflow: hidden;
+
+            &-tttop {
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 2;
+
+                img {
+                    width: 100px;
+                    opacity: 0.1;
+                }
+            }
+
+            &-img {
+                position: relative;
+                z-index: 3;
+                padding: 10px 0 10px 10px;
+                display: flex;
+
+                img {
+                    flex-shrink: 0;
+                    width: 240px;
+                    height: 260px;
+                    border-radius: 8px;
+                }
+
+                &-element {
+                    position: absolute;
+                    z-index: 4;
+                    right: -30px;
+
+                    &-line {
+                        flex-shrink: 0;
+                        background: linear-gradient(to bottom, #E54519, #FF6A2B);
+                        width: 6px;
+                        height: 260px;
+                        border-top-right-radius: 8px;
+                        border-bottom-right-radius: 8px;
+                    }
+
+                    &-circle {
+                        position: relative;
+                        z-index: 10;
+                        right: 14px;
+                        top: -160px;
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        background-color: #FFFFFF;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        outline: 6px solid #FF6A2B;
+                        box-sizing: border-box;
+
+                        img {
+                            width: 25px;
+                        }
+                    }
+                }
+
+            }
+
+            &-info {
+                padding: 16px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &-name {
+                    &-top {
+                        display: flex;
+                        gap: 5px;
+                        align-items: center;
+
+                        div {
+                            width: 4px;
+                            height: 18px;
+                            background-color: #E54519;
+                            border-radius: 16px;
+                        }
+
+                        p {
+                            @include font400(#181D27, 14px)
+                        }
+                    }
+
+                    h4 {
+                        margin-top: 9px;
+                        @include font600(#181D27, 22px)
+                    }
+                }
+
+                &-contact {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 6px;
+
+                    span {
+                        display: flex;
+                        gap: 6px;
+                        align-items: center;
+                        @include font400(#181D27, 14px);
+
+                        i {
+                            font-size: 18px;
+                            width: 18px;
+                            color: #5454E3;
+                        }
+                    }
+
+                    button {
+                        flex: 0 0 auto;
+                        border: none;
+                        margin-top: 13px;
+                        @include font500(#FFFFFF, 14px);
+                        background-color: #E54519;
+                        border-radius: 12px;
+                        padding: 8px 19px;
+                    }
+                }
+            }
+
+            &-ttbottom {
+                position: absolute;
+                left: -8px;
+                bottom: 0;
+                z-index: 0;
+
+                img {
+                    width: 100px;
+                    opacity: 0.1;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+
+        &--btn {
+            background-color: #F5F5F5 !important;
+            color: #252B37 !important;
+        }
+    }
+}

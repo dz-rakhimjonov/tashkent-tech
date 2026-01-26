@@ -1,0 +1,250 @@
+.library {
+    &__section {
+        --c-height: 680px;
+        --c-gap: 16px;
+
+        .container {
+            padding: 0 16px;
+        }
+
+        &--wrapper {
+            background: #002266;
+            display: flex;
+            flex-direction: row;
+            display: flex;
+            border-radius: 16px;
+            flex-direction: row;
+            min-height: var(--c-height);
+
+            @include devices(md) {
+                flex-direction: column;
+            }
+        }
+
+        &--title {
+            @include font600(#ffffff, 40px);
+            margin-bottom: 12px;
+
+            span {
+                color: #61AEFF;
+            }
+        }
+
+        &--text {
+            @include font400(#CCD3E0, 16px);
+            margin-bottom: 24px;
+        }
+
+
+        &--logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: auto;
+
+            @include devices(lg) {
+                gap: 20px;
+            }
+
+            @include devices(md) {
+                margin-bottom: 48px;
+            }
+
+
+
+            @include devices(sm) {
+                gap: 16px;
+            }
+
+            img {
+                width: calc(33% - 27px);
+
+                @include devices(md) {
+                    width: calc(33%);
+                }
+
+
+            }
+        }
+
+        &--left {
+            padding: 80px;
+            flex: 0 0 60%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            align-items: flex-start;
+
+            @include devices(lg) {
+                padding: 40px;
+            }
+
+            @include devices(md) {
+                padding: 40px 24px;
+                width: 100%;
+                flex: unset;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                top: 0;
+                width: calc(50% - 50px);
+                height: 100%;
+                background: url("../images/breadcrumb-default.png") no-repeat;
+                background-size: contain;
+                z-index: 0;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                width: calc(50% - 50px);
+                height: 100%;
+                background: url("../images/breadcrumb-default.png") no-repeat;
+                transform: scale(-1);
+                background-size: contain;
+                z-index: 0;
+            }
+        }
+
+        &--link {
+            background: #378CE5;
+            border-radius: 8px;
+            @include font600(#FFFFFF, 16px);
+            padding: 12px 14px;
+        }
+
+        &--right {
+            flex: 0 0 40%;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            position: relative;
+            overflow: hidden;
+
+            @include devices(md) {
+                width: 100%;
+                flex-direction: column;
+                padding-bottom: 20px;
+            }
+
+            .carousel {
+                position: absolute;
+                width: calc(30% - 16px);
+                display: flex;
+                flex-direction: column;
+                gap: var(--c-gap);
+                top: 0;
+
+                @include devices(md) {
+                    position: relative;
+                    flex-direction: row;
+                    max-height: 300px;
+                    width: fit-content;
+                }
+
+                &.library-carousel1 {
+                    left: 0%;
+                    animation: carousel-top1 8s linear infinite alternate;
+
+                    @include devices(md) {
+                        left: unset;
+                    }
+
+                }
+
+                &.library-carousel2 {
+                    left: calc(30% + 4px);
+                    animation: carousel-top2 8s linear infinite alternate;
+
+                    @include devices(md) {
+                        left: unset;
+                    }
+                }
+
+                &.library-carousel3 {
+                    left: calc(60% + 8px);
+                    animation: carousel-top1 8s linear infinite alternate;
+
+                    @include devices(md) {
+                        left: unset;
+                    }
+                }
+
+                &:hover {
+                    animation-play-state: paused;
+                }
+
+                @keyframes carousel-top1 {
+                    0% {
+                        transform: translate(0, - var(--c-height));
+
+                    }
+
+                    100% {
+                        transform: translateY(calc(-100% + var(--c-height)));
+                    }
+                }
+
+                @keyframes carousel-top2 {
+                    0% {
+                        transform: translateY(calc(-100% + var(--c-height)));
+                    }
+
+                    100% {
+                        transform: translate(0, - var(--c-height));
+                    }
+                }
+
+                @include devices(md) {
+                    &.library-carousel1 {
+                        animation: carousel-side1 8s linear infinite alternate;
+                        left: unset;
+                    }
+
+                    &.library-carousel2 {
+                        animation: carousel-side2 8s linear infinite alternate;
+                        left: unset;
+                    }
+
+                    &.library-carousel3 {
+                        animation: carousel-side1 8s linear infinite alternate;
+                        left: unset;
+                    }
+
+                    &:hover {
+                        animation-play-state: paused;
+                    }
+
+                    @keyframes carousel-side1 {
+                        0% {
+                            transform: translateX(calc(-1 * var(--c-width)));
+                        }
+
+                        100% {
+                            transform: translateX(calc(-100% + var(--c-width)));
+                        }
+                    }
+
+                    @keyframes carousel-side2 {
+                        0% {
+                            transform: translateX(calc(-100% + var(--c-width)));
+                        }
+
+                        100% {
+                            transform: translateX(calc(-1 * var(--c-width)));
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

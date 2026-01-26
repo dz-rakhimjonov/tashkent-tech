@@ -1,0 +1,171 @@
+.univer-library {
+    &__top {
+        display: flex;
+        gap: 16px;
+
+        .text-group {
+            border: 1px solid #E9EAEB;
+        }
+
+        &--img {
+            width: 374px;
+            height: 372px;
+            border-radius: 8px;
+            flex-shrink: 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__info {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        border-radius: 14px;
+        margin-top: 16px;
+        gap: 16px;
+
+        &--item {
+            padding: 16px;
+            display: flex;
+            gap: 16px;
+            border: 1px solid #E9EAEB;
+            align-items: center;
+            background-color: #FFFFFF;
+            border-radius: 14px;
+
+            &-img {
+                width: 58px;
+                height: 58px;
+                border-radius: 8px;
+                flex-shrink: 0;
+                background-color: #EFF8FF;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 28px;
+                }
+            }
+
+            &-text {
+                margin-left: 16px;
+
+                p {
+                    @include font500(#000000, 20px)
+                }
+
+                span {
+                    @include font500(#00000099, 14px);
+                    margin-top: 6px;
+                }
+            }
+        }
+    }
+
+    &__books {
+        margin-top: 30px;
+
+        h5 {
+            @include font600(#000000, 22px)
+        }
+
+        &--wrapper {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+
+            &-item {
+                border-radius: 14px;
+                border: 1px solid #E9EAEB;
+                display: flex;
+                padding: 10px;
+                background-color: #FFFFFF;
+
+                &-img {
+                    background-color: #F5F5F5;
+                    border-radius: 8px;
+                    padding: 14px;
+                    flex-shrink: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 127px;
+                        height: 167px;
+                    }
+                }
+
+                &-text {
+                    padding: 6px;
+                    margin-left: 10px;
+
+                    h4 {
+                        @include font500(#000000, 18px);
+                        line-height: 1;
+                    }
+
+                    div {
+                        width: 100%;
+                        height: 1px;
+                        margin-top: 5px;
+                        background: linear-gradient(to right,
+                                #E54519 0%,
+                                #E54519 40%,
+                                rgba(229, 69, 25, 0.5) 50%,
+                                rgba(229, 69, 25, 0.2) 80%,
+                                transparent 100%);
+                    }
+
+                    p {
+                        margin-top: 5px;
+                        @include font400(#535862, 14px);
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &__statis {
+        margin-top: 50px;
+        padding: 16px;
+        border-radius: 14px;
+        background-color: #FFFFFF;
+        border: 1px solid #E9EAEB;
+
+        &--top {
+            display: flex;
+            justify-content: space-between;
+
+            &-right {
+                display: flex;
+
+                &-date {
+                    border-radius: 8px;
+                    margin-right: 16px;
+                    background-color: #FFFFFF;
+                }
+            }
+
+            .toggle-button {
+                button {
+
+                    p {
+                        @include font500(#252B37, 16px)
+                    }
+                }
+            }
+        }
+
+        &--img {
+            margin-top: 30px;
+        }
+    }
+}

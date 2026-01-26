@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('components/layout/head.html')
+</head>
+
+<body>
+    @@include('components/layout/header.html')
+    @@include('components/layout/breadcrumb-mini.html')
+    <div class="layout">
+        <div class="container">
+            <div class="layout-sidebar">
+                @@include('components/layout/sidebar.html')
+            </div>
+            <div class="layout-content">
+                <div class="german-professor">
+                    <div class="german-professor__wrap">
+                        <div class="german-professor__wrap--row">
+                            <div class="german-professor__wrap--row-text">
+                                <h4>German Professor Delivers an Open Lecture on Europe’s CO₂ Policies at New Uzbekistan
+                                    University</h4>
+                                <div class="german-professor__wrap--row-text-hr"></div>
+                                <p>New Uzbekistan University hosted an open lecture by Professor Franz Wolfgang
+                                    Hubert, a distinguished
+                                    scholar
+                                    from Humboldt University of Berlin, which ranks 84th in the world. Professor Hubert
+                                    has been
+                                    teaching and conducting
+                                    research at Humboldt University since 2000 and is widely recognized for his
+                                    expertise in economics
+                                    and environmental
+                                    policy.
+                                    During the lecture, Professor Hubert discussed Europe’s CO₂ policies, focusing on
+                                    the challenges and
+                                    consequences
+                                    of centralized planning approaches. He explained how excessive centralization has
+                                    often resulted
+                                    in inefficiencies,
+                                    rising political costs, and a gradual decline in public and political support for
+                                    climate policies.
+                                    The session provided students with valuable insights into the complexities of
+                                    environmental
+                                    regulation and policy-making
+                                    in Europe, encouraging them to think critically about sustainable development and
+                                    innovation.
+                                    Students described the lecture as informative, engaging, and</p>
+                            </div>
+                            <div class="german-professor__wrap--row-tttop">
+                                <img src="../../images/logo-tt.svg">
+                            </div>
+                            <div class="german-professor__wrap--row-ttbottom">
+                                <img src="../../images/logo-tt.svg">
+                            </div>
+                            <div class="german-professor__wrap--row-img">
+                                <div class="german-professor__wrap--row-img-top">
+                                    <div class="german-professor__wrap--row-img-top-item"><i
+                                            class="i-calendar"></i><span>19
+                                            November,
+                                            2025</span></div>
+                                    <div class="german-professor__wrap--row-img-top-item"><i
+                                            class="i-eye"></i><span>356</span>
+                                    </div>
+                                    <div class="german-professor__wrap--row-img-top-item"><i
+                                            class="i-share"></i><span>Share</span>
+                                    </div>
+                                </div>
+                                <div class="german-professor__wrap--row-img-images">
+                                    <img src="../../images/professor.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="german-professor__wrap--p">
+                            <p>
+                                New Uzbekistan University hosted an open lecture by Professor Franz Wolfgang Hubert, a
+                                distinguished
+                                scholar
+                                from Humboldt University of Berlin, which ranks 84th in the world. Professor Hubert has
+                                been teaching
+                                and conducting
+                                research at Humboldt University since 2000 and is widely recognized for his expertise in
+                                economics and
+                                environmental
+                                policy.
+                                During the lecture, Professor Hubert discussed Europe’s CO₂ policies, focusing on the
+                                challenges and
+                                consequences
+                                of centralized planning approaches. He explained how excessive centralization has often
+                                resulted
+                                in inefficiencies,
+                                rising political costs, and a gradual decline in public and political support for
+                                climate policies.
+                                The session provided students with valuable insights into the complexities of
+                                environmental regulation
+                                and policy-making
+                                in Europe, encouraging them to think critically about sustainable development and
+                                innovation.
+                                Students described the lecture as informative, engaging, and
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('components/layout/social-media.html')
+    @@include('components/layout/footer.html')
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.ttechnology-header');
+            if (!header) return;
+
+            function onScroll() {
+                header.classList.remove('inset');
+            }
+
+            onScroll();
+            window.addEventListener('scroll', onScroll);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<div class="partners container">
+    <h2 class="components-title">University <span>Partners</span></h2>
+    <div class="partners__top owl-carousel owl-theme">
+        <div class="partners__top--item">
+            <img src="../../images/partnors-t1.svg">
+        </div>
+        <div class="partners__top--item">
+            <img src="../../images/partners-t2.svg">
+        </div>
+        <div class="partners__top--item">
+            <img src="../../images/partners-t3.svg">
+        </div>
+        <div class="partners__top--item">
+            <img src="../../images/partners-t4.svg">
+        </div>
+    </div>
+    <div class="partners__bottom owl-carousel owl-theme">
+        <div class="partners__bottom--item">
+            <img src="../../images/partner-global.png">
+        </div>
+        <div class="partners__bottom--item">
+            <img src="../../images/partners-b1.svg">
+        </div>
+        <div class="partners__bottom--item">
+            <img src="../../images/partners-b2.svg">
+        </div>
+        <div class="partners__bottom--item">
+            <img src="../../images/partners-b3.svg">
+        </div>
+
+    </div>
+</div>
+<script>
+    $('.partners__top').owlCarousel({
+        loop: true,
+        margin: 16,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            }
+        }
+    })
+
+    $('.partners__bottom').owlCarousel({
+        loop: true,
+        center: true,
+        items: 3,
+        margin: 16,
+        stagePadding: 16,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        rtl: true,
+        responsive: {
+            0: {
+                items: 1,
+                stagePadding: 16
+            },
+            600: {
+                items: 3,
+                stagePadding: 16
+            },
+            1000: {
+                items: 4,
+                stagePadding: 16
+            }
+        }
+    });
+
+
+
+</script>

@@ -1,0 +1,136 @@
+table {
+    border-collapse: separate;
+    width: 100%;
+    border-spacing: 0 4px;
+
+    tr {
+        border-radius: 14px;
+        box-shadow: 0px 4px 40px 0px #0615220D;
+
+        th {
+            background-color: #E0EAEA;
+            white-space: nowrap;
+            padding: 16px 12px;
+
+            @media(max-width:1279px) {
+                white-space: wrap;
+
+            }
+
+            &:first-of-type {
+                overflow: hidden;
+                border-radius: 10px 0 0 10px;
+            }
+
+            &:last-of-type {
+                overflow: hidden;
+                border-radius: 0 10px 10px 0;
+                text-align: end;
+            }
+
+            &:nth-child(even) {
+                flex: 1;
+            }
+        }
+
+        td {
+            padding: 16px 12px;
+            background: #fff;
+
+            &.number {
+                padding: 16px 12px;
+            }
+
+            &:first-of-type {
+                overflow: hidden;
+                border-radius: 10px 0 0 10px;
+            }
+
+            &:last-of-type {
+                overflow: hidden;
+                border-radius: 0 10px 10px 0;
+                text-align: end;
+            }
+
+            &:nth-child(even) {
+                flex: 1;
+            }
+
+            .download {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                @include font500(#25575A, 17px);
+                line-height: 140%;
+
+
+            }
+
+            .info-wrapper {
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+                align-items: center;
+
+                text-align: justify;
+
+
+                .img-wrapper {
+                    width: 48px;
+                    min-width: 48px;
+                    overflow: hidden;
+                    border-radius: 8px;
+                    height: 48px;
+                    background-color: var(--black-7);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+
+            .title {
+                @include font500(#061422, 17px);
+                line-height: 130%;
+
+            }
+        }
+
+    }
+
+    thead {
+        @media(max-width:768px) {
+            display: none;
+        }
+    }
+
+    tbody {
+        border-collapse: separate;
+
+        @media(max-width:768px) {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            tr,
+            td {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                overflow: hidden;
+                border-radius: 12px;
+            }
+
+            .number {
+                display: none;
+            }
+        }
+    }
+
+
+}

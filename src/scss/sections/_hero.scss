@@ -1,0 +1,352 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
+        url('../images/hero-img2.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // padding: 2rem;
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom,
+                rgba(0, 0, 0, 0.3) 0%,
+                rgba(0, 0, 0, 0.1) 60%,
+                rgba(0, 0, 0, 0.0) 90%,
+                transparent 100%);
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--left {
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            @include devices(lg) {
+                width: 40%;
+            }
+
+            >p:first-of-type {
+                @include font500(#FFFFFF, 18px);
+
+                @include devices(md) {
+                    font-size: 14px;
+                }
+            }
+
+            h1 {
+                @include font700(#FFFFFF, 52px);
+
+                @include devices(md) {
+                    font-size: 40px;
+                }
+
+                @include devices(sm) {
+                    font-size: 27px;
+                }
+            }
+
+            >p:nth-of-type(2) {
+                @include font500(#FFFFFF, 18px);
+                opacity: 0.8;
+
+                @include devices(md) {
+                    font-size: 14px;
+                }
+
+            }
+
+            &-buttons {
+                margin-top: 15px;
+                display: flex;
+                gap: 10px;
+
+                >button:first-of-type {
+                    @include font500 (#FFFFFF, 16px);
+                    border: none;
+                    border-radius: 8px;
+                    padding: 10px 53.5px;
+                    background: linear-gradient(to right, #E54519, #FF8C6C);
+
+                    @include devices(md) {
+                        padding: 10px 30px;
+                    }
+
+                    @include devices(sm) {
+                        padding: 10px 15px;
+                    }
+                }
+
+                >button:nth-of-type(2) {
+                    @include font500 (#FFFFFF, 16px);
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    border: none;
+                    border-radius: 8px;
+                    padding: 10px 23.5px;
+                    background-color: #2E2E2E;
+
+                    i {
+                        font-size: 20px;
+                        width: 20px;
+                    }
+                }
+            }
+        }
+
+        &--right {
+            width: 42%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            // aspect-ratio: 0.8;
+
+            // position: relative;
+            // z-index: 1;
+
+            @include devices(xl) {
+                width: 50%;
+            }
+
+            @include devices(sm) {
+                width: 60%;
+            }
+
+            &-item {
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                padding: 15px 10px;
+                border: 1px solid #717680;
+                align-items: end;
+                position: relative;
+                z-index: 1;
+                aspect-ratio: 1/1;
+
+                @include devices(xl) {
+                    aspect-ratio: 0/0;
+                }
+
+                @include devices(md) {
+                    padding: 10px 7px;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    z-index: 2;
+                    backdrop-filter: blur(8px);
+                    background: rgba(255, 255, 255, 0.1);
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                }
+
+                &:hover::after {
+                    opacity: 1;
+                }
+
+                &:nth-child(2n) {
+                    border-right: 1px solid #717680;
+                }
+
+                &:nth-last-child(-n+2) {
+                    border-bottom: 1px solid #717680;
+                }
+
+                border-right: none;
+                border-bottom: none;
+
+                img {
+                    width: 74px;
+                    height: 74px;
+                    position: relative;
+                    z-index: 3;
+                }
+
+                span {
+                    font-size: 32px;
+                    position: relative;
+                    z-index: 3;
+
+                    @include devices(lg) {
+                        font-size: 27px;
+                    }
+
+                    @include devices(md) {
+                        font-size: 22px;
+                    }
+                }
+
+                p {
+                    @include font500(#FFFFFF, 14px);
+                    opacity: 0.85;
+                    position: relative;
+                    z-index: 3;
+                    text-align: end;
+
+                    @include devices(md) {
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            &-top {
+                &-left {
+                    height: 195px;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        z-index: 2;
+                        width: 1px;
+                        height: 100%;
+                        left: 0;
+                        bottom: 0;
+                        background: linear-gradient(to top,
+                                rgba(113, 118, 128, 1) 0%,
+                                rgba(113, 118, 128, 0.4) 50%,
+                                rgba(113, 118, 128, 0.2) 70%,
+                                rgba(113, 118, 128, 0.1) 80%,
+                                rgba(113, 118, 128, 0.01) 90%,
+                            )
+                    }
+
+
+                }
+
+                &-right {
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        z-index: 2;
+                        width: 1px;
+                        height: 100%;
+                        left: 0;
+                        bottom: 0;
+                        background: linear-gradient(to top,
+                                rgba(113, 118, 128, 1) 0%,
+                                rgba(113, 118, 128, 0.4) 50%,
+                                rgba(113, 118, 128, 0.2) 70%,
+                                rgba(113, 118, 128, 0.1) 80%,
+                                rgba(113, 118, 128, 0.01) 90%,
+                            )
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        z-index: 2;
+                        width: 1px;
+                        height: 100%;
+                        right: 0;
+                        bottom: 0;
+                        background: linear-gradient(to top,
+                                rgba(113, 118, 128, 1) 0%,
+                                rgba(113, 118, 128, 0.4) 50%,
+                                rgba(113, 118, 128, 0.2) 70%,
+                                rgba(113, 118, 128, 0.1) 80%,
+                                rgba(113, 118, 128, 0.01) 90%,
+                            )
+                    }
+
+
+                }
+            }
+
+            &-bottom {
+
+                &-left {
+                    height: 195px;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        z-index: 2;
+                        width: 1px;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        background: linear-gradient(to bottom,
+                                rgba(113, 118, 128, 1) 0%,
+                                rgba(113, 118, 128, 0.4) 50%,
+                                rgba(113, 118, 128, 0.2) 70%,
+                                rgba(113, 118, 128, 0.1) 80%,
+                                rgba(113, 118, 128, 0.01) 90%,
+                            )
+                    }
+
+
+
+                    border-top: 1px solid #717680;
+                }
+
+                &-right {
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        z-index: 2;
+                        width: 1px;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        background: linear-gradient(to bottom,
+                                rgba(113, 118, 128, 1) 0%,
+                                rgba(113, 118, 128, 0.4) 50%,
+                                rgba(113, 118, 128, 0.2) 70%,
+                                rgba(113, 118, 128, 0.1) 80%,
+                                rgba(113, 118, 128, 0.01) 90%,
+                            )
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        z-index: 2;
+                        width: 1px;
+                        height: 100%;
+                        right: 0;
+                        top: 0;
+                        background: linear-gradient(to bottom,
+                                rgba(113, 118, 128, 1) 0%,
+                                rgba(113, 118, 128, 0.4) 50%,
+                                rgba(113, 118, 128, 0.2) 70%,
+                                rgba(113, 118, 128, 0.1) 80%,
+                                rgba(113, 118, 128, 0.01) 90%,
+                            )
+                    }
+
+
+                    border-top: 1px solid #717680;
+                }
+            }
+        }
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(to bottom, #E54519 0%, #FFA288 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
