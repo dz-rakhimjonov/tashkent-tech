@@ -154,6 +154,10 @@
                     padding: 10px 7px;
                 }
 
+                @include devices(sm) {
+                    transform: rotate(90deg);
+                }
+
                 &::after {
                     content: "";
                     position: absolute;
