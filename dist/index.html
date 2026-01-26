@@ -524,7 +524,7 @@
     <div class="decree container">
     <div class="decree__wrapper">
         <div class="decree__wrapper--img">
-            <img src="../../images/president.svg">
+            <img src="../../images/preseident-decree.png">
         </div>
         <div class="decree__wrapper--text">
             <img class="decree__wrapper--text-gerb" src="../../images/Gerb.svg">
@@ -605,7 +605,7 @@
                     <img src="../../images/univer-card-1.png">
                 </div>
                 <div class="univer-news__wrapper--card-item-text">
-                    <p>Twitter sues Elon Musk to enforce original merger</p>
+                    <p class="line-clamp-2">Twitter sues Elon Musk to enforce original merger</p>
                     <p>SEC Targets Crypto Scams – The U.S. Securities....</p>
                     <div class="univer-news__wrapper--card-item-text-date">
                         <div class="univer-news__wrapper--card-item-text-date-data">
@@ -756,25 +756,41 @@
     <h2 class="components-title">Academics & <span>Program</span></h2>
     <div class="academics__carousel">
         <div class="academics__carousel--left">
-            <button class="active" data-tab="undergraduate">
+            <button class="active">
                 <p>Undergraduate</p>
             </button>
-            <button data-tab="graduate">
+            <button>
                 <p>Graduate</p>
             </button>
-            <button data-tab="phd">
+            <button>
                 <p>Phd and DSc</p>
             </button>
-            <button data-tab="courses">
+            <button>
                 <p>Courses</p>
             </button>
+        </div>
+        <div class="academics__carousel--select">
+            <select>
+                <option value="0">
+                    Undergraduate
+                </option>
+                <option value="1">
+                    Graduate
+                </option>
+                <option value="2">
+                    Phd and DSc
+                </option>
+                <option value="3">
+                    Courses
+                </option>
+            </select>
         </div>
         <div class="about__wrapper--univer-text-btn">
             <button>See All <i class="fa-solid fa-arrow-right"></i></button>
         </div>
     </div>
     <div class="tab-contents">
-        <div class="tab-content active" data-content="undergraduate">
+        <div class="academics__carousel--content active">
             <div class="academics__card">
                 <div class="academics__card--item">
                     <img src="../../images/academics-1.jpg">
@@ -818,7 +834,7 @@
                 </div>
             </div>
         </div>
-        <div class="tab-content" data-content="graduate">
+        <div class="academics__carousel--content">
             <div class="academics__card">
 
                 <div class="academics__card--item">
@@ -843,7 +859,7 @@
                 </div>
             </div>
         </div>
-        <div class="tab-content" data-content="phd">
+        <div class="academics__carousel--content">
             <div class="academics__card">
                 <div class="academics__card--item">
                     <img src="../../images/academics-1.jpg">
@@ -868,7 +884,7 @@
 
             </div>
         </div>
-        <div class="tab-content" data-content="courses">
+        <div class="academics__carousel--content">
             <div class="academics__card">
                 <div class="academics__card--item">
                     <img src="../../images/academics-1.jpg">
@@ -897,26 +913,55 @@
 
 </div>
 <script>
-    console.log("alaloo");
-    const buttons = document.querySelectorAll('.academics__carousel--left button');
-    const contents = document.querySelectorAll('.tab-content');
+    // const buttonsa = document.querySelectorAll('.academics__carousel--left button');
+    // const contenta = document.querySelectorAll('.academics__carousel--content');
+    // const selecta = document.querySelector('.academics__carousel--select select');
 
-    buttons.forEach(btn => {
+    // buttonsa.forEach((btn, index) => {
+    //     btn.addEventListener('click', () => {
+
+    //         buttonsa.forEach(b => b.classList.remove('active'));
+    //         contenta.forEach(c => c.classList.remove('active'));
+
+    //         btn.classList.add('active');
+    //         contenta[index].classList.add('active');
+    //         console.log("keldi aca");
+
+    //     });
+    // });
+    const buttonsa = document.querySelectorAll('.academics__carousel--left button');
+    const contenta = document.querySelectorAll('.academics__carousel--content');
+    const selecta = document.querySelector('.academics__carousel--select select');
+
+    buttonsa.forEach((btn, index) => {
         btn.addEventListener('click', () => {
 
-            buttons.forEach(b => b.classList.remove('active'));
+            buttonsa.forEach(b => b.classList.remove('active'));
+            contenta.forEach(c => c.classList.remove('active'));
+
             btn.classList.add('active');
+            contenta[index].classList.add('active');
 
-            const tab = btn.dataset.tab;
+            // selectni ham index bo'yicha update qilish
+            selecta.value = index;
 
-            contents.forEach(content => {
-                content.classList.toggle(
-                    'active',
-                    content.dataset.content === tab
-                );
-            });
+            console.log("keldi aca");
         });
     });
+
+    /* ===== select uchun event ===== */
+    selecta.addEventListener('change', () => {
+        const index = selecta.value;
+
+        buttonsa.forEach(b => b.classList.remove('active'));
+        contenta.forEach(c => c.classList.remove('active'));
+
+        buttonsa[index].classList.add('active');
+        contenta[index].classList.add('active');
+
+        console.log("select o'zgardi");
+    });
+
 </script>
     <div class="carousel ">
     <img class="carousel__back-img" src="../../images/carousel-back.jpg">
@@ -981,14 +1026,21 @@
         loop: true,
         margin: 10,
         nav: true,
+        center: false,
         responsive: {
             0: {
                 items: 1
             },
             600: {
-                items: 3
+                items: 2
             },
             1000: {
+                items: 3
+            },
+            1300: {
+                items: 4
+            },
+            1500: {
                 items: 4
             }
         }
@@ -1035,10 +1087,13 @@
         autoplayTimeout: 3000,
         responsive: {
             0: {
-                items: 1
+                items: 2
             },
-            600: {
+            660: {
                 items: 3
+            },
+            1000: {
+                items: 4
             },
             1000: {
                 items: 4
@@ -1059,7 +1114,7 @@
         rtl: true,
         responsive: {
             0: {
-                items: 1,
+                items: 2,
                 stagePadding: 16
             },
             600: {
@@ -1198,6 +1253,18 @@
                 </a>
             </div>
         </div>
+        <div class="footer__content--row">
+            <div class=" footer__content--row-link">
+                <h4>Quick Links</h4>
+                <p>Admissions</p>
+                <p>Programs</p>
+                <p>News</p>
+                <p>Campus Life</p>
+                <p>About</p>
+                <p>Contact Us</p>
+            </div>
+
+        </div>
         <div class="footer__content--link">
             <h4>Quick Links</h4>
             <p>Admissions</p>
@@ -1219,6 +1286,17 @@
             </iframe>
         </div>
     </div>
+    <div class=" footer__content--row-contact">
+        <h4>Contact Us</h4>
+        <p><i class="i-location"></i>123 University Avenue, Tech City, TC 12345</p>
+        <p><i class="i-mail"></i>info@tashkenttech-edu.uz</p>
+        <p><i class="i-phone1"></i>+998 77 288 82 82</p>
+    </div>
+    <div class="footer__content--row-map">
+        <iframe src="https://yandex.uz/map-widget/v1/?um=constructor%3A..." width="100%" height="250" frameborder="0">
+        </iframe>
+    </div>
+
     <div class="footer__bottom container">
         <div class="footer__bottom--hr"></div>
         <div class="footer__bottom--info">

@@ -264,6 +264,14 @@ section {
     span {
         color: #E54519
     }
+
+    @include devices(md) {
+        font-size: 32px;
+    }
+
+    @include devices(sm) {
+        font-size: 27px;
+    }
 }
 
 .text-group {

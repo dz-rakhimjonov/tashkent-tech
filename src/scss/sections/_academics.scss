@@ -3,16 +3,30 @@
     padding-top: 50px;
     padding-bottom: 50px;
 
+    @include devices(md) {
+        margin-top: 20px;
+        padding-top: 0px;
+        padding-bottom: 20px;
+    }
+
     &__carousel {
         display: flex;
         justify-content: space-between;
         margin-top: 50px;
+
+        @include devices(md) {
+            margin-top: 20px;
+        }
 
         &--left {
             background-color: #F5F5F5;
             border-radius: 12px;
             display: flex;
             padding: 5px;
+
+            @include devices(sm) {
+                display: none;
+            }
 
             button {
                 border-radius: 8px;
@@ -22,6 +36,18 @@
 
                 p {
                     @include font500(#181D27, 16px);
+
+                    @include devices(sm) {
+                        font-size: 14px;
+                    }
+                }
+
+                @include devices(md) {
+                    padding: 6px 14px;
+                }
+
+                @include devices(sm) {
+                    padding: 4px 14px;
                 }
             }
 
@@ -33,12 +59,29 @@
                 }
             }
         }
+
+        &--select {
+            display: none;
+
+            @include devices(sm) {
+                display: block;
+            }
+        }
+
+        &--content {
+            display: none;
+        }
+
+        &--content.active {
+            display: block;
+        }
     }
 
     &__card {
         margin-top: 30px;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 16px;
 
         &--item {
@@ -46,6 +89,7 @@
             overflow: hidden;
             border-radius: 14px;
             width: 308px;
+            max-width: 350px;
             height: 300px;
             display: flex;
             align-items: flex-end;

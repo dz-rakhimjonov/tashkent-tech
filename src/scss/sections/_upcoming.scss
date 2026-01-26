@@ -4,6 +4,15 @@
     padding: 40px 0;
     overflow: hidden;
 
+    @include devices(md) {
+        margin-top: 0px;
+        padding: 20px 0;
+    }
+
+    @include devices(sm) {
+        margin-top: 20px;
+    }
+
     &__back {
         position: absolute;
         left: 0;
@@ -27,6 +36,11 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 16px;
+
+        @include devices(md) {
+            grid-template-columns: 1fr;
+            margin-top: 20px;
+        }
 
         &--item.one {
             .upcoming__content--item-left {
@@ -92,12 +106,33 @@
                 justify-content: space-between;
 
                 h4 {
-                    @include font500(#000000, 24px)
+                    @include font500(#000000, 24px);
+
+                    @include devices(lg) {
+                        font-size: 18px;
+                    }
+
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    /* nechta qator */
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
                 }
 
                 p {
                     @include font400(#535862, 16px);
                     line-height: 1;
+
+                    @include devices(lg) {
+                        font-size: 14px;
+                        line-height: 0.9;
+                    }
+
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    /* nechta qator */
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
                 }
 
                 div {
@@ -109,7 +144,12 @@
                 span {
                     display: flex;
                     align-items: center;
-                    @include font400(#5454E3, 14px)
+                    @include font400(#5454E3, 14px);
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    /* nechta qator */
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
                 }
             }
         }

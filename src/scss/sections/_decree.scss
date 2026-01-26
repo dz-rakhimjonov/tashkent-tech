@@ -11,18 +11,63 @@
         border-radius: 14px;
         overflow: hidden;
 
+        @include devices(sm) {
+            grid-template-columns: 1fr;
+        }
+
         &--img {
             width: 100%;
             z-index: 1;
             position: relative;
             z-index: 5;
+
+            &::after {
+                content: "";
+                width: 14px;
+                background-color: #E54519;
+                height: 100%;
+                position: absolute;
+                z-index: 6;
+                right: 0px;
+                top: 0;
+
+                @include devices(sm) {
+                    display: none;
+                }
+            }
+
+            @include devices(sm) {
+                &::before {
+                    content: "";
+                    width: 100%;
+                    background-color: #E54519;
+                    height: 14px;
+                    position: absolute;
+                    z-index: 6;
+                    right: 0px;
+                    bottom: 0;
+                }
+
+                img {
+                    width: 100%;
+                    position: relative;
+                    height: 350px;
+                    object-fit: cover;
+                    z-index: 5;
+                }
+            }
+
+
         }
 
         &--text {
             padding-left: 16px;
             padding-top: 16px;
             overflow: hidden;
-            border: 2px solid red;
+
+            @include devices(sm) {
+                padding: 20px;
+            }
 
             &-gerb {
                 position: absolute;
@@ -32,6 +77,10 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: 3;
+
+                @include devices(sm) {
+                    top: 65%;
+                }
             }
 
             >p:first-of-type {
@@ -49,7 +98,7 @@
                 }
 
                 @include devices(sm) {
-                    font-size: 16px;
+                    font-size: 20px;
                 }
             }
 
@@ -72,6 +121,7 @@
                 @include devices(sm) {
                     line-height: 1;
                     margin-top: 5px;
+                    font-size: 14px;
                 }
             }
 
@@ -82,6 +132,14 @@
                 right: 0;
                 top: 0;
                 z-index: 2;
+
+                @include devices(sm) {
+                    height: 100%;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 2;
+                }
 
                 div {
                     position: absolute;

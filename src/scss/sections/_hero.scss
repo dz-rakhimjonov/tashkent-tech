@@ -124,16 +124,14 @@
             // z-index: 1;
             @include devices(sm) {
                 width: 100%;
-                transform: rotate(-90deg);
+                margin-top: 50px;
             }
 
             @include devices(xl) {
                 width: 50%;
             }
 
-            @include devices(sm) {
-                width: 60%;
-            }
+
 
             &-item {
                 display: flex;
@@ -155,8 +153,10 @@
                 }
 
                 @include devices(sm) {
-                    transform: rotate(90deg);
+                    justify-content: center;
+
                 }
+
 
                 &::after {
                     content: "";
@@ -192,12 +192,15 @@
                     height: 74px;
                     position: relative;
                     z-index: 3;
+
+
                 }
 
                 span {
                     font-size: 32px;
                     position: relative;
                     z-index: 3;
+
 
                     @include devices(lg) {
                         font-size: 27px;
@@ -209,6 +212,8 @@
                 }
 
                 p {
+
+
                     @include font500(#FFFFFF, 14px);
                     opacity: 0.85;
                     position: relative;
@@ -224,10 +229,17 @@
             }
 
             &-top {
+                @include devices(sm) {
+                    display: none;
+                }
 
                 &-left {
                     height: 195px;
                     position: relative;
+
+                    @include devices(sm) {
+                        display: none;
+                    }
 
                     &::before {
                         content: "";
@@ -251,6 +263,10 @@
 
                 &-right {
                     position: relative;
+
+                    @include devices(sm) {
+                        display: none;
+                    }
 
                     &::before {
                         content: "";
@@ -292,9 +308,11 @@
 
             &-bottom {
 
+
                 &-left {
                     height: 195px;
                     position: relative;
+
 
                     &::before {
                         content: "";
@@ -304,13 +322,18 @@
                         height: 100%;
                         left: 0;
                         top: 0;
+
                         background: linear-gradient(to bottom,
                                 rgba(113, 118, 128, 1) 0%,
                                 rgba(113, 118, 128, 0.4) 50%,
                                 rgba(113, 118, 128, 0.2) 70%,
                                 rgba(113, 118, 128, 0.1) 80%,
                                 rgba(113, 118, 128, 0.01) 90%,
-                            )
+                            );
+
+                        @include devices(sm) {
+                            display: none;
+                        }
                     }
 
 
@@ -321,6 +344,8 @@
                 &-right {
                     position: relative;
 
+
+
                     &::before {
                         content: "";
                         position: absolute;
@@ -335,7 +360,11 @@
                                 rgba(113, 118, 128, 0.2) 70%,
                                 rgba(113, 118, 128, 0.1) 80%,
                                 rgba(113, 118, 128, 0.01) 90%,
-                            )
+                            );
+
+                        @include devices(sm) {
+                            display: none;
+                        }
                     }
 
                     &::after {
@@ -352,7 +381,11 @@
                                 rgba(113, 118, 128, 0.2) 70%,
                                 rgba(113, 118, 128, 0.1) 80%,
                                 rgba(113, 118, 128, 0.01) 90%,
-                            )
+                            );
+
+                        @include devices(sm) {
+                            display: none;
+                        }
                     }
 
 

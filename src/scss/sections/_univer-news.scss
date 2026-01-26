@@ -3,12 +3,27 @@
     padding-top: 40px;
     padding-bottom: 40px;
 
+    @include devices(sm) {
+        margin-top: 20px;
+        padding-top: 0;
+        padding-bottom: 20px;
+    }
+
     &__wrapper {
         margin-top: 50px;
+
+        @include devices(sm) {
+            margin-top: 20px;
+        }
 
         &--img {
             display: flex;
             gap: 16px;
+
+            @include devices(sm) {
+                flex-direction: column;
+                align-items: center;
+            }
 
             &-item {
                 position: relative;
@@ -22,6 +37,12 @@
                 gap: 8px;
                 padding: 15px;
                 overflow: hidden;
+
+
+                @include devices(md) {
+                    gap: 4px;
+
+                }
 
                 &-overlay {
                     z-index: -1;
@@ -52,11 +73,21 @@
                 }
 
                 >p:first-of-type {
-                    @include font700(#FFFFFF, 20px)
+                    @include font700(#FFFFFF, 20px);
+
+                    @include devices(md) {
+                        font-size: 16px;
+                    }
+
+
                 }
 
                 >p:nth-of-type(2) {
                     @include font400(#D5D7DA, 14px);
+
+                    @include devices(md) {
+                        font-size: 12px;
+                    }
 
                 }
 
@@ -64,6 +95,10 @@
                     display: flex;
                     margin-top: 14px;
                     justify-content: space-between;
+
+                    @include devices(md) {
+                        margin-top: -4px;
+                    }
 
                     &-data {
                         display: flex;
@@ -73,10 +108,18 @@
                         i {
                             font-size: 24px;
                             color: #5454E3;
+
+                            @include devices(md) {
+                                font-size: 20px
+                            }
                         }
 
                         p {
-                            @include font600(#FFFFFF, 14px)
+                            @include font600(#FFFFFF, 14px);
+
+                            @include devices(md) {
+                                font-size: 12px;
+                            }
                         }
                     }
                 }
@@ -87,12 +130,22 @@
             margin-top: 20px;
             display: flex;
             gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            @include devices(md) {}
 
             &-item {
                 border-radius: 14px;
                 width: 308px;
+
                 background-color: #FFFFFF;
                 border: 1px solid #E9EAEB;
+
+                @include devices(sm) {
+                    width: 100%;
+                    max-width: 416px;
+                }
 
                 &-img {
                     width: 100%;
@@ -118,11 +171,22 @@
                     padding: 10px 12px 15px 12px;
 
                     >p:first-of-type {
-                        @include font700(#181D27, 18px)
+                        @include font700(#181D27, 18px);
+
+                        @include devices(lg) {
+                            font-size: 14px;
+                        }
                     }
 
                     >p:nth-of-type(2) {
                         @include font500(#535862, 13px);
+
+                        @include devices(lg) {
+                            font-size: 12px;
+                            line-height: 1.3;
+                            margin-top: 0px;
+                        }
+
                         margin-top: 5px;
                     }
 
@@ -131,19 +195,35 @@
                         display: flex;
                         justify-content: space-between;
 
+                        @include devices(lg) {
+                            margin-top: 7px;
+                        }
+
                         &-data {
                             display: flex;
                             gap: 10px;
                             align-items: center;
 
+                            @include devices(lg) {
+                                gap: 0px;
+                            }
+
                             i {
                                 font-size: 24px;
                                 width: 24px;
                                 color: #5454E3;
+
+                                @include devices(lg) {
+                                    font-size: 18px;
+                                }
                             }
 
                             p {
-                                @include font600(#000000, 14px)
+                                @include font600(#000000, 14px);
+
+                                @include devices(lg) {
+                                    font-size: 12px;
+                                }
                             }
                         }
                     }

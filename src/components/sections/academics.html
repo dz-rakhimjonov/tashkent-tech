@@ -2,25 +2,41 @@
     <h2 class="components-title">Academics & <span>Program</span></h2>
     <div class="academics__carousel">
         <div class="academics__carousel--left">
-            <button class="active" data-tab="undergraduate">
+            <button class="active">
                 <p>Undergraduate</p>
             </button>
-            <button data-tab="graduate">
+            <button>
                 <p>Graduate</p>
             </button>
-            <button data-tab="phd">
+            <button>
                 <p>Phd and DSc</p>
             </button>
-            <button data-tab="courses">
+            <button>
                 <p>Courses</p>
             </button>
+        </div>
+        <div class="academics__carousel--select">
+            <select>
+                <option value="0">
+                    Undergraduate
+                </option>
+                <option value="1">
+                    Graduate
+                </option>
+                <option value="2">
+                    Phd and DSc
+                </option>
+                <option value="3">
+                    Courses
+                </option>
+            </select>
         </div>
         <div class="about__wrapper--univer-text-btn">
             <button>See All <i class="fa-solid fa-arrow-right"></i></button>
         </div>
     </div>
     <div class="tab-contents">
-        <div class="tab-content active" data-content="undergraduate">
+        <div class="academics__carousel--content active">
             <div class="academics__card">
                 <div class="academics__card--item">
                     <img src="../../images/academics-1.jpg">
@@ -64,7 +80,7 @@
                 </div>
             </div>
         </div>
-        <div class="tab-content" data-content="graduate">
+        <div class="academics__carousel--content">
             <div class="academics__card">
 
                 <div class="academics__card--item">
@@ -89,7 +105,7 @@
                 </div>
             </div>
         </div>
-        <div class="tab-content" data-content="phd">
+        <div class="academics__carousel--content">
             <div class="academics__card">
                 <div class="academics__card--item">
                     <img src="../../images/academics-1.jpg">
@@ -114,7 +130,7 @@
 
             </div>
         </div>
-        <div class="tab-content" data-content="courses">
+        <div class="academics__carousel--content">
             <div class="academics__card">
                 <div class="academics__card--item">
                     <img src="../../images/academics-1.jpg">
@@ -143,24 +159,53 @@
 
 </div>
 <script>
-    console.log("alaloo");
-    const buttons = document.querySelectorAll('.academics__carousel--left button');
-    const contents = document.querySelectorAll('.tab-content');
+    // const buttonsa = document.querySelectorAll('.academics__carousel--left button');
+    // const contenta = document.querySelectorAll('.academics__carousel--content');
+    // const selecta = document.querySelector('.academics__carousel--select select');
 
-    buttons.forEach(btn => {
+    // buttonsa.forEach((btn, index) => {
+    //     btn.addEventListener('click', () => {
+
+    //         buttonsa.forEach(b => b.classList.remove('active'));
+    //         contenta.forEach(c => c.classList.remove('active'));
+
+    //         btn.classList.add('active');
+    //         contenta[index].classList.add('active');
+    //         console.log("keldi aca");
+
+    //     });
+    // });
+    const buttonsa = document.querySelectorAll('.academics__carousel--left button');
+    const contenta = document.querySelectorAll('.academics__carousel--content');
+    const selecta = document.querySelector('.academics__carousel--select select');
+
+    buttonsa.forEach((btn, index) => {
         btn.addEventListener('click', () => {
 
-            buttons.forEach(b => b.classList.remove('active'));
+            buttonsa.forEach(b => b.classList.remove('active'));
+            contenta.forEach(c => c.classList.remove('active'));
+
             btn.classList.add('active');
+            contenta[index].classList.add('active');
 
-            const tab = btn.dataset.tab;
+            // selectni ham index bo'yicha update qilish
+            selecta.value = index;
 
-            contents.forEach(content => {
-                content.classList.toggle(
-                    'active',
-                    content.dataset.content === tab
-                );
-            });
+            console.log("keldi aca");
         });
     });
+
+    /* ===== select uchun event ===== */
+    selecta.addEventListener('change', () => {
+        const index = selecta.value;
+
+        buttonsa.forEach(b => b.classList.remove('active'));
+        contenta.forEach(c => c.classList.remove('active'));
+
+        buttonsa[index].classList.add('active');
+        contenta[index].classList.add('active');
+
+        console.log("select o'zgardi");
+    });
+
 </script>
