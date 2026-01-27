@@ -3,6 +3,14 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
 
+    @include devices(md) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include devices(sm) {
+        grid-template-columns: 1fr;
+    }
+
     &__item {
         border: 1px solid #E9EAEB;
         border-radius: 14px;
@@ -48,6 +56,10 @@
             h3 {
                 @include font500(#000000, 22px);
                 letter-spacing: 0px;
+
+                @include devices(sm) {
+                    font-size: 18px;
+                }
             }
         }
 

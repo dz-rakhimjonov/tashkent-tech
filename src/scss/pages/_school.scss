@@ -2,25 +2,55 @@
     &__wrap {
         margin-top: 20px;
 
+        @include devices(md) {
+            margin-top: 0
+        }
+
         h4 {
             @include font600(#000000, 22px);
             margin-top: 20px;
+
+            @include devices (md) {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+
+            @include devices(sm) {
+                font-size: 18px;
+            }
         }
 
         &--select {
             display: flex;
             justify-content: space-between;
-            align-items: end;
+            align-items: center;
 
             h4 {
                 margin-top: 0;
+            }
+
+            select {
+                @include devices(sm) {
+                    padding: 7px;
+                }
             }
         }
 
         &--con {
             margin-top: 20px;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 16px;
+
+            @include devices(md) {
+                margin-top: 5px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include devices(sm) {
+                grid-template-columns: 1fr;
+            }
 
 
             &-card {
@@ -29,7 +59,6 @@
                 border: 1px solid #E9EAEB;
                 border-radius: 14px;
                 background-color: #FFFFFF;
-                max-width: 320px;
                 position: relative;
                 z-index: 1;
                 overflow: hidden;
@@ -55,6 +84,10 @@
 
                     h5 {
                         @include font500(#000000, 18px);
+
+                        @include devices(sm) {
+                            font-size: 16px;
+                        }
                     }
 
                     &-hr {

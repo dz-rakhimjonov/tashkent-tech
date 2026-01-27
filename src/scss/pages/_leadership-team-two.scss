@@ -4,6 +4,11 @@
         grid-template-columns: 1fr 1fr;
         gap: 16px;
 
+        @include devices(md) {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
         &--card {
             display: flex;
             position: relative;
@@ -11,6 +16,12 @@
             border-radius: 14px;
             background-color: #FFFFFF;
             overflow: hidden;
+
+
+            @include devices(md) {
+
+                max-width: 500px;
+            }
 
             &-tttop {
                 position: absolute;
@@ -154,6 +165,11 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 16px;
+
+        @include devices(md) {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
 
         &--btn {
             position: relative;

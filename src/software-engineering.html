@@ -61,6 +61,23 @@
                         <button>
                             <p>Job Opportunities</p>
                         </button>
+                        <select>
+                            <option value="0">
+                                Course Structure
+                            </option>
+                            <option value="1">
+                                Entry Requirements
+                            </option>
+                            <option value="2">
+                                Graduation Requirements
+                            </option>
+                            <option value="3">
+                                Fees & Funding
+                            </option>
+                            <option value="4">
+                                Job Opportunities
+                            </option>
+                        </select>
                     </div>
                 </div>
                 <div class=" tab-contents">
@@ -101,7 +118,9 @@
         });
         const buttons = document.querySelectorAll('.software-engineering__tab button');
         const contents = document.querySelectorAll('.software-engineering__tab--content');
+        const select = document.querySelector('.software-engineering__tab select');
 
+        /* ===== button click ===== */
         buttons.forEach((btn, index) => {
             btn.addEventListener('click', () => {
 
@@ -110,8 +129,23 @@
 
                 btn.classList.add('active');
                 contents[index].classList.add('active');
+
+                // selectni ham sync qilish
+                select.value = index;
             });
         });
+
+        /* ===== select change ===== */
+        select.addEventListener('change', () => {
+            const index = Number(select.value);
+
+            buttons.forEach(b => b.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+
+            buttons[index].classList.add('active');
+            contents[index].classList.add('active');
+        });
+
 
     </script>
 </body>

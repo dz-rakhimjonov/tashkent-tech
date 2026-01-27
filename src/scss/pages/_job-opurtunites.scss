@@ -4,17 +4,43 @@
     padding: 16px;
     margin-top: 20px;
 
+    @include devices(sm) {
+        padding: 12px;
+    }
+
+    @include devices(xs) {
+        padding: 8px;
+    }
+
     h5 {
         @include font500(#181D27, 20px);
+
+        @include devices(sm) {
+            font-size: 18px;
+        }
     }
 
     p {
         margin-top: 10px;
         @include font400(#252B37, 16px);
 
+        @include devices(sm) {
+            font-size: 14px;
+            line-height: 1.3;
+            margin-top: 5px;
+        }
+
         span {
             display: block;
             margin-top: 30px;
+
+            @include devices (sm) {
+                margin-top: 15px;
+            }
+
+            @include devices (xs) {
+                margin-top: 7px;
+            }
         }
     }
 }

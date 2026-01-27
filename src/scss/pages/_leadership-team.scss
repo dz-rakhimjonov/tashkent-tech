@@ -4,6 +4,10 @@
         grid-template-columns: 1fr 1fr;
         gap: 16px;
 
+        @include devices(md) {
+            grid-template-columns: 1fr;
+        }
+
         &--card {
             display: flex;
             position: relative;
@@ -154,6 +158,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 16px;
+
+        @include devices(md) {
+            grid-template-columns: 1fr;
+        }
 
         &--btn {
             background-color: #F5F5F5 !important;

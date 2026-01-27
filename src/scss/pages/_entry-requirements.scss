@@ -5,8 +5,16 @@
     margin-top: 20px;
     padding: 16px;
 
+    @include devices(sm) {
+        padding: 10px;
+    }
+
     &__info {
         margin-bottom: 30px;
+
+        @include devices(sm) {
+            margin-bottom: 10px;
+        }
 
         h3 {
             @include font500(#181D27, 20px);
@@ -16,10 +24,23 @@
             li {
                 @include font400(#414651, 16px);
 
+                @include devices(xs) {
+                    font-size: 14px;
+                }
+
                 span {
                     @include font500(#181D27, 16px);
+
+                    @include devices(xs) {
+                        font-size: 14px;
+                    }
+
                 }
             }
         }
+    }
+
+    &__table {
+        overflow-x: auto;
     }
 }

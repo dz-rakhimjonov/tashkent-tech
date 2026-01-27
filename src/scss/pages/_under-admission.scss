@@ -5,6 +5,14 @@
         gap: 16px;
         margin-top: 16px;
 
+        @include devices(sm) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include devices(xs) {
+            grid-template-columns: 1fr;
+        }
+
         &--card {
             padding: 16px;
             position: relative;
@@ -12,13 +20,31 @@
             border-radius: 8px;
             background-color: #FFFFFF;
 
+            @include devices(sm) {
+                padding: 12px
+            }
+
+            @include devices(xs) {
+                padding: 10px
+            }
+
             p {
                 @include font500(#E54519, 20px);
+
+                @include devices(md) {
+                    font-size: 18px;
+                }
             }
 
             span {
                 margin-top: 8px;
+                display: block;
                 @include font400(#414651, 16px);
+
+                @include devices(md) {
+                    font-size: 14px;
+                    line-height: 1;
+                }
             }
 
             &-hr {
@@ -53,6 +79,10 @@
                 justify-content: end;
                 margin-top: 15px;
 
+                @include devices(xs) {
+                    margin-top: 10px;
+                }
+
                 button {
                     padding: 8px 16px;
                     display: flex;
@@ -60,6 +90,11 @@
                     background-color: #F5F5F5;
                     border-radius: 8px;
                     border: none;
+
+                    @include devices(xs) {
+                        padding: 5px 10px;
+                        font-size: 14px;
+                    }
                 }
             }
         }

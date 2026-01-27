@@ -1,6 +1,17 @@
 .programs {
     margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
+
+    @include devices(md) {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 10px;
+    }
+
+    @include devices(sm) {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 0px;
+    }
 }

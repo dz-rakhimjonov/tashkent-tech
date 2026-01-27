@@ -9,6 +9,10 @@
             gap: 16px;
             margin-top: 16px;
 
+            @include devices(xs) {
+                gap: 6px;
+            }
+
             &-item {
                 border-radius: 15px;
                 width: 186px;
@@ -18,6 +22,24 @@
                 justify-content: center;
                 background-color: #F5F5F5;
                 border: 1px solid #E9EAEB;
+
+                @include devices(sm) {
+                    width: 140px;
+                    height: 80px;
+
+                    img {
+                        height: 60px;
+                    }
+                }
+
+                @include devices(xs) {
+                    width: 100px;
+                    height: 60px;
+
+                    img {
+                        height: 40px;
+                    }
+                }
             }
         }
     }

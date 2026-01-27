@@ -3,6 +3,10 @@
     grid-template-columns: 1fr 1fr;
     gap: 16px;
 
+    @include devices(md) {
+        grid-template-columns: 1fr;
+    }
+
     &__card {
         position: relative;
         overflow: hidden;
@@ -33,8 +37,13 @@
 
             img {
                 width: 246px;
-                height: 260px;
+                height: auto;
+                max-height: 260px;
                 border-radius: 8px;
+
+                @include devices(xs) {
+                    width: 170px;
+                }
             }
 
             &-before {
@@ -46,10 +55,15 @@
                     position: absolute;
                     left: -8px;
                     width: 6px;
-                    height: 260px;
+                    height: 100%;
                     background: linear-gradient(to bottom, #E54519, #FF6A2B);
                     border-top-right-radius: 8px;
                     border-bottom-right-radius: 8px;
+
+                    @include devices(xs) {
+                        height: 100%;
+                        left: -6px;
+                    }
                 }
 
                 &-circle {
@@ -65,8 +79,19 @@
                     top: 100px;
                     background-color: #FFFFFF;
 
+                    @include devices(xs) {
+                        top: 70px;
+                        width: 30px;
+                        height: 30px;
+                        left: -18px;
+                    }
+
                     img {
-                        width: 25px;
+                        width: 30px;
+
+                        @include devices(xs) {
+                            width: 24px;
+                        }
                     }
                 }
             }
@@ -81,6 +106,10 @@
             &-top {
                 p {
                     @include font600(#181D27, 22px);
+
+                    @include devices(xs) {
+                        font-size: 18px;
+                    }
                 }
 
                 &-element {
@@ -98,13 +127,18 @@
                     }
 
                     p {
-                        @include font400(#181D27, 14px)
+                        @include font400(#181D27, 14px);
+
+                        @include devices(xs) {
+                            font-size: 12px;
+                            line-height: 1
+                        }
                     }
                 }
             }
 
             &-bottom {
-                p {
+                div {
                     @include font400(#181D27, 14px);
                     display: flex;
                     align-items: center;

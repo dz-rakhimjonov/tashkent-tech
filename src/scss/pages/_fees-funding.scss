@@ -8,8 +8,17 @@
         padding: 16px;
         border-radius: 14px;
 
+        @include devices (sm) {
+            padding: 12px
+        }
+
         h4 {
             @include font500(#181D27, 20px);
+
+            @include devices (sm) {
+                font-size: 18px;
+
+            }
         }
 
         &--wrap {
@@ -18,6 +27,14 @@
             gap: 16px;
             border-radius: 8px;
 
+            @include devices (sm) {
+                margin-top: 10px;
+            }
+
+            @include devices (xs) {
+                flex-direction: column;
+                gap: 10px;
+            }
 
             &-card {
                 position: relative;
@@ -26,6 +43,14 @@
                 border: 1px solid #E9EAEB;
                 border-radius: 8px;
                 max-width: 400px;
+
+                @include devices (sm) {
+                    padding: 12px;
+                }
+
+                @include devices (xs) {
+                    max-width: 100%;
+                }
 
                 &-tt {
                     position: absolute;
@@ -45,6 +70,10 @@
                     position: relative;
                     z-index: 3;
                     margin-bottom: 15px;
+
+                    @include devices (sm) {
+                        font-size: 18px;
+                    }
                 }
 
                 &-hr {
@@ -65,6 +94,12 @@
                     span {
                         color: #E54519;
                     }
+
+                    @include devices (sm) {
+                        font-size: 18px;
+                        margin-top: 10px;
+                        line-height: 1.1;
+                    }
                 }
             }
         }
@@ -77,19 +112,43 @@
         border-radius: 14px;
         margin-top: 20px;
 
+        @include devices (sm) {
+            padding: 12px;
+            margin-top: 10px
+        }
+
         h4 {
             @include font500(#181D27, 20px);
+
+            @include devices (sm) {
+                font-size: 18px;
+            }
         }
 
         p {
             margin-top: 10px;
-            @include font400(#252B37, 16px)
+            @include font400(#252B37, 16px);
+
+            @include devices (sm) {
+                font-size: 14px;
+                line-height: 1.1;
+                margin-top: 5px;
+            }
         }
 
         &--wrap {
             margin-top: 30px;
             display: flex;
             gap: 16px;
+
+            @include devices (sm) {
+                margin-top: 10px;
+            }
+
+            @include devices (xs) {
+                flex-direction: column;
+                gap: 10px;
+            }
 
             &-card {
                 padding: 16px;
@@ -99,14 +158,32 @@
                 border-radius: 8px;
                 max-width: 370px;
 
+                @include devices (sm) {
+                    padding: 12px;
+                }
+
+                @include devices (xs) {
+                    max-width: 100%;
+                }
+
                 h6 {
-                    @include font500(#E54519, 20px)
+                    @include font500(#E54519, 20px);
+
+                    @include devices (sm) {
+                        font-size: 18px;
+                    }
                 }
 
                 p {
                     @include font400(#414651, 16px);
                     margin-top: 8px;
                     margin-bottom: 15px;
+
+                    @include devices (sm) {
+                        font-size: 14px;
+                        line-height: 1.1;
+                        margin-top: 5px;
+                    }
                 }
 
                 &-img {
@@ -114,11 +191,20 @@
                     display: flex;
                     justify-content: end;
 
+                    @include devices (sm) {
+                        margin-top: 10px;
+                    }
+
                     button {
                         border-radius: 8px;
                         background-color: #F5F5F5;
                         padding: 8px 16px;
                         border: none;
+
+                        @include devices (sm) {
+                            padding: 6px 12px;
+                            font-size: 14px;
+                        }
                     }
                 }
 

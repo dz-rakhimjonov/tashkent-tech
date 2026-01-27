@@ -1,13 +1,25 @@
 .undergraduate {
     &__engineering {
         margin-top: 40px;
+
+        @include devices(sm) {
+            margin-top: 10px;
+        }
     }
 
     &__natural {
         margin-top: 40px;
+
+        @include devices(sm) {
+            margin-top: 10px;
+        }
     }
 
     &__management {
         margin-top: 40px;
+
+        @include devices(sm) {
+            margin-top: 10px;
+        }
     }
 }

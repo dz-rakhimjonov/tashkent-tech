@@ -3,6 +3,10 @@
         display: flex;
         gap: 16px;
 
+        @include devices(sm) {
+            flex-direction: column;
+        }
+
         .text-group {
             border: 1px solid #E9EAEB;
         }
@@ -12,10 +16,20 @@
             height: 372px;
             border-radius: 8px;
             flex-shrink: 0;
+            overflow: hidden;
+
+            @include devices(sm) {
+                width: 100%;
+                height: 300px;
+            }
 
             img {
                 width: 100%;
                 height: 100%;
+
+                @include devices(sm) {
+                    object-fit: cover;
+                }
             }
         }
     }
@@ -28,6 +42,10 @@
         margin-top: 16px;
         gap: 16px;
 
+        @include devices(sm) {
+            grid-template-columns: 1fr 1fr;
+        }
+
         &--item {
             padding: 16px;
             display: flex;
@@ -36,6 +54,11 @@
             align-items: center;
             background-color: #FFFFFF;
             border-radius: 14px;
+
+            @include devices(md) {
+                padding: 10px;
+                gap: 8px;
+            }
 
             &-img {
                 width: 58px;
@@ -47,6 +70,11 @@
                 align-items: center;
                 justify-content: center;
 
+                @include devices(md) {
+                    width: 48px;
+                    height: 48px;
+                }
+
                 img {
                     width: 28px;
                 }
@@ -55,6 +83,10 @@
             &-text {
                 margin-left: 16px;
 
+                @include devices(md) {
+                    margin-left: 0px
+                }
+
                 p {
                     @include font500(#000000, 20px)
                 }
@@ -62,6 +94,13 @@
                 span {
                     @include font500(#00000099, 14px);
                     margin-top: 6px;
+
+                    @include devices(md) {
+                        font-size: 12px;
+                    }
+
+                    line-height: 1;
+
                 }
             }
         }
@@ -70,8 +109,13 @@
     &__books {
         margin-top: 30px;
 
+        @include devices(sm) {
+            margin-top: 10px;
+        }
+
         h5 {
-            @include font600(#000000, 22px)
+            @include font600(#000000, 22px);
+
         }
 
         &--wrapper {
@@ -79,6 +123,15 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 16px;
+
+            @include devices(lg) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include devices(sm) {
+                grid-template-columns: 1fr;
+                margin-top: 10px;
+            }
 
             &-item {
                 border-radius: 14px;
@@ -139,18 +192,35 @@
         border-radius: 14px;
         background-color: #FFFFFF;
         border: 1px solid #E9EAEB;
+        overflow-x: auto;
 
         &--top {
             display: flex;
             justify-content: space-between;
 
+            h4 {
+                @include devices(sm) {
+                    font-size: 16px;
+                }
+            }
+
             &-right {
                 display: flex;
+                align-items: flex-start;
 
                 &-date {
                     border-radius: 8px;
                     margin-right: 16px;
                     background-color: #FFFFFF;
+
+                    @include devices(sm) {
+                        width: 150px;
+
+                    }
+
+                    input {
+                        padding: 5px;
+                    }
                 }
             }
 
@@ -165,6 +235,7 @@
         }
 
         &--img {
+            min-width: 1000px;
             margin-top: 30px;
         }
     }

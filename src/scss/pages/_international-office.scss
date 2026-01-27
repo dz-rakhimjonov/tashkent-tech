@@ -1,60 +1,109 @@
 .inter-office {
+
     &__contact {
         margin-top: 20px;
 
         &--bottom {
             margin-top: 16px;
             display: flex;
-            gap: 200px;
+            justify-content: space-between;
 
-            &-item {
-                display: flex;
-                align-items: center;
-                gap: 9px;
-
-                &-img {
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 50%;
-                    flex-shrink: 0;
-                    background-color: #E545191A;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    i {
-                        color: #E54519;
-                        font-size: 26px;
-                    }
-                }
-            }
-
-            &-text {
-                h5 {
-                    @include font500(#000000, 16px);
-                }
-
-                #phone-number {
-                    margin-top: 3px;
-                    @include font400(#414651, 20px);
-                    border: 2px solid red !important;
-                }
+            @include devices(sm) {
+                flex-direction: column;
+                gap: 13px;
             }
 
             &-left {
                 display: flex;
                 flex-direction: column;
-                gap: 25px;
+                gap: 13px;
                 width: 500px;
+
+                &-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 9px;
+
+                    &-img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        flex-shrink: 0;
+                        background-color: #E545191A;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        i {
+                            color: #E54519;
+                            font-size: 26px;
+                        }
+                    }
+
+                    &-text {
+                        h5 {
+                            @include font500(#000000, 16px);
+
+                            @include devices(xs) {
+                                font-size: 16px;
+                            }
+                        }
+
+                        .phone-number {
+                            margin-top: 3px;
+                            @include font400(#414651, 14px);
+                            line-height: 1;
+
+                        }
+                    }
+                }
             }
 
             &-right {
                 display: flex;
                 flex-direction: column;
-                gap: 12px;
+                gap: 13px;
+
+                &-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 9px;
+
+                    &-img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        flex-shrink: 0;
+                        background-color: #E545191A;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        i {
+                            color: #E54519;
+                            font-size: 26px;
+                        }
+                    }
+
+                    &-text {
+                        h5 {
+                            @include font500(#000000, 16px);
+
+                            @include devices(xs) {
+                                font-size: 16px;
+                            }
+                        }
+
+                        .phone-number {
+                            margin-top: 3px;
+                            @include font400(#414651, 14px);
+                            line-height: 1;
+
+                        }
+                    }
+                }
             }
         }
-
     }
 
     &__map {

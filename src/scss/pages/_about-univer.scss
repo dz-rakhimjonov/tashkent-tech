@@ -20,23 +20,40 @@
         h3 {
             position: relative;
             z-index: 3;
-            @include font600(#000000, 22px)
+            @include font600(#000000, 22px);
+
+            @include devices(md) {
+                font-size: 20px;
+            }
         }
 
         p {
             position: relative;
             z-index: 3;
             margin-top: 10px;
-            @include font400(#000000, 16px)
+            @include font400(#000000, 16px);
+
+            @include devices(md) {
+                font-size: 14px;
+            }
+
+            @include devices(xs) {
+                line-height: 1;
+                margin-top: 5px;
+            }
         }
 
         &--card {
             position: relative;
             z-index: 3;
             margin-top: 20px;
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 16px;
 
+            @include devices(sm) {
+                grid-template-columns: 1fr 1fr;
+            }
 
             &-item.student {
                 background: linear-gradient(to right, #E54519CC, #FFA288);
@@ -72,21 +89,33 @@
 
 
             &-item {
-                width: 230px;
+
                 padding: 15px;
                 display: flex;
                 gap: 12px;
-
                 border-radius: 14px;
+
+                @include devices(md) {
+
+                    padding: 10px;
+                }
 
                 &-img {
                     padding: 15px;
                     border-radius: 8px;
 
+                    @include devices(md) {
+                        padding: 10px;
+                    }
 
                     img {
                         width: 40px;
                         height: 40px;
+
+                        @include devices(md) {
+                            width: 32px;
+                            height: 32px;
+                        }
                     }
                 }
 
@@ -122,6 +151,10 @@
         display: flex;
         gap: 16px;
 
+        @include devices(sm) {
+            flex-direction: column;
+        }
+
         &--item {
             border-radius: 14px;
             background-color: #F4D2BA4D;
@@ -129,24 +162,43 @@
             padding: 20px;
             z-index: 1;
 
+            @include devices(sm) {
+                padding: 15px;
+            }
+
             &-tt {
                 position: absolute;
                 top: 0;
                 right: 0;
                 z-index: 2;
+
+                @include devices(sm) {
+                    img {
+                        width: 80px;
+                    }
+                }
             }
 
             h4 {
                 position: relative;
                 z-index: 3;
-                @include font600(#000000, 24px)
+                @include font600(#000000, 24px);
+
+                @include devices(sm) {
+                    font-size: 20px;
+                }
             }
 
             p {
                 margin-top: 10px;
                 position: relative;
                 z-index: 3;
-                @include font400(#414651, 16px)
+                @include font400(#414651, 16px);
+
+                @include devices(sm) {
+                    font-size: 14px;
+                    line-height: 1;
+                }
             }
         }
     }
@@ -154,6 +206,10 @@
     &__values {
         margin-top: 40px;
         text-align: center;
+
+        @include devices(md) {
+            margin-top: 20px;
+        }
 
         h4 {
             @include font600(#000000, 22px);
@@ -164,6 +220,14 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 16px;
+
+            @include devices(md) {
+                margin-top: 10px;
+            }
+
+            @include devices(xs) {
+                grid-template-columns: 1fr;
+            }
         }
 
         &--bottom {
@@ -171,6 +235,14 @@
             display: grid;
             gap: 16px;
             grid-template-columns: 1fr 1fr 1fr;
+
+            @include devices(sm) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include devices(xs) {
+                grid-template-columns: 1fr;
+            }
         }
     }
 
@@ -179,6 +251,11 @@
         border-radius: 14px;
         padding: 20px;
         background-color: #FFFFFF;
+        overflow: hidden;
+
+        @include devices(md) {
+            padding: 15px;
+        }
 
         &--top {
             display: flex;
@@ -194,11 +271,25 @@
                 border-radius: 50%;
                 flex-shrink: 0;
                 background-color: #E54519;
+
+                @include devices(xs) {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
             }
 
             h5 {
                 text-align: start;
                 @include font500(#000000, 22px);
+
+                @include devices(xs) {
+                    font-size: 18px;
+                }
             }
         }
 
@@ -208,7 +299,13 @@
             z-index: 1;
             text-align: start;
             margin-left: 52px;
-            @include font400(#414651, 16px)
+            @include font400(#414651, 16px);
+
+            @include devices(md) {
+                font-size: 14px;
+                margin-top: 0px;
+                line-height: 1;
+            }
         }
 
         &--back {
@@ -216,6 +313,12 @@
             right: 0;
             bottom: 0;
             z-index: 0;
+
+            @include devices(md) {
+                img {
+                    width: 70px;
+                }
+            }
         }
     }
 
@@ -228,6 +331,10 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 16px;
+
+            @include devices(sm) {
+                grid-template-columns: 1fr;
+            }
         }
 
         &--bottom {
@@ -235,6 +342,10 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 16px;
+
+            @include devices(sm) {
+                grid-template-columns: 1fr;
+            }
         }
     }
 }

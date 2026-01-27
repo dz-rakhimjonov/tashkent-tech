@@ -283,11 +283,23 @@ section {
     overflow: hidden;
     border: 1px solid #E9EAEB;
 
+    @include devices(sm) {
+        padding: 10px;
+    }
+
     h4 {
         @include font600(#181D27, 22px);
         margin-bottom: 10px;
         position: relative;
         z-index: 3;
+
+        @include devices(sm) {
+            font-size: 20px;
+        }
+
+        @include devices(xs) {
+            font-size: 18px;
+        }
     }
 
     .hr {
@@ -314,6 +326,12 @@ section {
         span {
             margin-top: 15px;
             display: block;
+        }
+
+        @include devices(sm) {
+            font-size: 14px;
+            line-height: 1;
+            margin-top: 6px;
         }
     }
 
@@ -361,6 +379,10 @@ section {
         padding: 6px 15px;
         border: none;
         background-color: #F5F5F5;
+
+        @include devices(md) {
+            padding: 4px 10px;
+        }
     }
 
     .active {
@@ -376,12 +398,26 @@ section {
 .school-card {
     h4 {
         @include font600(#000000, 22px);
+
+        @include devices(sm) {
+            font-size: 18px;
+        }
     }
 
     .wrapper {
         margin-top: 20px;
         display: flex;
         gap: 16px;
+
+        @include devices(sm) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 10px;
+        }
+
+        @include devices(xs) {
+            grid-template-columns: 1fr;
+        }
 
         .item {
             border: 1px solid #E9EAEB;
@@ -392,16 +428,34 @@ section {
             z-index: 1;
             overflow: hidden;
 
+            @include devices(sm) {
+                padding: 10px;
+            }
+
             .top {
+                // width: 280px;
+                width: 100%;
+                height: 225px;
+
+                @include devices(sm) {
+                    height: 200px;
+                }
+
                 img {
-                    width: 280px;
-                    height: 225px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 8px;
                 }
             }
 
             p {
                 margin-top: 10px;
                 @include font600(#181D27, 20px);
+
+                @include devices(sm) {
+                    font-size: 16px;
+                }
             }
 
             .hr {
@@ -421,6 +475,10 @@ section {
                 justify-content: end;
                 margin-top: 16px;
                 padding: 2;
+
+                @include devices(sm) {
+                    margin-top: 6px
+                }
 
                 button {
                     span {
@@ -447,12 +505,14 @@ section {
             }
         }
     }
+
 }
 
 .table-structura {
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid #E9EAEB;
+    min-width: 1000px;
 
     .top {
         display: flex;
@@ -607,5 +667,6 @@ section {
     justify-content: center;
     align-items: center;
 }
+
 
 @import './components';

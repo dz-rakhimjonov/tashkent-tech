@@ -1,21 +1,69 @@
 .live-statistics {
 
+
     &__tab {
         margin-bottom: 20px;
+
+        @include devices(md) {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        select {
+            display: none;
+            background-color: transparent;
+
+            @include devices(md) {
+                display: block;
+                width: 100%;
+            }
+
+            @include devices(xs) {
+                padding: 5px 10px;
+                font-size: 16px;
+            }
+        }
+
+        button {
+            @include devices(md) {
+                display: none;
+            }
+        }
     }
 
     &__table {
         margin-top: 20px;
         margin-bottom: 20px;
-    }
+        padding-bottom: 10px;
+        overflow-x: auto;
 
-
-
-    ul {
-        li {
-            margin-top: 10px;
+        &--wrap {
+            min-width: 1000px;
         }
     }
+
+
+
+    span {
+        @include font500(#252B37, 18px);
+    }
+
+    li {
+        margin-top: 10px;
+
+        @include font400(#252B37, 18px);
+
+        @include devices(md) {
+            line-height: 1.2;
+        }
+
+        @include devices(sm) {
+            line-height: 1;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    }
+
 
     &__content {
         display: none;

@@ -3,6 +3,11 @@
     align-items: flex-start;
     gap: 16px;
 
+    @include devices(md) {
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__info {
         position: relative;
         background-color: #FFFFFF;
@@ -11,6 +16,10 @@
         border: 1px solid #E9EAEB;
         border-radius: 14px;
         overflow: hidden;
+
+        @include devices(md) {
+            order: 2;
+        }
 
         &--tttop {
             position: absolute;
@@ -23,7 +32,15 @@
         h3 {
             position: relative;
             z-index: 3;
-            @include font600(#000000, 22px)
+            @include font600(#000000, 22px);
+
+            @include devices(sm) {
+                font-size: 18px;
+            }
+
+            @include devices(xs) {
+                font-size: 16px;
+            }
         }
 
         &--hr {
@@ -47,7 +64,15 @@
             gap: 30px;
 
             p {
-                @include font400(#252B37, 16px)
+                @include font400(#252B37, 16px);
+
+                @include devices(sm) {
+                    font-size: 14px;
+                }
+
+                @include devices(xs) {
+                    line-height: 1;
+                }
             }
         }
 
@@ -67,6 +92,10 @@
         border-radius: 14px;
         padding: 15px;
         border: 1px solid #E9EAEB;
+
+        @include devices(md) {
+            order: 1;
+        }
 
         &--images {
             width: 100%;

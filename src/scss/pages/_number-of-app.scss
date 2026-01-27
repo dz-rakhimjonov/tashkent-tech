@@ -1,5 +1,14 @@
 .number-of {
     margin-top: 24px;
+    overflow-x: auto;
+
+    @include devices(sm) {
+        margin-top: 0px;
+    }
+
+    .text-group {
+        min-width: 1000px;
+    }
 
     &__img {
         width: 100%;
@@ -13,5 +22,11 @@
 
     p {
         margin-top: 20px;
+        @include font400(#252B37, 16px);
+
+        @include devices(sm) {
+            font-size: 14px;
+            line-height: 1.1;
+        }
     }
 }

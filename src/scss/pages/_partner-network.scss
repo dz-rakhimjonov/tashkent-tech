@@ -10,13 +10,15 @@
     width: 100%;
     overflow: hidden;
     margin-top: 16px;
-
+    overflow-x: auto;
 
     &__title {
         display: flex;
+        min-width: 1000px;
 
         &--item {
             width: 100%;
+
             padding: 16px;
             text-align: center;
             background: linear-gradient(to right, #444CE7E5, #8098F9E5);
@@ -31,6 +33,7 @@
     &__body {
         display: flex;
         width: 100%;
+        min-width: 1000px;
 
         &--element {
             width: 50%;

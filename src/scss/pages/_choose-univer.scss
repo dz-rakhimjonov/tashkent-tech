@@ -7,6 +7,14 @@
         background-color: #FFFFFF;
         border-radius: 14px;
 
+        @include devices (sm) {
+            padding: 12px;
+        }
+
+        @include devices (xs) {
+            padding: 10px;
+        }
+
         &--tttop {
             position: absolute;
             right: -50px;
@@ -23,6 +31,15 @@
             @include font600(#181D27, 22px);
             position: relative;
             z-index: 3;
+
+            @include devices(sm) {
+                font-size: 20px;
+                margin-top: 0;
+            }
+
+            @include devices(xs) {
+                font-size: 18px;
+            }
         }
 
         &--hr {
@@ -49,6 +66,15 @@
                 position: relative;
                 z-index: 3;
 
+                @include devices(sm) {
+                    line-height: 1.1;
+                }
+
+                @include devices (xs) {
+                    font-size: 14px;
+                    line-height: 1;
+                }
+
                 span {
                     display: block;
                     font-weight: 500;
@@ -62,6 +88,15 @@
             display: flex;
             gap: 16px;
 
+            @include devices (md) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include devices (xs) {
+                grid-template-columns: 1fr;
+            }
+
             &-item {
                 &-head {
                     background: linear-gradient(to right, #444CE7E5, #8098F9E5);
@@ -71,9 +106,17 @@
                     z-index: 0;
                     margin-bottom: 4px;
 
+                    @include devices (sm) {
+                        padding: 10px;
+                    }
+
                     p {
                         @include font500(#FFFFFF, 20px);
                         margin-top: 0;
+
+                        @include devices (sm) {
+                            font-size: 18px;
+                        }
                     }
 
                     &-dropdown {
@@ -105,9 +148,17 @@
                     border-radius: 14px;
                     margin-top: 4px;
 
+                    @include devices (sm) {
+                        padding: 10px
+                    }
+
                     p {
                         @include font400(#181D27, 18px);
                         margin: 0;
+
+                        @include devices (sm) {
+                            font-size: 16px;
+                        }
                     }
                 }
             }
@@ -115,6 +166,17 @@
 
         &--description {
             margin-top: 20px;
+
+            p {
+                @include devices(sm) {
+                    line-height: 1.1;
+                }
+
+                @include devices (xs) {
+                    font-size: 14px;
+                    line-height: 1;
+                }
+            }
         }
 
         &--ttbottom {
@@ -141,11 +203,14 @@
         gap: 40px;
         align-items: stretch;
         padding-left: 65px;
+        overflow-x: auto;
 
 
 
         &--info {
             width: 100%;
+            min-width: 1000px;
+            // overflow-x: auto;
 
             &-wrap:last-child::after {
                 display: none;
@@ -158,6 +223,7 @@
                 width: 100%;
                 position: relative;
                 padding-bottom: 20px;
+
 
                 &::before {
                     content: "1";
@@ -208,6 +274,14 @@
                         top: 50%;
                         transform: translateY(-50%);
                         background-color: #FFFFFF;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        i {
+                            transform: rotate(-90deg);
+                            font-size: 18px;
+                        }
                     }
                 }
             }
@@ -222,6 +296,10 @@
         position: relative;
         z-index: 1;
         overflow: hidden;
+
+        @include devices (sm) {
+            padding: 12px;
+        }
 
         &--tttop {
             position: absolute;
@@ -252,6 +330,14 @@
             margin-top: 0;
             position: relative;
             z-index: 3;
+
+            @include devices(sm) {
+                font-size: 20px;
+            }
+
+            @include devices(xs) {
+                font-size: 18px;
+            }
         }
 
         &--hr {
@@ -266,6 +352,10 @@
                     rgba(229, 69, 25, 0.2) 80%,
                     transparent 100%);
             margin-top: 10px;
+
+            @include devices(sm) {
+                margin-top: 7px;
+            }
         }
 
         &--text {
@@ -273,11 +363,29 @@
             z-index: 3;
             margin-top: 10px;
 
+            @include devices (sm) {
+                margin-top: 7px
+            }
+
             p {
                 @include font400(#252B37, 16px);
 
+                @include devices(sm) {
+                    line-height: 1.1;
+                    font-size: 14px
+                }
+
+                @include devices (xs) {
+                    font-size: 14px;
+                    line-height: 1;
+                }
+
                 span {
                     @include font500(#252B37, 18px);
+
+                    @include devices(sm) {
+                        font-size: 16px;
+                    }
                 }
             }
         }
@@ -300,6 +408,17 @@
                 i {
                     font-size: 20px;
                     color: #FFFFFF;
+                }
+
+                @include devices(sm) {
+                    font-size: 14px;
+                    padding: 8px 12px;
+                    margin-top: 14px;
+                }
+
+                @include devices(xs) {
+                    font-size: 12px;
+                    margin-top: 7px;
                 }
             }
         }

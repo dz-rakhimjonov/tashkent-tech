@@ -13,6 +13,40 @@
         z-index: 3;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+
+        &--tab {
+            p {
+                @include devices(sm) {
+                    font-size: 14px;
+
+                }
+            }
+
+            button {
+                @include devices(xs) {
+                    display: none;
+                }
+            }
+
+            select {
+                display: none;
+                // width: 200px;
+                // height: 20px;
+                font-size: 14px;
+                border: 1px solid #D5D7DA;
+                border-radius: 8px;
+                overflow: hidden;
+                background-color: #FFFFFF;
+                padding: 6px 8px;
+                align-items: center;
+                justify-content: center;
+
+                @include devices(xs) {
+                    display: flex;
+                }
+            }
+        }
 
         &--select {
             width: 200px;
@@ -20,6 +54,14 @@
             border: 1px solid #D5D7DA;
             border-radius: 8px;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include devices(sm) {
+                width: 120px;
+                height: 35px;
+            }
 
             select {
                 background-color: #FFFFFF;
@@ -32,10 +74,18 @@
     }
 
     &__wrap {
-        display: grid;
+        display: none;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 16px;
         margin-top: 20px;
+
+        @include devices(md) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include devices(sm) {
+            grid-template-columns: 1fr;
+        }
 
         &--card {
             display: flex;
@@ -68,6 +118,10 @@
 
                 p {
                     @include font600(#FFFFFF, 20px);
+
+                    @include devices(xs) {
+                        font-size: 16px;
+                    }
                 }
             }
 
@@ -102,6 +156,10 @@
                 }
             }
         }
+    }
+
+    &__wrap.active {
+        display: grid;
     }
 
     &__tt {

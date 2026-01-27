@@ -3,11 +3,22 @@
         &--contact {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+
+            @include devices(xs) {
+                gap: 10px;
+            }
 
             &-icon {
                 display: flex;
-                gap: 30px;
+                gap: 20px;
+                flex-wrap: wrap;
 
+                @include devices(xs) {
+                    gap: 10px;
+                }
 
                 p {
                     @include font400(#000000, 16px);
@@ -23,9 +34,14 @@
             }
 
             &-link {
-                margin-left: 44px;
+                // margin-left: 44px;
                 display: flex;
-                gap: 10px;
+                gap: 7px;
+                align-items: center;
+
+                // @include devices(xs) {
+                //     margin-top: 10px;
+                // }
 
                 i {
                     font-size: 24px;
@@ -38,6 +54,14 @@
 
         &--body {
             margin-top: 30px;
+
+            @include devices(md) {
+                margin-top: 15px;
+            }
+
+            @include devices(xs) {
+                margin-top: 5px;
+            }
         }
     }
 
@@ -49,6 +73,12 @@
         position: sticky;
         top: calc(10px + var(--height-header) + 16px);
         border: 1px solid #E9EAEB;
+
+        @include devices(md) {
+            position: relative;
+            top: 0px;
+
+        }
 
         &--top {
             flex-shrink: 0;

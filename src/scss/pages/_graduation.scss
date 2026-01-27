@@ -5,12 +5,36 @@
     padding: 16px;
     margin-top: 20px;
 
+    @include devices(sm) {
+        padding: 12px;
+        margin-top: 10px
+    }
+
     h4 {
-        @include font500(#181D27, 20px)
+        @include font500(#181D27, 20px);
+
+        @include devices(xs) {
+            font-size: 16px;
+        }
     }
 
     p {
         @include font500(#181D27, 16px);
         margin-top: 10px;
+
+        @include devices(xs) {
+            font-size: 14px;
+        }
+    }
+
+    ol {
+        li {
+            @include font500(#252B37, 16px);
+
+            @include devices(xs) {
+                font-size: 14px;
+                line-height: 1.1;
+            }
+        }
     }
 }

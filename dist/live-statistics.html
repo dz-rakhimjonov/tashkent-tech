@@ -215,11 +215,11 @@
                             </a>
                         </li>
 
-                        <li class="header__submenu-item">
+                        <!-- <li class="header__submenu-item">
                             <a href="graduate-programs.html" class="header__submenu-link">
                                 Software engineering 2
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </li>
                 <li class="header__menu-item header__menu-item--dropdown">
@@ -590,6 +590,23 @@
                     <button>
                         <p>State Grants and Tuition-Fee Basis</p>
                     </button>
+                    <select>
+                        <option value="0">
+                            Live Statistics Overview
+                        </option>
+                        <option value="1">
+                            Schools
+                        </option>
+                        <option value="2">
+                            Programs
+                        </option>
+                        <option value="3">
+                            Application, Quota, Reserved
+                        </option>
+                        <option value="4">
+                            State Grants and Tuition-Fee Basis
+                        </option>
+                    </select>
                 </div>
                 <div class="tab-contents">
                     <div class="live-statistics__content active">
@@ -646,68 +663,70 @@
         </li>
     </ul>
     </p>
-    <div class="live-statistics__table table-structura">
-        <div class="section">
-            <p>Rank Group (for each field of study)
-            </p>
-            <p>State Grant Quota (relative to the total admission quota for each field of study)
-            </p>
-            <p>State Grant Funding per Applicant
-            </p>
-        </div>
-        <div class="body">
-            <div class="element">
-
-                <div class="item black">
-                    <p>
-                        Group 1
-                    </p>
-                </div>
-                <div class="item">
-                    <p>
-                        Group 2
-                    </p>
-                </div>
-                <div class="item black">
-                    <p>
-                        Group 3
-                    </p>
-                </div>
+    <div class="live-statistics__table">
+        <div class="live-statistics__table--wrap table-structura">
+            <div class="section">
+                <p>Rank Group (for each field of study)
+                </p>
+                <p>State Grant Quota (relative to the total admission quota for each field of study)
+                </p>
+                <p>State Grant Funding per Applicant
+                </p>
             </div>
-            <div class="element">
+            <div class="body">
+                <div class="element">
 
-                <div class="item black">
-                    <p>
-                        Group 1
-                    </p>
+                    <div class="item black">
+                        <p>
+                            Group 1
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p>
+                            Group 2
+                        </p>
+                    </div>
+                    <div class="item black">
+                        <p>
+                            Group 3
+                        </p>
+                    </div>
                 </div>
-                <div class="item">
-                    <p>
-                        Group 2
-                    </p>
-                </div>
-                <div class="item black">
-                    <p>
-                        Group 3
-                    </p>
-                </div>
-            </div>
-            <div class="element">
+                <div class="element">
 
-                <div class="item black">
-                    <p>
-                        Group 1
-                    </p>
+                    <div class="item black">
+                        <p>
+                            Group 1
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p>
+                            Group 2
+                        </p>
+                    </div>
+                    <div class="item black">
+                        <p>
+                            Group 3
+                        </p>
+                    </div>
                 </div>
-                <div class="item">
-                    <p>
-                        Group 2
-                    </p>
-                </div>
-                <div class="item black">
-                    <p>
-                        Group 3
-                    </p>
+                <div class="element">
+
+                    <div class="item black">
+                        <p>
+                            Group 1
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p>
+                            Group 2
+                        </p>
+                    </div>
+                    <div class="item black">
+                        <p>
+                            Group 3
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1052,7 +1071,6 @@
             </div>
             <div class="body">
                 <div class="element">
-
                     <div class="item black">
                         <p>
                             Group 1
@@ -1107,18 +1125,19 @@
                 </div>
             </div>
         </div>
-        <p>The allocation of tiered 1-year state grants will be reviewed annually by the University based on the
-            specified
-            criteria, and grants will be awarded to eligible applicants in accordance with the established procedure.
-               4. The total admission quota for each field of study may be adjusted by the Admissions Commission based
-            on the number
-            of applicants and their requests. In this case, the number of state grants and tuition-fee places will be
-            adjusted
-            proportionally.
-               5. Since the statistical data on the admission process for applicants in the table above is updated in
-            real-time, it
-            is recommended to monitor this table regularly.</p>
+
     </div>
+    <p>The allocation of tiered 1-year state grants will be reviewed annually by the University based on the
+        specified
+        criteria, and grants will be awarded to eligible applicants in accordance with the established procedure.
+           4. The total admission quota for each field of study may be adjusted by the Admissions Commission based
+        on the number
+        of applicants and their requests. In this case, the number of state grants and tuition-fee places will be
+        adjusted
+        proportionally.
+           5. Since the statistical data on the admission process for applicants in the table above is updated in
+        real-time, it
+        is recommended to monitor this table regularly.</p>
 </div>
                     </div>
                     <div class="live-statistics__content">
@@ -1134,6 +1153,17 @@
             <button>
                 <p>Tuition-Fee Basis</p>
             </button>
+            <select>
+                <option value="0">
+                    4 - years State Grants
+                </option>
+                <option value="1">
+                    1-year Tiered State Grants
+                </option>
+                <option value="2">
+                    Tuition-Fee Basis
+                </option>
+            </select>
         </div>
         <div class="state-grants__top--select">
             <select>
@@ -1144,7 +1174,7 @@
             </select>
         </div>
     </div>
-    <div class="state-grants__wrap">
+    <div class="state-grants__wrap active">
         <div class="state-grants__wrap--card">
             <div class="state-grants__wrap--card-left orange">
                 <p>Graduates of Presidential Schools</p>
@@ -1218,24 +1248,117 @@
             </div>
         </div>
     </div>
+    <div class="state-grants__wrap">
+        <div class="state-grants__wrap--card">
+            <div class="state-grants__wrap--card-left blue">
+                <p>Graduates of Presidential Schools</p>
+            </div>
+            <div class="state-grants__wrap--card-right">
+                <p>Quota:<span> 25</span></p>
+                <p>Reserved:<span> 0</span></p>
+            </div>
+            <div class="state-grants__wrap--card-tt">
+                <img src="../../images/logo-tt.svg">
+            </div>
+        </div>
+        <div class="state-grants__wrap--card">
+            <div class="state-grants__wrap--card-left green">
+                <p>Graduates of Presidential Schools</p>
+            </div>
+            <div class="state-grants__wrap--card-right">
+                <p>Quota:<span> 25</span></p>
+                <p>Reserved:<span> 0</span></p>
+            </div>
+            <div class="state-grants__wrap--card-tt">
+                <img src="../../images/logo-tt.svg">
+            </div>
+        </div>
+        <div class="state-grants__wrap--card">
+            <div class="state-grants__wrap--card-left green">
+                <p>Family Members Included in the Unified Social Protection</p>
+            </div>
+            <div class="state-grants__wrap--card-right">
+                <p>Quota:<span> 25</span></p>
+                <p>Reserved:<span> 0</span></p>
+            </div>
+            <div class="state-grants__wrap--card-tt">
+                <img src="../../images/logo-tt.svg">
+            </div>
+        </div>
+    </div>
+    <div class="state-grants__wrap">
+        <div class="state-grants__wrap--card">
+            <div class="state-grants__wrap--card-left blue">
+                <p>Graduates of Presidential Schools</p>
+            </div>
+            <div class="state-grants__wrap--card-right">
+                <p>Quota:<span> 25</span></p>
+                <p>Reserved:<span> 0</span></p>
+            </div>
+            <div class="state-grants__wrap--card-tt">
+                <img src="../../images/logo-tt.svg">
+            </div>
+        </div>
+        <div class="state-grants__wrap--card">
+            <div class="state-grants__wrap--card-left blue">
+                <p>Graduates of Presidential Schools</p>
+            </div>
+            <div class="state-grants__wrap--card-right">
+                <p>Quota:<span> 25</span></p>
+                <p>Reserved:<span> 0</span></p>
+            </div>
+            <div class="state-grants__wrap--card-tt">
+                <img src="../../images/logo-tt.svg">
+            </div>
+        </div>
+        <div class="state-grants__wrap--card">
+            <div class="state-grants__wrap--card-left green">
+                <p>Graduates of Presidential Schools</p>
+            </div>
+            <div class="state-grants__wrap--card-right">
+                <p>Quota:<span> 25</span></p>
+                <p>Reserved:<span> 0</span></p>
+            </div>
+            <div class="state-grants__wrap--card-tt">
+                <img src="../../images/logo-tt.svg">
+            </div>
+        </div>
+    </div>
     <div class="state-grants__tt">
         <img src="../../images/logo-tt.svg">
     </div>
 </div>
 <script>
-    const buttons = document.querySelectorAll('.state-grants__top--tab button');
-    const contents = document.querySelectorAll('.tab-content');
+    const tabWrapper = document.querySelector('.state-grants__top--tab');
+    const buttons = tabWrapper.querySelectorAll('button');
+    const select = tabWrapper.querySelector('select');
+    const contents = document.querySelectorAll('.state-grants__wrap');
 
+    /* ===== umumiy funksiya ===== */
+    function activateTab(index) {
+        buttons.forEach(b => b.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+
+        buttons[index].classList.add('active');
+        contents[index].classList.add('active');
+
+        // selectni sync qilish
+        select.value = index;
+    }
+
+    /* ===== button click ===== */
     buttons.forEach((btn, index) => {
         btn.addEventListener('click', () => {
-
-            buttons.forEach(b => b.classList.remove('active'));
-            contents.forEach(c => c.classList.remove('active'));
-
-            btn.classList.add('active');
-            contents[index].classList.add('active');
+            activateTab(index);
         });
     });
+
+    /* ===== select change ===== */
+    select.addEventListener('change', () => {
+        const index = Number(select.value);
+        activateTab(index);
+    });
+
 
 </script>
                     </div>
@@ -1371,7 +1494,9 @@
         });
         const liveButtons = document.querySelectorAll('.live-statistics__tab button');
         const liveContents = document.querySelectorAll('.live-statistics__content');
+        const liveSelect = document.querySelector('.live-statistics__tab select');
 
+        /* ===== button click ===== */
         liveButtons.forEach((btn, index) => {
             btn.addEventListener('click', () => {
 
@@ -1380,8 +1505,23 @@
 
                 btn.classList.add('active');
                 liveContents[index].classList.add('active');
+
+                // selectni sync qilish
+                liveSelect.value = index;
             });
         });
+
+        /* ===== select change ===== */
+        liveSelect.addEventListener('change', () => {
+            const index = Number(liveSelect.value);
+
+            liveButtons.forEach(b => b.classList.remove('active'));
+            liveContents.forEach(c => c.classList.remove('active'));
+
+            liveButtons[index].classList.add('active');
+            liveContents[index].classList.add('active');
+        });
+
 
     </script>
 </body>

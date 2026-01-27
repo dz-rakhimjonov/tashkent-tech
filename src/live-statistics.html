@@ -32,6 +32,23 @@
                     <button>
                         <p>State Grants and Tuition-Fee Basis</p>
                     </button>
+                    <select>
+                        <option value="0">
+                            Live Statistics Overview
+                        </option>
+                        <option value="1">
+                            Schools
+                        </option>
+                        <option value="2">
+                            Programs
+                        </option>
+                        <option value="3">
+                            Application, Quota, Reserved
+                        </option>
+                        <option value="4">
+                            State Grants and Tuition-Fee Basis
+                        </option>
+                    </select>
                 </div>
                 <div class="tab-contents">
                     <div class="live-statistics__content active">
@@ -72,7 +89,9 @@
         });
         const liveButtons = document.querySelectorAll('.live-statistics__tab button');
         const liveContents = document.querySelectorAll('.live-statistics__content');
+        const liveSelect = document.querySelector('.live-statistics__tab select');
 
+        /* ===== button click ===== */
         liveButtons.forEach((btn, index) => {
             btn.addEventListener('click', () => {
 
@@ -81,8 +100,23 @@
 
                 btn.classList.add('active');
                 liveContents[index].classList.add('active');
+
+                // selectni sync qilish
+                liveSelect.value = index;
             });
         });
+
+        /* ===== select change ===== */
+        liveSelect.addEventListener('change', () => {
+            const index = Number(liveSelect.value);
+
+            liveButtons.forEach(b => b.classList.remove('active'));
+            liveContents.forEach(c => c.classList.remove('active'));
+
+            liveButtons[index].classList.add('active');
+            liveContents[index].classList.add('active');
+        });
+
 
     </script>
 </body>

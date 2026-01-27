@@ -132,10 +132,18 @@
         flex-direction: row;
         gap: 12px;
 
+        @include devices(md) {
+            margin-top: 60px;
+        }
+
         .container {
-            padding: 25px 0;
+            padding: 25px 16px;
             display: block;
             margin: 0 auto;
+
+            @include devices(md) {
+                padding: 25px 16px 10px 20px;
+            }
 
             &::after {
                 content: unset;
