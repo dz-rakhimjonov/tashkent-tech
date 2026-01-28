@@ -3,10 +3,23 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
 
+    @include devices(md) {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    @include devices(xs) {
+        grid-template-columns: 1fr;
+    }
+
     &__item {
         border-radius: 14px;
         border: 1px solid #E9EAEB;
         background-color: #FFFFFF;
+
+        @include devices(md) {
+            max-width: 350px;
+        }
 
         &--img {
             height: 180px;
@@ -28,11 +41,22 @@
 
             p {
                 @include font700(#181D27, 18px);
+
+                @include devices(sm) {
+                    font-size: 16px;
+                    line-height: 1.2
+                }
             }
 
             span {
                 @include font500(#535862, 13px);
                 margin-top: 5px;
+
+                @include devices(sm) {
+                    font-size: 11px;
+                    display: block;
+                    line-height: 1;
+                }
             }
 
             &-icon {
@@ -46,14 +70,26 @@
                     align-items: center;
                     gap: 10px;
 
+                    @include devices(sm) {
+                        gap: 5px;
+                    }
+
                     i {
                         font-size: 24px;
                         width: 24px;
                         color: #5454E3;
+
+                        @include devices(sm) {
+                            font-size: 20px
+                        }
                     }
 
                     p {
                         @include font600(#000000, 14px);
+
+                        @include devices(sm) {
+                            font-size: 12px;
+                        }
                     }
                 }
             }

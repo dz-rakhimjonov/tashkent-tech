@@ -123,15 +123,21 @@
 
             // position: relative;
             // z-index: 1;
-            @include devices(sm) {
-                width: 100%;
-                margin-top: 50px;
-            }
+
 
             @include devices(xl) {
                 width: 50%;
             }
 
+            @include devices(sm) {
+                width: 100%;
+                margin-top: 50px;
+            }
+
+            @include devices(xs) {
+                width: 100%;
+                margin-top: 20px;
+            }
 
 
             &-item {
@@ -155,7 +161,10 @@
 
                 @include devices(sm) {
                     justify-content: center;
+                }
 
+                @include devices(xs) {
+                    padding: 5px;
                 }
 
 
@@ -209,6 +218,10 @@
 
                     @include devices(md) {
                         font-size: 22px;
+                    }
+
+                    @include devices(xs) {
+                        font-size: 18px
                     }
                 }
 

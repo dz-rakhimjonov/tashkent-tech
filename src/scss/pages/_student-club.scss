@@ -5,11 +5,28 @@
         gap: 20px;
         margin-top: 10px;
 
+        @include devices(sm) {
+            gap: 10px
+        }
+
+        @include devices(xs) {
+            gap: 5px;
+        }
+
         div {
             @include font400(#252B37, 16px);
 
+            @include devices(sm) {
+                font-size: 14px;
+                line-height: 1.1
+            }
+
             span {
-                @include font500(#252B37, 18px)
+                @include font500(#252B37, 18px);
+
+                @include devices(sm) {
+                    font-size: 16px;
+                }
             }
         }
     }
@@ -20,10 +37,26 @@
         gap: 16px;
         margin-top: 16px;
 
+        @include devices(xs) {
+            grid-template-columns: 1fr;
+        }
+
         &--item {
             border-radius: 8px;
             overflow: hidden;
             height: 400px;
+
+            @include devices(md) {
+                height: 300px;
+            }
+
+            @include devices(sm) {
+                height: 250px;
+            }
+
+            @include devices(xs) {
+                height: 200px;
+            }
 
             img {
                 width: 100%;

@@ -10,6 +10,11 @@
             gap: 16px;
             align-items: center;
 
+            @include devices(xs) {
+                flex-direction: column;
+                gap: 4px;
+            }
+
             &-btn {
                 display: flex;
                 gap: 5px;
@@ -20,6 +25,11 @@
                     border-radius: 8px;
                     background-color: #F5F5F5;
                     border: none;
+
+                    @include devices(sm) {
+                        width: 30px;
+                        height: 30px;
+                    }
                 }
             }
 
@@ -33,20 +43,51 @@
             display: flex;
             gap: 16px;
 
+            @include devices(xs) {
+                flex-direction: column;
+                gap: 4px;
+            }
+
             input,
             select {
                 background-color: transparent;
                 height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include devices(sm) {
+                    height: 30px;
+                }
+            }
+
+            @include devices(sm) {
+                select {
+                    padding: 4px 8px;
+                }
+            }
+
+            @include devices(xs) {
+                input {
+                    width: 120px;
+                    padding: 4px 8px;
+                    padding-left: 50px;
+                }
             }
         }
     }
 
     &__img {
         margin-top: 10px;
+        overflow-x: auto;
 
-        img {
-            object-fit: contain;
-            width: 100%;
+        &--wrap {
+            min-width: 1000px;
+
+            img {
+                object-fit: contain;
+                width: 100%;
+            }
         }
     }
 }

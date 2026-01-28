@@ -10,6 +10,12 @@
         grid-template-columns: 1fr 1fr 135px;
         gap: 16px;
 
+        @include devices(sm) {
+            gap: 5px;
+            grid-template-columns: 1fr;
+            margin-top: 10px;
+        }
+
         &--input {
             margin-top: 0;
 
@@ -17,24 +23,44 @@
                 background-color: #FFFFFF;
                 margin-top: 6px;
                 height: 44px;
+
+                @include devices(sm) {
+                    margin-top: 0px
+                }
+
+                @include devices(xs) {
+                    height: 35px
+                }
             }
 
             label {
                 @include font500(#414651, 14px);
+
+                @include devices(xs) {
+                    font-size: 12px;
+                    line-height: 1.1;
+                }
             }
         }
 
         &--btn {
             margin-top: 30px;
 
+            @include devices(sm) {
+                margin-top: 5px;
+            }
+
             button {
                 width: 100%;
-
                 background: linear-gradient(to right, #E54519, #FF8C6C);
                 @include font500(#FFFFFF, 16px);
                 border: none;
                 border-radius: 8px;
                 height: 44px;
+
+                @include devices(xs) {
+                    height: 35px;
+                }
             }
         }
     }
@@ -47,17 +73,50 @@
             grid-template-columns: 1fr 1fr 1fr;
             gap: 16px;
 
+            @include devices(md) {
+                grid-template-columns: 1fr 1fr;
+            }
 
+            @include devices(sm) {
+                gap: 5px;
+                margin-top: 5px;
+            }
+
+            @include devices(xs) {
+                grid-template-columns: 1fr;
+            }
         }
 
         &--message {
             width: 100%;
             margin-top: 16px;
 
+            @include devices(sm) {
+                margin-top: 10px
+            }
+
+            @include devices(xs) {
+                margin-top: 5px
+            }
+
+            label {
+                @include font500(#414651, 14px);
+
+                @include devices(xs) {
+                    font-size: 12px;
+                    line-height: 1.1;
+                }
+            }
+
             input {
                 height: 100px;
                 margin-top: 6px;
                 background-color: #FFFFFF;
+
+                @include devices(xs) {
+                    height: 70px;
+                    margin-top: 0px;
+                }
             }
         }
 
@@ -73,12 +132,21 @@
                 border: none;
                 border-radius: 8px;
                 height: 44px;
+
+                @include devices(xs) {
+                    height: 35px;
+                    font-size: 14px
+                }
             }
         }
 
         &--file {
             label {
                 @include font500(#414651, 14px);
+
+                @include devices(xs) {
+                    font-size: 12px;
+                }
             }
 
             input {
@@ -95,6 +163,10 @@
                 margin-top: 6px;
                 gap: 4px;
                 justify-content: center;
+
+                @include devices(xs) {
+                    height: 35px;
+                }
 
                 i {
                     font-size: 20px;

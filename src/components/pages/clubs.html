@@ -95,3 +95,10 @@
         </div>
     </div>
 </div>
+<script>
+    document.querySelectorAll('.clubs__wrap--item-head').forEach(head => {
+        head.addEventListener('click', () => {
+            head.parentElement.classList.toggle('active');
+        });
+    });
+</script>

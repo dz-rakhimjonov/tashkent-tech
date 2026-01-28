@@ -2,8 +2,11 @@
     width: 100%;
     height: 162px;
     margin-top: calc(var(--height-header) + 10px);
-
     position: relative;
+
+    @include devices(md) {
+        margin-top: 70px;
+    }
 
     >.container {
         position: relative;
@@ -29,6 +32,14 @@
 
             h1 {
                 @include font700(#FFFFFF, 36px)
+            }
+
+            div {
+                padding-left: 30px;
+
+                // @include devices(md) {
+                //     padding-left: 30px;
+                // }
             }
         }
     }
@@ -121,6 +132,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 0;
+
+    @include devices(sm) {
+        margin-top: 20px;
+    }
 
     &__title {
         width: 560px;
@@ -129,25 +145,59 @@
         justify-content: center;
         align-items: center;
 
+        @include devices(sm) {
+            width: 100%;
+        }
+
         h2 {
             @include font500(#181D27, 38px);
+
+            @include devices(md) {
+                font-size: 30px;
+            }
+
+            @include devices(sm) {
+                font-size: 24px;
+            }
         }
 
         p {
             margin-top: 10px;
             text-align: center;
             @include font400(#414651, 20px);
+
+            @include devices(md) {
+                font-size: 16px;
+                margin-top: 0;
+            }
+
+            @include devices(sm) {
+                font-size: 14px;
+                line-height: 1.2;
+            }
         }
     }
 
     &__wrap {
-        display: flex;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 25px;
         margin-top: 50px;
 
+        @include devices(sm) {
+            margin-top: 20px;
+        }
+
+        @include devices(sm) {
+            gap: 10px;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 10px;
+        }
+
         &--item {
             padding: 20px 0;
-            width: 246px;
+            // width: 246px;
             border-radius: 14px;
             border: 1px solid #E9EAEB;
             background-color: #FFFFFF;
@@ -155,6 +205,10 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            @include devices(md) {
+                padding: 10px 0;
+            }
 
             &-img {
                 background: linear-gradient(to right, #E54519CC, #FFA288);
@@ -177,11 +231,24 @@
                 p {
                     margin-top: 11px;
                     @include font500(#181D27, 18px);
+
+                    @include devices(md) {
+                        font-size: 16px;
+                    }
                 }
 
                 span {
                     margin-top: 2px;
                     @include font400(#414651, 16px);
+
+                    @include devices(md) {
+                        font-size: 14px;
+                    }
+
+                    @include devices(sm) {
+                        display: block;
+                        line-height: 1;
+                    }
                 }
             }
         }
@@ -193,13 +260,39 @@
     margin-top: 70px;
     width: 100%;
 
+    @include devices(md) {
+        margin-top: 30px
+    }
+
+    @include devices(sm) {
+        margin-top: 15px
+    }
+
     h2 {
         @include font500(#181D27, 38px);
+
+        @include devices(md) {
+            font-size: 30px;
+        }
+
+        @include devices(sm) {
+            font-size: 24px;
+        }
     }
 
     p {
         margin-top: 10px;
         @include font400(#414651, 20px);
+
+        @include devices(md) {
+            font-size: 16px;
+            margin-top: 0px;
+        }
+
+        @include devices(sm) {
+            font-size: 14px;
+            line-height: 1.2;
+        }
     }
 
     &__wrap {
@@ -209,6 +302,17 @@
         grid-template-columns: 1fr 600px;
         gap: 20px;
 
+        @include devices(lg) {
+            grid-template-columns: 1fr 1fr;
+            align-items: stretch;
+        }
+
+        @include devices(sm) {
+            grid-template-columns: 1fr;
+            margin-top: 10px;
+
+        }
+
         &--left {
             border: 1px solid #E9EAEB;
             border-radius: 14px;
@@ -217,17 +321,37 @@
             position: relative;
             z-index: 1;
 
+            @include devices(md) {
+                padding: 15px;
+            }
+
+            @include devices(xs) {
+                padding: 8px;
+            }
+
             &-input {
                 position: relative;
                 z-index: 3;
                 margin-top: 16px;
 
+                @include devices(md) {
+                    margin-top: 0
+                }
+
                 label {
                     @include font500(#414651, 14px);
+
+                    @include devices(xs) {
+                        font-size: 12px;
+                    }
                 }
 
                 input {
                     background-color: #FFFFFF;
+
+                    @include devices(md) {
+                        padding: 10px;
+                    }
 
                 }
             }
@@ -249,6 +373,10 @@
                     padding: 10px 8.5px;
                     border-radius: 8px;
                     border: none;
+
+                    @include devices(sm) {
+                        padding: 5px;
+                    }
                 }
             }
 
@@ -262,13 +390,18 @@
         }
 
         &--right {
-
-            height: 450px;
+            @include devices(sm) {
+                height: 300px;
+            }
 
             img {
                 border-radius: 14px;
                 width: 100%;
                 height: 100%;
+
+                @include devices(sm) {
+                    object-fit: cover;
+                }
             }
         }
     }
@@ -277,13 +410,39 @@
 .location-info {
     margin-top: 70px;
 
+    @include devices(md) {
+        margin-top: 30px
+    }
+
+    @include devices(sm) {
+        margin-top: 15px
+    }
+
     h2 {
         @include font500(#181D27, 38px);
+
+        @include devices(md) {
+            font-size: 30px;
+        }
+
+        @include devices(sm) {
+            font-size: 24px;
+        }
     }
 
     p {
         margin-top: 10px;
         @include font400(#414651, 20px);
+
+        @include devices(sm) {
+            font-size: 16px;
+        }
+
+        @include devices(xs) {
+            font-size: 14px;
+            line-height: 1.1;
+            margin-top: 5px;
+        }
     }
 }
 
@@ -291,6 +450,14 @@
     width: 100%;
     height: 400px;
     margin-top: 20px;
+
+    @include devices(sm) {
+        height: 300px;
+    }
+
+    @include devices(xs) {
+        height: 200px;
+    }
 
     iframe {
         width: 100%;

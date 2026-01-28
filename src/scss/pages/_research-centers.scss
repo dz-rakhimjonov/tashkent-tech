@@ -5,6 +5,10 @@
         gap: 16px;
         margin-top: 16px;
 
+        @include devices (sm) {
+            grid-template-columns: 1fr;
+        }
+
         &--card {
             display: flex;
             position: relative;
@@ -41,6 +45,10 @@
 
                     p {
                         @include font500(#000000, 18px);
+
+                        @include devices(xs) {
+                            font-size: 14px;
+                        }
                     }
 
                     &-hr {
@@ -61,6 +69,11 @@
                         @include font400(#535862, 14px);
                         margin-top: 5px;
 
+                        @include devices(xs) {
+                            font-size: 12px;
+                            display: block;
+                            line-height: 1.2;
+                        }
                     }
                 }
 

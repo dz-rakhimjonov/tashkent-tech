@@ -5,11 +5,17 @@
         margin-top: 16px;
         align-items: flex-start;
 
+        @include devices(md) {
+            flex-direction: column;
+            align-items: center;
+        }
+
         &--cards {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 16px;
             margin-top: 16px;
+
 
             &-item {
                 border-radius: 8px;
@@ -24,6 +30,10 @@
 
                     span {
                         @include font600(#181D27, 32px);
+
+                        @include devices(xs) {
+                            font-size: 24px;
+                        }
                     }
                 }
 
@@ -45,6 +55,11 @@
                 p {
                     @include font400(#414651, 16px);
                     margin-top: 10px;
+
+                    @include devices(xs) {
+                        font-size: 14px;
+                        line-height: 1;
+                    }
                 }
 
                 &:hover {

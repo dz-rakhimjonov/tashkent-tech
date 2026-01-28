@@ -9,9 +9,17 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 16px;
 
+        @include devices(md) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include devices(xs) {
+            grid-template-columns: 1fr;
+        }
 
         &--item {
             position: relative;
+            cursor: pointer;
 
             &-head {
                 border: 1px solid #E9EAEB;
@@ -24,8 +32,26 @@
                 justify-content: space-between;
                 align-items: center;
 
+                @include devices(sm) {
+                    padding: 12px
+                }
+
+                @include devices(xs) {
+                    padding: 10px
+                }
+
                 p {
-                    @include font500(#000000, 20px)
+                    @include font500(#000000, 20px);
+
+                    @include devices(sm) {
+                        font-size: 18px;
+
+                    }
+
+                    @include devices(xs) {
+                        font-size: 16px;
+
+                    }
                 }
 
                 &-img {
@@ -36,6 +62,11 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+
+                    @include devices(xs) {
+                        width: 34px;
+                        height: 34px;
+                    }
                 }
 
                 &-dropdown {
@@ -53,19 +84,27 @@
                     align-items: center;
                     justify-content: center;
 
+
                     i {
+                        transition: all 0.3s ease;
                         font-size: 20px;
+                        transform: rotate(180deg);
                     }
                 }
             }
 
             &-body {
+                // display: none;
                 margin-top: 4px;
                 border: 1px solid #E9EAEB;
                 border-radius: 8px;
                 background-color: #FFFFFF;
                 position: relative;
                 z-index: 1;
+                opacity: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.5s ease;
 
                 ul {
                     padding: 6px 16px;
@@ -83,5 +122,18 @@
                 }
             }
         }
+
+
+    }
+}
+
+.clubs__wrap--item.active .clubs__wrap--item-body {
+    opacity: 1;
+    max-height: 500px;
+}
+
+.clubs__wrap--item.active .clubs__wrap--item-head-dropdown {
+    i {
+        transform: rotate(0deg);
     }
 }

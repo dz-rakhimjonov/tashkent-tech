@@ -20,23 +20,23 @@
                     </iframe>
                 </div>
             </div>
-
         </div>
-        @@include('components/layout/social-media.html')
-        @@include('components/layout/footer.html')
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const header = document.querySelector('.ttechnology-header');
-                if (!header) return;
+    </div>
+    @@include('components/layout/social-media.html')
+    @@include('components/layout/footer.html')
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.ttechnology-header');
+            if (!header) return;
 
-                function onScroll() {
-                    header.classList.remove('inset');
-                }
+            function onScroll() {
+                header.classList.remove('inset');
+            }
 
-                onScroll();
-                window.addEventListener('scroll', onScroll);
-            });
-        </script>
+            onScroll();
+            window.addEventListener('scroll', onScroll);
+        });
+    </script>
 </body>
 
 </html>

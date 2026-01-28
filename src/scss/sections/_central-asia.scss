@@ -3,7 +3,14 @@
     gap: 16px;
     grid-template-columns: 1fr 220px;
 
+    @include devices(sm) {
+        grid-template-columns: 1fr;
+    }
+
     &__text {
+        @include devices(sm) {
+            order: 2;
+        }
 
         &--info {
             margin-top: 10px;
@@ -14,6 +21,12 @@
             div {
                 @include font400(#252B37, 16px);
 
+                @include devices(sm) {
+                    font-size: 14px;
+                    line-height: 1.1;
+                    justify-items: center;
+                }
+
                 span {
                     @include font500(#252B37, 18px)
                 }
@@ -23,6 +36,11 @@
 
     &__date {
         width: 220px;
+
+        @include devices(sm) {
+            order: 1;
+            margin: 0 auto;
+        }
 
         &--top {
             display: flex;
@@ -51,7 +69,7 @@
 
         &--body {
             padding: 20px 30px;
-            border-radius: 1px solid #E9EAEB;
+            border: 1px solid #E9EAEB;
             border-radius: 14px;
             background-color: #FFFFFF;
             display: flex;

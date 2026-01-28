@@ -5,11 +5,28 @@
         flex-direction: column;
         gap: 20px;
 
+        @include devices(sm) {
+            gap: 10px;
+        }
+
+        @include devices(xs) {
+            gap: 5px
+        }
+
         div {
             @include font400(#252B37, 16px);
 
+            @include devices(xs) {
+                font-size: 14px;
+                line-height: 1.1
+            }
+
             span {
                 @include font500(#252B37, 18px);
+
+                @include devices(xs) {
+                    font-size: 16px;
+                }
 
             }
         }
@@ -24,10 +41,22 @@
             grid-template-columns: 1fr 1fr 1fr;
             gap: 16px;
 
+            @include devices(sm) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include devices(xs) {
+                grid-template-columns: 1fr;
+            }
+
             &-item {
                 border-radius: 8px;
                 height: 270px;
                 overflow: hidden;
+
+                @include devices(sm) {
+                    height: 240px;
+                }
 
                 img {
                     width: 100%;

@@ -1,9 +1,21 @@
 .admission-process {
+
+    li {
+
+        @include devices(sm) {
+            font-size: 14px;
+            line-height: 0.8;
+            margin-top: 6px;
+        }
+    }
+
     .table-wrapper {
         overflow-x: auto;
         border-radius: 8px;
         border: 1px solid #E9EAEB;
         margin-top: 16px;
+        overflow-x: auto;
+
 
 
         .ielts-table {
@@ -11,7 +23,7 @@
             border-collapse: collapse;
             font-family: Arial, sans-serif;
             font-size: 14px;
-
+            min-width: 1000px;
             background-color: #FFFFFF;
 
             thead {
@@ -68,6 +80,10 @@
             position: relative;
             z-index: 3;
 
+            @include devices(xs) {
+                padding: 10px
+            }
+
             h5 {
                 @include font500(#181D27, 18px);
                 margin-bottom: 10px;
@@ -78,18 +94,52 @@
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr 1fr;
                     gap: 16px;
+
+                    @include devices(md) {
+                        grid-template-columns: 1fr 1fr;
+                    }
+
+                    @include devices(sm) {
+                        grid-template-columns: 1fr;
+                        gap: 10px;
+
+                    }
                 }
 
                 &-body {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     gap: 20px;
-                    margin-top: 20px
+                    margin-top: 20px;
+
+                    @include devices(xs) {
+                        margin-top: 10px;
+                        gap: 10px
+                    }
+
+                    label {
+                        @include font500(#414651, 14px);
+
+                        @include devices(xs) {
+                            font-size: 12px;
+                            line-height: 1.1;
+                        }
+                    }
+
+                    @include devices(sm) {
+                        grid-template-columns: 1fr;
+                        margin-top: 10px
+                    }
                 }
 
                 &-element {
                     label {
                         @include font500(#414651, 14px);
+
+                        @include devices(xs) {
+                            font-size: 12px;
+                            line-height: 1.1;
+                        }
                     }
 
                     input {
@@ -98,6 +148,11 @@
                         background-color: inherit;
                         border: 1px solid #E9EAEB;
                         border-radius: 8px;
+
+                        @include devices(xs) {
+                            margin-top: 4px;
+                            padding: 5px 8px;
+                        }
                     }
 
                     select {
@@ -106,6 +161,11 @@
                         background-color: inherit;
                         border: 1px solid #E9EAEB;
                         border-radius: 8px;
+
+                        @include devices(xs) {
+                            margin-top: 4px;
+                            padding: 5px 8px;
+                        }
                     }
                 }
 
@@ -114,6 +174,11 @@
 
                     label {
                         @include font500(#414651, 14px);
+
+                        @include devices(xs) {
+                            font-size: 12px;
+                            line-height: 1.1;
+                        }
                     }
 
                     &-item {
@@ -125,6 +190,25 @@
                         align-items: center;
                         justify-content: center;
                         flex-direction: column;
+
+                        @include devices(xs) {
+                            padding-left: 10px;
+                            height: 40px;
+                            margin-top: 4px;
+
+                            label {
+                                display: flex;
+
+                                span {
+                                    display: block;
+                                }
+
+                                p {
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+
                         // gap: 10px;
 
                         .files-list {
@@ -184,12 +268,20 @@
             justify-content: end;
             margin-top: 20px;
 
+            @include devices(xs) {
+                margin-top: 10px;
+            }
+
             button {
                 border-radius: 8px;
                 background: linear-gradient(to right, #E54519, #FF8C6C);
                 padding: 10px 48px;
                 border: none;
                 @include font500(#FFFFFF, 16px);
+
+                @include devices(xs) {
+                    padding: 5px 20px;
+                }
             }
         }
     }

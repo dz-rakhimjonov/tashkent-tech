@@ -108,6 +108,11 @@
                     margin-top: 5px;
                 }
 
+                @include devices(xs) {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                }
+
                 &-item {
                     display: flex;
                     align-items: center;
@@ -205,6 +210,10 @@
                 @include devices(sm) {
                     width: 160px;
                 }
+
+                @media (max-width: 420px) {
+                    width: 120px;
+                }
             }
 
             &-fac {
@@ -248,6 +257,10 @@
 
                 @include devices(sm) {
                     width: 170px;
+                }
+
+                @media (max-width: 420px) {
+                    width: 120px;
                 }
             }
         }
