@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Vatandoshlar Jamoat Fondi rasmiy veb-sayti">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="./images/logo.png">
+<link rel="icon" href="./images/logo-tt.png">
 <link rel="stylesheet" href="./assets/libs/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="./assets/libs/aos/main.min.css">
 <link rel="stylesheet" href="./assets/flatpickr/flatpickr.css">
@@ -15,9 +15,6 @@
 <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
 <link rel="stylesheet" href="./assets/icomoon/style.css">
 <link rel="stylesheet" href="./css/main.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="./assets/libs/aos/main.min.js"></script>
 <!-- jQuery (majburiy) -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -31,29 +28,34 @@
 </head>
 
 <body>
-    <div class="ttechnology-header inset">
+    <header class="header inset">
     <div class="container">
-        <div class="ttechnology-header__top">
-            <div class="ttechnology-header__top--left">
-                <div class="ttechnology-header__top--left-item">
+        <div class="header__top">
+
+            <div class="header__top--left">
+                <div class="header__top--left-item">
+                    <button class="header__top--left-item-menu" type="button" aria-controls="offcanvas"
+                        aria-expanded="false" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                        <i class="i-menu"></i>
+                    </button>
                     <a href="index.html">
                         <img src="./images/TT-logo.svg">
                     </a>
                 </div>
-                <div class="ttechnology-header__top--left-item connec">
+                <div class="header__top--left-item connec">
                     <a href="#">
                         <i class="i-mail"></i>
                         <span>info@tashkenttech-edu.uz</span>
                     </a>
                 </div>
-                <div class="ttechnology-header__top--left-item connec">
+                <div class="header__top--left-item connec">
                     <a href="#">
                         <i class="i-phone1"></i>
                         <span>+998 77 288 82 82</span>
                     </a>
                 </div>
             </div>
-            <div class="ttechnology-header__top--right">
+            <div class="header__top--right">
                 <a href="#">
                     <i class="i-facebook-card"></i>
                 </a>
@@ -66,10 +68,11 @@
                 <a href="#">
                     <i class="i-telegram"></i>
                 </a>
-                <div class="ttechnology-header__top--right-item">
-                    <div class="ttechnology-header__top--right-item-lang">
+                <div class="header__top--right-item">
+                    <div class="header__top--right-item-lang">
                         <img id="selectedFlag" src="../../images/flag-en.png">
-                        <span id="selectedLang">English <i class="i-dropdown"></i></span>
+                        <span id="selectedLang">English </span>
+                        <i class="i-dropdown"></i>
                     </div>
 
                     <ul class="language-dropdown">
@@ -87,9 +90,9 @@
 
             </div>
         </div>
-        <div class="ttechnology-header__hr"></div>
-        <div class="ttechnology-header__bottom">
-            <ul class="ttechnology-header__bottom--menu header__menu">
+        <div class="header__hr"></div>
+        <div class="header__bottom">
+            <ul class="header__bottom--menu header__menu">
                 <li class="header__menu-item header__menu-item--dropdown">
                     <span class="header__menu-link">
                         About
@@ -100,7 +103,6 @@
                             <a href="about.html" class="header__submenu-link">
                                 About the university
                             </a>
-
                         </li>
                         <li class="header__submenu-item header__submenu-item--dropdown">
                             <a href="rector.html" class="header__submenu-link">
@@ -429,7 +431,7 @@
                     </ul>
                 </li>
             </ul>
-            <div class="ttechnology-header__bottom-btn">
+            <div class="header__bottom-btn">
                 <button class="btn-apply">
                     Apply Now
                     <i class="fa-solid fa-arrow-right"></i>
@@ -437,16 +439,15 @@
             </div>
         </div>
     </div>
-</div>
+</header>
 <script>
-    const langBtn = document.querySelector('.ttechnology-header__top--right-item-lang');
+    const langBtn = document.querySelector('.header__top--right-item-lang');
     const dropdown = document.querySelector('.language-dropdown');
     const selectedFlag = document.getElementById('selectedFlag');
     const selectedLang = document.getElementById('selectedLang');
 
-    // dropdownni ochish/ yopish
     langBtn.addEventListener('click', function (e) {
-        e.stopPropagation(); // bu juda muhim!
+        e.stopPropagation();
         dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
     });
 
@@ -466,13 +467,374 @@
 
     // tashqariga bosilsa yopilsin
     document.addEventListener('click', function (e) {
-        if (!e.target.closest('.ttechnology-header__top--right-item')) {
+        if (!e.target.closest('.header__top--right-item')) {
             dropdown.style.display = 'none';
         }
     });
 
 
 </script>
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu"
+    aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menyu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="menu">
+            <li class="menu-item menu-item--dropdown">
+                <span class="menu-link" data-bs-toggle="collapse" data-bs-target="#about" aria-expanded="false"
+                    aria-controls="submenu1">
+                    About
+                    <i class="i-angle-bot"></i>
+                </span>
+                <ul class="submenu collapse" id="about">
+                    <li class="submenu-item">
+                        <a href="about.html" class="submenu-link">
+                            About the university
+                        </a>
+                    </li>
+                    <li class="submenu-item submenu-item--dropdown">
+                        <span class="submenu-link" data-bs-toggle="collapse" data-bs-target="#dradham"
+                            aria-expanded="false" aria-controls="submenu2">
+                            Dr. Adham Khudaykulov <i class="i-dropdown"></i>
+                            <i class="i-angle-right"></i>
+                        </span>
+                        <ul class="submenu collapse" id="dradham">
+                            <li class="submenu-item">
+                                <a href="albert-flores.html" class="submenu-link">
+                                    Dr. Adham Khudaykulov About
+                                </a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="albert-flores-contact.html" class="submenu-link">
+                                    Dr. Adham Khudaykulov contact
+                                </a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="rector.html" class="submenu-link">
+                                    DR. Adham Khudayqulov rector
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="submenu-item submenu-item--dropdown">
+                        <span class="submenu-link" data-bs-toggle="collapse" data-bs-target="#leadership"
+                            aria-expanded="false" aria-controls="submenu2">
+                            Leadership <i class="i-dropdown"></i>
+                            <i class="i-angle-right"></i>
+                        </span>
+                        <ul class="submenu collapse" id="leadership">
+                            <li class="submenu-item">
+                                <a href="leadership-team.html" class="submenu-link">
+                                    Leadership Team
+                                </a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="leadership-team-two.html" class="submenu-link">
+                                    Leadership Team Two
+                                </a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="leadership-list.html" class="submenu-link">
+                                    Leadership List
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="academic-comunity.html" class="submenu-link">
+                            Academic comunity
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="univer-govermance.html" class="submenu-link">
+                            Univer govermance
+                        </a>
+                    </li>
+                    <li class="submenu-item submenu-item--dropdown">
+                        <span class="submenu-link" data-bs-toggle="collapse" data-bs-target="#global"
+                            aria-expanded="false" aria-controls="global">
+                            Global <i class="i-dropdown"></i>
+                            <i class="i-angle-right"></i>
+                        </span>
+                        <ul class="submenu collapse" id="global">
+                            <li class="submenu-item">
+                                <a href="global-partner.html" class="submenu-link">
+                                    Global partner
+                                </a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="partner-strategic.html" class="submenu-link">
+                                    Partner strategic
+                                </a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="global-partner-logo.html" class="submenu-link">
+                                    Global Partner logo
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="international-office.html" class="submenu-link">
+                            Introduction
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="partner-network.html" class="submenu-link">
+                            Partner network
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="academic-excellense.html" class="submenu-link">
+                            Academic excellense
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="governance.html" class="submenu-link">
+                            Governance
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="univer-library.html" class="submenu-link">
+                            univer Library
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="campus-faculty.html" class="submenu-link">
+                            Ulugbek Central Auditorium (U.C.A.)
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <span class="menu-link" data-bs-toggle="collapse" data-bs-target="#academics" aria-expanded="false"
+                    aria-controls="submenu1">
+                    Academics
+                    <i class="i-angle-bot"></i>
+                </span>
+                <ul class="submenu collapse" id="academics">
+                    <li class="submenu-item">
+                        <a href="undergraduate.html" class="submenu-link">
+                            School of Computing
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="software-engineering.html" class="submenu-link">
+                            Software engineering
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <span class="menu-link" data-bs-toggle="collapse" data-bs-target="#admission" aria-expanded="false"
+                    aria-controls="submenu1">
+                    Admissions
+                    <i class="i-angle-bot"></i>
+                </span>
+                <ul class="submenu collapse" id="admission">
+                    <li class="submenu-item">
+                        <a href="choose-univer.html" class="submenu-link">
+                            choose universitet
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="live-statistics.html" class="submenu-link">
+                            Live statistics
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="under-admission.html" class="submenu-link">
+                            Undergraduate admission
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="online-calculator.html" class="submenu-link">
+                            Online equivalency calculator
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="exam-specification.html" class="submenu-link">
+                            Exam Specification
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="admission-process.html" class="submenu-link">
+                            Admission process
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="open-doors.html" class="submenu-link">
+                            Open Doors Day at Tashkent University of Technology
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <span class="menu-link" data-bs-toggle="collapse" data-bs-target="#research" aria-expanded="false"
+                    aria-controls="submenu1">
+                    Research
+                    <i class="i-angle-bot"></i>
+                </span>
+                <ul class="submenu collapse" id="research">
+                    <li class="submenu-item">
+                        <a href="research-pioneering.html" class="submenu-link">
+                            Pioneering Breakthroughs
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="research-centers.html" class="submenu-link">
+                            Research Centers
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="research-global.html" class="submenu-link">
+                            Expanding global research
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="research-inovation.html" class="submenu-link">
+                            Innovation Hub
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="research-studies.html" class="submenu-link">
+                            Case Studies
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="research-supporting.html" class="submenu-link">
+                            Supporting Your Journey to Success
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <span class="menu-link" data-bs-toggle="collapse" data-bs-target="#campus" aria-expanded="false"
+                    aria-controls="submenu1">
+                    Campus life
+                    <i class="i-angle-bot"></i>
+                </span>
+                <ul class="submenu collapse" id="campus">
+                    <li class="submenu-item">
+                        <a href="research-supporting.html" class="submenu-link">
+                            Supporting Your Journey to Success
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="students-dormitories.html" class="submenu-link">
+                            Student Dormitories of New Uzbekistan University
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="structura.html" class="submenu-link">
+                            Structura
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="student-council.html" class="submenu-link">
+                            Student council
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="student-club.html" class="submenu-link">
+                            Student Club
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="clubs.html" class="submenu-link">
+                            Clubs
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="sport-facilities.html" class="submenu-link">
+                            Sport Facilities
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="sport-club.html" class="submenu-link">
+                            Sport Club
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="football-team.html" class="submenu-link">
+                            Football team
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="event-calendar.html" class="submenu-link">
+                            Event calendar
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="elections.html" class="submenu-link">
+                            Elections
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <span class="menu-link" data-bs-toggle="collapse" data-bs-target="#news" aria-expanded="false"
+                    aria-controls="submenu1">
+                    News & Events
+                    <i class="i-angle-bot"></i>
+                </span>
+                <ul class="submenu collapse" id="news">
+                    <li class="submenu-item">
+                        <a href="latest-news.html" class="submenu-link">
+                            Latest news
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="german-professor.html" class="submenu-link">
+                            German professor
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="upcoming-events.html" class="submenu-link">
+                            Upcoming events
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="central-asia.html" class="submenu-link">
+                            Central Asia
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="german-teacher.html" class="submenu-link">
+                            German teacher
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <span class="menu-link" data-bs-toggle="collapse" data-bs-target="#contact" aria-expanded="false"
+                    aria-controls="submenu1">
+                    Contact Us
+                    <i class="i-angle-bot"></i>
+                </span>
+                <ul class="submenu collapse" id="contact">
+                    <li class="submenu-item">
+                        <a href="contact-us.html" class="submenu-link">
+                            Contact us
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="contact-home.html" class="submenu-link">
+                            Home Contact
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="rector-reception.html" class="submenu-link">
+                            Rector reception
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
     <div class="breadcrumbs mini">
     <div class="container">
         <ul class="breadcrumbs__list">
@@ -819,10 +1181,10 @@
             </div>
         </div>
         <div class="social-media__content--tel">
-            <div class="social-media__content--tel-ins"><img src="../../images/instagram-tel.svg"></div>
-            <div class="social-media__content--tel-ins2"><img src="../../images/instagram-tel2.svg"></div>
-            <div class="social-media__content--tel-fac"><img src="../../images/facebook-tel.svg"></div>
-            <div class="social-media__content--tel-tg"><img src="../../images/telegram-tel.svg"></div>
+            <div class="social-media__content--tel-ins"><img src="../../images/instagram-tel.png"></div>
+            <div class="social-media__content--tel-ins2"><img src="../../images/instagram-tel2.png"></div>
+            <div class="social-media__content--tel-fac"><img src="../../images/facebok-tel.png"></div>
+            <div class="social-media__content--tel-tg"><img src="../../images/telegram-tel.png"></div>
         </div>
     </div>
 </div>
@@ -903,9 +1265,14 @@
         </div>
     </div>
 </footer>
+<script src="./assets/libs/jquery.min.js"></script>
+<script src="./assets/js/imask.js"></script>
+<script src="./assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="./assets/libs/owl-carousel/owl.carousel.min.js"></script>
+<script src="./assets/js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const header = document.querySelector('.ttechnology-header');
+            const header = document.querySelector('.header');
             if (!header) return;
 
             function onScroll() {

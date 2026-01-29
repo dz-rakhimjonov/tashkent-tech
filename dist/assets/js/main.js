@@ -196,3 +196,16 @@ $('.carousel__card').owlCarousel({
 })
 console.log("keldi");
 
+// Header inset classini scrolldan keyin olib tashlash
+window.addEventListener('scroll', function () {
+  const header = document.querySelector('.header');
+  const scrollPosition = window.scrollY;
+  
+  if (header) {
+    if (scrollPosition > 100) {
+      header.classList.remove('inset');
+    } else {
+      header.classList.add('inset');
+    }
+  }
+});

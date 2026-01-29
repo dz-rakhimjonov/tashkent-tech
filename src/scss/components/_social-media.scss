@@ -180,7 +180,7 @@
 
                 @include devices(md) {
                     width: 300px;
-                    right: 110px;
+                    right: 130px;
                 }
 
                 @include devices(sm) {
@@ -195,7 +195,7 @@
 
             &-ins2 {
                 position: absolute;
-                top: -3px;
+                top: -10px;
                 right: 0;
                 width: 320px;
 
@@ -205,10 +205,13 @@
 
                 @include devices(md) {
                     width: 220px;
+                    right: 2px;
+                    top: -13px;
                 }
 
                 @include devices(sm) {
                     width: 160px;
+                    right: -10px;
                 }
 
                 @media (max-width: 420px) {
@@ -219,7 +222,7 @@
             &-fac {
                 position: absolute;
                 bottom: 0px;
-                right: 198px;
+                right: 210px;
                 width: 415px;
 
                 img {
@@ -228,12 +231,12 @@
 
                 @include devices(md) {
                     width: 280px;
-                    right: 135px;
+                    right: 155px;
                 }
 
                 @include devices(sm) {
                     width: 215px;
-                    right: 100px;
+                    right: 107px;
                 }
 
                 @include devices(xs) {

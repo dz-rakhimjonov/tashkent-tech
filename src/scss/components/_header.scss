@@ -13,11 +13,14 @@
 }
 
 
-.ttechnology-header {
+.header {
     width: 100%;
     background-color: #FFFFFF;
     position: fixed;
-    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 
     &__top {
         padding: 17px 0;
@@ -29,8 +32,34 @@
             gap: 40px;
             align-items: center;
 
-            &-item {
 
+
+            &-item {
+                @include devices(md) {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                }
+
+                @include devices(xs) {
+                    gap: 7px;
+                }
+
+                &-menu {
+                    display: none;
+                    border: none;
+                    background-color: transparent;
+
+                    @include devices(md) {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    i {
+                        font-size: 30px;
+                        color: var(--default-black);
+                    }
+                }
 
                 a {
                     display: flex;
@@ -69,7 +98,7 @@
                     color: #5454E3;
                 }
 
-                @include devices(md) {
+                @include devices(xs) {
                     display: none;
                 }
             }
@@ -86,17 +115,33 @@
                     padding: 6px 8px;
                     border-radius: 6px;
 
+
+
                     img {
                         width: 18px;
+
+                        @include devices(xs) {
+                            width: 25px;
+                        }
                     }
 
                     span {
                         display: flex;
                         align-items: center;
                         color: var(--default-black);
+                        font-size: 14px;
 
-                        i {
-                            color: var(--default-black);
+                        @include devices(xs) {
+                            display: none;
+                        }
+                    }
+
+                    i {
+                        font-size: 14px;
+                        color: var(--default-black);
+
+                        @include devices(xs) {
+                            font-size: 20px;
                         }
                     }
                 }
@@ -113,6 +158,10 @@
                     border-radius: 8px;
                     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
                     min-width: 120px;
+
+                    @include devices(xs) {
+                        left: -50px;
+                    }
                 }
 
                 .language-dropdown li {
@@ -182,20 +231,22 @@
 }
 
 .inset {
-    background: transparent;
+    background: transparent !important;
+    position: fixed !important;
+    top: 0 !important;
 }
 
 .header {
-    color: var(--black);
-    background: #ffffffff;
-    position: absolute;
-    top: 0;
-    z-index: 1000;
-    height: var(--height-header);
-    width: 100%;
-    transition: all 0.1s ease;
-    border-bottom: 1px solid #F2F4F7;
-    position: fixed;
+    // color: var(--black);
+    // // background: #ffffffff;
+    // position: absolute;
+    // top: 0;
+    // z-index: 1000;
+    // height: var(--height-header);
+    // width: 100%;
+    // transition: all 0.1s ease;
+    // border-bottom: 1px solid #F2F4F7;
+    // position: fixed;
 
     &.light {
         background: #FFFFFF1A;

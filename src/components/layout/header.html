@@ -1,26 +1,31 @@
-<div class="ttechnology-header inset">
+<header class="header inset">
     <div class="container">
-        <div class="ttechnology-header__top">
-            <div class="ttechnology-header__top--left">
-                <div class="ttechnology-header__top--left-item">
+        <div class="header__top">
+
+            <div class="header__top--left">
+                <div class="header__top--left-item">
+                    <button class="header__top--left-item-menu" type="button" aria-controls="offcanvas"
+                        aria-expanded="false" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                        <i class="i-menu"></i>
+                    </button>
                     <a href="index.html">
                         <img src="./images/TT-logo.svg">
                     </a>
                 </div>
-                <div class="ttechnology-header__top--left-item connec">
+                <div class="header__top--left-item connec">
                     <a href="#">
                         <i class="i-mail"></i>
                         <span>info@tashkenttech-edu.uz</span>
                     </a>
                 </div>
-                <div class="ttechnology-header__top--left-item connec">
+                <div class="header__top--left-item connec">
                     <a href="#">
                         <i class="i-phone1"></i>
                         <span>+998 77 288 82 82</span>
                     </a>
                 </div>
             </div>
-            <div class="ttechnology-header__top--right">
+            <div class="header__top--right">
                 <a href="#">
                     <i class="i-facebook-card"></i>
                 </a>
@@ -33,10 +38,11 @@
                 <a href="#">
                     <i class="i-telegram"></i>
                 </a>
-                <div class="ttechnology-header__top--right-item">
-                    <div class="ttechnology-header__top--right-item-lang">
+                <div class="header__top--right-item">
+                    <div class="header__top--right-item-lang">
                         <img id="selectedFlag" src="../../images/flag-en.png">
-                        <span id="selectedLang">English <i class="i-dropdown"></i></span>
+                        <span id="selectedLang">English </span>
+                        <i class="i-dropdown"></i>
                     </div>
 
                     <ul class="language-dropdown">
@@ -54,9 +60,9 @@
 
             </div>
         </div>
-        <div class="ttechnology-header__hr"></div>
-        <div class="ttechnology-header__bottom">
-            <ul class="ttechnology-header__bottom--menu header__menu">
+        <div class="header__hr"></div>
+        <div class="header__bottom">
+            <ul class="header__bottom--menu header__menu">
                 <li class="header__menu-item header__menu-item--dropdown">
                     <span class="header__menu-link">
                         About
@@ -67,7 +73,6 @@
                             <a href="about.html" class="header__submenu-link">
                                 About the university
                             </a>
-
                         </li>
                         <li class="header__submenu-item header__submenu-item--dropdown">
                             <a href="rector.html" class="header__submenu-link">
@@ -396,7 +401,7 @@
                     </ul>
                 </li>
             </ul>
-            <div class="ttechnology-header__bottom-btn">
+            <div class="header__bottom-btn">
                 <button class="btn-apply">
                     Apply Now
                     <i class="fa-solid fa-arrow-right"></i>
@@ -404,16 +409,15 @@
             </div>
         </div>
     </div>
-</div>
+</header>
 <script>
-    const langBtn = document.querySelector('.ttechnology-header__top--right-item-lang');
+    const langBtn = document.querySelector('.header__top--right-item-lang');
     const dropdown = document.querySelector('.language-dropdown');
     const selectedFlag = document.getElementById('selectedFlag');
     const selectedLang = document.getElementById('selectedLang');
 
-    // dropdownni ochish/ yopish
     langBtn.addEventListener('click', function (e) {
-        e.stopPropagation(); // bu juda muhim!
+        e.stopPropagation();
         dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
     });
 
@@ -433,10 +437,11 @@
 
     // tashqariga bosilsa yopilsin
     document.addEventListener('click', function (e) {
-        if (!e.target.closest('.ttechnology-header__top--right-item')) {
+        if (!e.target.closest('.header__top--right-item')) {
             dropdown.style.display = 'none';
         }
     });
 
 
 </script>
+@@include('./menu.html')

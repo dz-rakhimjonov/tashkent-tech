@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src: url('fonts/icomoon.eot?i8g28x');
-  src: url('fonts/icomoon.eot?i8g28x#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?i8g28x') format('truetype'),
-    url('fonts/icomoon.woff?i8g28x') format('woff'),
-    url('fonts/icomoon.svg?i8g28x#icomoon') format('svg');
+  src: url('fonts/icomoon.eot?o1hdfy');
+  src: url('fonts/icomoon.eot?o1hdfy#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?o1hdfy') format('truetype'),
+    url('fonts/icomoon.woff?o1hdfy') format('woff'),
+    url('fonts/icomoon.svg?o1hdfy#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -102,70 +102,74 @@
   content: "\e912";
 }
 
-.i-monitor:before {
+.i-menu:before {
   content: "\e913";
 }
 
-.i-next-carousel:before {
+.i-monitor:before {
   content: "\e914";
 }
 
-.i-phone1:before {
+.i-next-carousel:before {
   content: "\e915";
 }
 
-.i-previous-carousel:before {
+.i-phone1:before {
   content: "\e916";
 }
 
-.i-rotate:before {
+.i-previous-carousel:before {
   content: "\e917";
 }
 
-.i-ruler:before {
+.i-rotate:before {
   content: "\e918";
 }
 
-.i-school-flag:before {
+.i-ruler:before {
   content: "\e919";
 }
 
-.i-share:before {
+.i-school-flag:before {
   content: "\e91a";
 }
 
-.i-shield:before {
+.i-share:before {
   content: "\e91b";
 }
 
-.i-telegram-basic:before {
+.i-shield:before {
   content: "\e91c";
 }
 
-.i-telegram-circle:before {
+.i-telegram-basic:before {
   content: "\e91d";
 }
 
-.i-telegram:before {
+.i-telegram-circle:before {
   content: "\e91e";
 }
 
-.i-upload:before {
+.i-telegram:before {
   content: "\e91f";
 }
 
-.i-user-magostr:before {
+.i-upload:before {
   content: "\e920";
 }
 
-.i-users:before {
+.i-user-magostr:before {
   content: "\e921";
 }
 
-.i-youtube-strong:before {
+.i-users:before {
   content: "\e922";
 }
 
-.i-youtube:before {
+.i-youtube-strong:before {
   content: "\e923";
+}
+
+.i-youtube:before {
+  content: "\e924";
 }

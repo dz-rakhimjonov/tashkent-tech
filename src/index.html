@@ -7,6 +7,7 @@
 
 <body class="index">
     @@include('components/layout/header.html')
+
     @@include('components/sections/hero.html')
     @@include('components/sections/decree.html')
     @@include('components/sections/univer-news.html')
@@ -22,7 +23,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const header = document.querySelector('.ttechnology-header');
+        const header = document.querySelector('.header');
         if (!header) return;
 
         function onScroll() {
