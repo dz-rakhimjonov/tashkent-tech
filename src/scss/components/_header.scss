@@ -646,6 +646,10 @@
 
         &:hover {
             opacity: 1;
+
+            i {
+                transform: rotate(-90deg);
+            }
         }
 
         i {
@@ -763,9 +767,7 @@
             color: var(--black);
             opacity: 1;
 
-            i {
-                transform: rotate(-90deg);
-            }
+
         }
 
         i {

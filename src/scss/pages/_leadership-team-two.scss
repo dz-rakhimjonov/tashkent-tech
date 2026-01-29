@@ -17,10 +17,13 @@
             background-color: #FFFFFF;
             overflow: hidden;
 
-
             @include devices(md) {
-
                 max-width: 500px;
+            }
+
+            @include devices(xs) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
             }
 
             &-tttop {
@@ -38,20 +41,34 @@
             &-img {
                 position: relative;
                 z-index: 3;
-                padding: 10px 0 10px 10px;
+                padding: 10px 10px 10px 10px;
                 display: flex;
 
-                img {
+                @include devices(xs) {
+                    padding: 6px;
+                }
+
+                >img {
                     flex-shrink: 0;
                     width: 240px;
                     height: 260px;
                     border-radius: 8px;
+
+                    @include devices(xs) {
+                        width: 100%;
+                        object-fit: cover;
+                        height: 200px;
+                    }
                 }
 
                 &-element {
                     position: absolute;
                     z-index: 4;
                     left: 10px;
+
+                    @include devices(xs) {
+                        left: 6px;
+                    }
 
                     &-line {
                         flex-shrink: 0;
@@ -60,6 +77,10 @@
                         height: 260px;
                         border-top-left-radius: 8px;
                         border-bottom-left-radius: 8px;
+
+                        @include devices(xs) {
+                            height: 200px;
+                        }
                     }
 
                     &-circle {
@@ -77,6 +98,10 @@
                         outline: 6px solid #FF6A2B;
                         box-sizing: border-box;
 
+                        @include devices(xs) {
+                            top: -125px;
+                        }
+
                         img {
                             width: 25px;
                         }
@@ -90,6 +115,10 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+
+                @include devices(xs) {
+                    padding: 10px;
+                }
 
                 &-name {
                     &-top {
@@ -105,13 +134,23 @@
                         }
 
                         p {
-                            @include font400(#181D27, 14px)
+                            @include font400(#181D27, 14px);
+
+                            @include devices(xs) {
+                                font-size: 12px;
+                                line-height: 1.1;
+                            }
                         }
                     }
 
                     h4 {
                         margin-top: 9px;
-                        @include font600(#181D27, 22px)
+                        @include font600(#181D27, 22px);
+
+                        @include devices(xs) {
+                            font-size: 18px;
+                            margin-top: 4px;
+                        }
                     }
                 }
 
@@ -121,11 +160,20 @@
                     align-items: flex-start;
                     gap: 6px;
 
+                    @include devices(xs) {
+                        gap: 2px;
+                    }
+
                     span {
                         display: flex;
                         gap: 6px;
                         align-items: center;
                         @include font400(#181D27, 14px);
+
+                        @include devices(xs) {
+                            font-size: 12px;
+                            gap: 2px;
+                        }
 
                         i {
                             font-size: 18px;
@@ -142,6 +190,11 @@
                         background-color: #E54519;
                         border-radius: 12px;
                         padding: 8px 19px;
+
+                        @include devices(xs) {
+                            padding: 6px 15px;
+                            margin-top: 5px;
+                        }
                     }
                 }
             }

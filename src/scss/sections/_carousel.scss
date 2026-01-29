@@ -55,7 +55,7 @@
 
             .owl-next {
                 &::after {
-                    content: "\e914";
+                    content: "\e902";
                     color: #FFFFFF;
                     position: absolute;
                     width: 44px;
@@ -84,7 +84,7 @@
 
             .owl-prev {
                 &::after {
-                    content: "\e916";
+                    content: "\e902";
                     color: #FFFFFF;
                     position: absolute;
                     width: 44px;
@@ -98,6 +98,7 @@
                     font-size: 24px;
                     left: -40px;
                     top: 40%;
+                    transform: rotate(180deg);
 
                     @include devices(xl) {
                         left: 10px;

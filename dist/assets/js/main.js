@@ -178,34 +178,21 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
-$('.carousel__card').owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  responsive: {
-    0: {
-      items: 1
-    },
-    600: {
-      items: 3
-    },
-    1000: {
-      items: 5
-    }
-  }
-})
-console.log("keldi");
+// $('.carousel__card').owlCarousel({
+//   loop: true,
+//   margin: 10,
+//   nav: true,
+//   responsive: {
+//     0: {
+//       items: 1
+//     },
+//     600: {
+//       items: 3
+//     },
+//     1000: {
+//       items: 5
+//     }
+//   }
+// })
+// console.log("keldi");
 
-// Header inset classini scrolldan keyin olib tashlash
-window.addEventListener('scroll', function () {
-  const header = document.querySelector('.header');
-  const scrollPosition = window.scrollY;
-  
-  if (header) {
-    if (scrollPosition > 100) {
-      header.classList.remove('inset');
-    } else {
-      header.classList.add('inset');
-    }
-  }
-});
