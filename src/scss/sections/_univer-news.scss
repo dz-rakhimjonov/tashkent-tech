@@ -97,7 +97,7 @@
                     justify-content: space-between;
 
                     @include devices(md) {
-                        margin-top: -4px;
+                        margin-top: 4px;
                     }
 
                     &-data {
@@ -138,13 +138,35 @@
             &-item {
                 border-radius: 14px;
                 width: 308px;
-
                 background-color: #FFFFFF;
                 border: 1px solid #E9EAEB;
 
                 @include devices(sm) {
                     width: 100%;
                     max-width: 416px;
+                    background-color: transparent;
+                    position: relative;
+                    height: 320px;
+                    z-index: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+                    overflow: hidden;
+
+                    &::before {
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        z-index: 3;
+                        position: absolute;
+                        background: linear-gradient(to bottom,
+                                rgba(0, 0, 0, 0.15) 0%,
+                                rgba(0, 0, 0, 0.35) 40%,
+                                rgba(0, 0, 0, 0.65) 80%,
+                                rgba(0, 0, 0, 0.80) 100%);
+                    }
                 }
 
                 &-img {
@@ -153,6 +175,11 @@
                     border-top-left-radius: 14px;
                     border-top-right-radius: 14px;
 
+                    @include devices(sm) {
+                        border: 2px solid red;
+
+                    }
+
                     img {
                         width: 100%;
                         height: 180px;
@@ -160,6 +187,14 @@
                         border-top-left-radius: 14px;
                         border-top-right-radius: 14px;
                         transition: ease-in-out 0.3s;
+
+                        @include devices(sm) {
+                            height: 320px;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            z-index: 2;
+                        }
                     }
 
                     &:hover img {
@@ -170,11 +205,21 @@
                 &-text {
                     padding: 10px 12px 15px 12px;
 
+                    @include devices(sm) {
+                        position: relative;
+                        z-index: 4;
+                        bottom: 0;
+                    }
+
                     >p:first-of-type {
                         @include font700(#181D27, 18px);
 
                         @include devices(lg) {
                             font-size: 14px;
+                        }
+
+                        @include devices(sm) {
+                            color: white;
                         }
                     }
 
@@ -187,6 +232,10 @@
                             margin-top: 0px;
                         }
 
+                        @include devices(sm) {
+                            color: #D5D7DA;
+                        }
+
                         margin-top: 5px;
                     }
 
@@ -196,7 +245,7 @@
                         justify-content: space-between;
 
                         @include devices(lg) {
-                            margin-top: 7px;
+                            margin-top: 10px;
                         }
 
                         &-data {
@@ -223,6 +272,10 @@
 
                                 @include devices(lg) {
                                     font-size: 12px;
+                                }
+
+                                @include devices(sm) {
+                                    color: white;
                                 }
                             }
                         }
