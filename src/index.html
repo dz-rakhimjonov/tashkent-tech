@@ -27,13 +27,13 @@
         if (!header) return;
 
         function onScroll() {
-            header.classList.toggle('inset', window.scrollY <= 30);
+            const limit = window.innerHeight - 200; // 100vh - 30px
+            header.classList.toggle('inset', window.scrollY <= limit);
         }
 
         onScroll();
         window.addEventListener('scroll', onScroll);
     });
-
 
 
 </script>

@@ -50,7 +50,6 @@
             position: relative;
             z-index: 5;
             padding: 40px 0px 40px 50px;
-            left: -18px;
 
             @include devices(md) {
                 padding: 20px 0px 20px 30px;
@@ -168,10 +167,12 @@
             top: 0;
             right: -18px;
 
+
+
             &-ins {
                 position: absolute;
                 top: 0;
-                right: 163px;
+                right: 190px;
                 width: 415px;
 
                 img {
@@ -180,12 +181,12 @@
 
                 @include devices(md) {
                     width: 300px;
-                    right: 110px;
+                    right: 130px;
                 }
 
                 @include devices(sm) {
                     width: 220px;
-                    right: 90px;
+                    right: 108px;
                 }
 
                 @include devices(xs) {
@@ -196,7 +197,7 @@
             &-ins2 {
                 position: absolute;
                 top: 0px;
-                right: 0;
+                right: 18px;
                 width: 300px;
 
                 img {
@@ -205,33 +206,33 @@
 
                 @include devices(md) {
                     width: 205px;
-                    right: 2px;
+                    right: 18px;
                     top: 0px;
                 }
 
                 @include devices(sm) {
                     width: 160px;
-                    right: 2px;
+                    right: 18px;
                     top: -6px;
                 }
 
                 @include devices(xs) {
                     top: 0;
-                    right: 0;
+                    right: 18px;
                     width: 140px;
                 }
 
                 @media (max-width: 420px) {
                     width: 120px;
                     top: 0;
-                    right: 0;
+                    right: 18px;
                 }
             }
 
             &-fac {
                 position: absolute;
                 bottom: 0px;
-                right: 195px;
+                right: 225px;
                 width: 415px;
 
                 img {
@@ -240,12 +241,12 @@
 
                 @include devices(md) {
                     width: 280px;
-                    right: 135px;
+                    right: 155px;
                 }
 
                 @include devices(sm) {
                     width: 215px;
-                    right: 107px;
+                    right: 125px;
                 }
 
                 @include devices(xs) {
@@ -255,7 +256,7 @@
 
             &-tg {
                 position: absolute;
-                right: 0;
+                right: 18px;
                 bottom: 0;
                 width: 310px;
 

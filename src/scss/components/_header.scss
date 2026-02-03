@@ -224,7 +224,18 @@
                 border: none;
                 padding: 12px 13px;
                 background: linear-gradient(to right, #E54519, #FF8C6C);
-                @include font500(#FFFFFF, 16px)
+                @include font500(#FFFFFF, 16px);
+
+                a {
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    i {
+                        font-size: 20px;
+                    }
+                }
             }
         }
     }

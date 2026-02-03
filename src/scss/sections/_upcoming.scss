@@ -73,6 +73,11 @@
             display: flex;
             gap: 16px;
 
+            @media (max-width: 400px) {
+                flex-direction: column;
+            }
+
+
             &-left {
                 border-radius: 12px;
                 // background-color: #ECFDF3;
@@ -80,6 +85,12 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: center;
+                aspect-ratio: 1/1;
+
+                @media (max-width: 400px) {
+                    aspect-ratio: auto;
+                }
 
                 p {
                     display: flex;
@@ -104,6 +115,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                gap: 5px;
 
                 h4 {
                     @include font500(#000000, 24px);
@@ -121,11 +133,11 @@
 
                 p {
                     @include font400(#535862, 16px);
-                    line-height: 1;
+                    line-height: 1.3;
 
                     @include devices(lg) {
                         font-size: 14px;
-                        line-height: 0.9;
+                        line-height: 1.3;
                     }
 
                     display: -webkit-box;

@@ -107,7 +107,7 @@
                 @include font400(#000000, 20px);
                 position: relative;
                 z-index: 3;
-                line-height: 1.1;
+                line-height: 1.3;
 
                 @include devices(lg) {
                     font-size: 16px;
@@ -115,11 +115,11 @@
 
                 @include devices(md) {
                     font-size: 12px;
-                    line-height: 1.2;
+                    line-height: 1.3;
                 }
 
                 @include devices(sm) {
-                    line-height: 1.2;
+                    line-height: 1.3;
                     margin-top: 5px;
                     font-size: 14px;
                 }

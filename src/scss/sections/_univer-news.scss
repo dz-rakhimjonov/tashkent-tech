@@ -39,6 +39,7 @@
                 overflow: hidden;
 
 
+
                 @include devices(md) {
                     gap: 4px;
 
@@ -71,6 +72,7 @@
                 &:hover img {
                     transform: scale(1.2);
                 }
+
 
                 >p:first-of-type {
                     @include font700(#FFFFFF, 20px);
@@ -197,7 +199,11 @@
                         }
                     }
 
-                    &:hover img {
+
+                }
+
+                &:hover &-img {
+                    img {
                         transform: scale(1.2);
                     }
                 }

@@ -123,6 +123,10 @@
             align-items: flex-end;
             padding: 20px;
 
+            @include devices(xs) {
+                height: 250px;
+            }
+
             img {
                 position: absolute;
                 width: 100%;
