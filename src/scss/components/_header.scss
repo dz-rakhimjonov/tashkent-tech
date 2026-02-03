@@ -39,8 +39,6 @@
             gap: 40px;
             align-items: center;
 
-
-
             &-item {
                 @include devices(md) {
                     display: flex;
@@ -50,6 +48,11 @@
 
                 @include devices(xs) {
                     gap: 7px;
+                }
+
+                @media (max-width: 400px) {
+                    width: 90%;
+                    gap: 0px;
                 }
 
                 &-menu {
@@ -72,6 +75,7 @@
                     display: flex;
                     align-items: center;
                     gap: 5px;
+
 
                     i {
                         font-size: 18px;
