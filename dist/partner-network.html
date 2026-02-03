@@ -477,7 +477,6 @@
         dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
     });
 
-    // til tanlash
     dropdown.addEventListener('click', function (e) {
         const item = e.target.closest('li');
         if (!item) return;
@@ -491,11 +490,22 @@
         dropdown.style.display = 'none';
     });
 
-    // tashqariga bosilsa yopilsin
     document.addEventListener('click', function (e) {
         if (!e.target.closest('.header__top--right-item')) {
             dropdown.style.display = 'none';
         }
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        const header = document.querySelector('.header');
+        if (!header) return;
+
+        function onScroll() {
+            const trigger = 170;
+            header.classList.toggle('bloor-header', window.scrollY >= trigger);
+        }
+
+        onScroll();
+        window.addEventListener('scroll', onScroll);
     });
 
 

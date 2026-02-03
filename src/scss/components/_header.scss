@@ -12,6 +12,13 @@
     --bg-header: inherit;
 }
 
+.bloor-header {
+    background: rgba(255, 255, 255, 0.2);
+    /* shaffof fon */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
 
 .header {
     width: 100%;
@@ -206,7 +213,7 @@
                 // padding-left: 40px;
 
                 &:first-child {
-                    padding-left: 0;
+                    padding-left: 0px;
                 }
 
                 span {
