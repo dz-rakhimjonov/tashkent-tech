@@ -176,12 +176,15 @@
                 display: none;
             }
 
+            display: flex;
+            flex-direction: column;
+
             h4 {
                 @include font500(#FFFFFF, 20px);
                 margin-bottom: 10px;
             }
 
-            p {
+            a {
                 margin-top: 6px;
                 @include font400(#FFFFFF, 16px);
             }
@@ -200,7 +203,7 @@
                 margin-bottom: 6px;
             }
 
-            p {
+            a {
                 display: flex;
                 align-items: center;
                 gap: 8px;
