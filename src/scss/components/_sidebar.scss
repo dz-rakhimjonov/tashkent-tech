@@ -31,8 +31,6 @@
         border-right: 1px solid #E9EAEB;
         border-bottom: 1px solid #E9EAEB;
 
-
-
         &--item {
             padding: 12px;
             cursor: pointer;
@@ -43,6 +41,16 @@
                 padding-right: 18px;
             }
 
+            &:last-child:hover .sidebar__link::after {
+                content: "";
+                position: absolute;
+                left: -13px;
+                bottom: -13px;
+                width: 110%;
+                height: 1px;
+                background: red; // oxirgi item maxsus hover
+            }
+
             &:hover:not(.has-dropdown),
             &.active:not(.has-dropdown) {
                 .sidebar__link {
@@ -51,13 +59,14 @@
                     padding-right: 0;
                     @include font500(#E54519, 16px);
 
+
+
                     &::before {
                         flex: 0 0 14px;
                         opacity: 1;
                         height: 8px;
                         width: 8px;
                         background: #FFFFFF;
-                        // border: 3px solid var(--primary);
                         background-color: #E54519;
                         box-shadow: 0px 5px 5px 0px var(--primary)1A;
                     }
@@ -76,9 +85,7 @@
                                 rgba(229, 69, 25, 0.3) 80%,
                                 transparent 100%);
                     }
-
                 }
-
 
 
 
@@ -119,6 +126,51 @@
 
         &--item:last-child {
             border-bottom: none;
+        }
+
+        &--item:last-child:hover {
+
+            &:hover:not(.has-dropdown),
+            &.active:not(.has-dropdown) {
+                .sidebar__link {
+                    padding-left: 22px;
+                    color: var(--primary);
+                    padding-right: 0;
+                    @include font500(#E54519, 16px);
+
+
+
+                    &::before {
+                        flex: 0 0 14px;
+                        opacity: 1;
+                        height: 8px;
+                        width: 8px;
+                        background: #FFFFFF;
+                        background-color: #E54519;
+                        box-shadow: 0px 5px 5px 0px var(--primary)1A;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: -7px;
+                        bottom: -13px;
+                        width: 110%;
+                        height: 1px;
+                        border-radius: 14px;
+                        background: linear-gradient(to right,
+                                #E54519 0%,
+                                #E54519 40%,
+                                rgba(229, 69, 25, 0.5) 50%,
+                                rgba(229, 69, 25, 0.3) 80%,
+                                transparent 100%);
+                    }
+                }
+
+
+
+
+            }
         }
     }
 
