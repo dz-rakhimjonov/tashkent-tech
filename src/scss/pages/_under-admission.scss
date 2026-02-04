@@ -76,7 +76,7 @@
 
             &-btn {
                 display: flex;
-                justify-content: end;
+                justify-content: flex-end;
                 margin-top: 15px;
 
                 @include devices(xs) {

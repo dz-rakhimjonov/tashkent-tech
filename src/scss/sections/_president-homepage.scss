@@ -127,7 +127,7 @@
 
             &-backimg {
                 width: 375px;
-                height: 400px;
+                height: 100%;
                 position: absolute;
                 right: 0;
                 top: 0;
@@ -160,6 +160,7 @@
                 img {
                     position: relative;
                     z-index: 2;
+                    height: 100%;
                 }
             }
         }

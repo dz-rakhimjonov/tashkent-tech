@@ -7,15 +7,14 @@
 
 <body class="index">
     @@include('components/layout/header.html')
-
     @@include('components/sections/hero.html')
-    @@include('components/sections/decree.html')
+    @@include('components/sections/president-homepae.html')
     @@include('components/sections/univer-news.html')
-    @@include('components/sections/about.html')
-    @@include('components/sections/academics.html')
-    @@include('components/sections/carousel.html')
-    @@include('components/sections/partners.html')
-    @@include('components/sections/upcoming.html')
+    @@include('components/sections/about-univer.html')
+    @@include('components/sections/academics-program.html')
+    @@include('components/sections/campus-life.html')
+    @@include('components/sections/partners-univer.html')
+    @@include('components/sections/events.html')
     @@include('components/layout/social-media.html')
     @@include('components/layout/footer.html')
 
@@ -27,8 +26,7 @@
         if (!header) return;
 
         function onScroll() {
-            const limit = window.innerHeight - 200; // 100vh - 30px
-            header.classList.toggle('inset', window.scrollY <= limit);
+            header.classList.toggle('light', window.scrollY < 30);
         }
 
         onScroll();

@@ -21,7 +21,7 @@
         &--wrap {
             display: flex;
             gap: 20px;
-            align-items: end;
+            align-items: flex-end;
             margin-top: 10px;
 
             @include devices(xs) {

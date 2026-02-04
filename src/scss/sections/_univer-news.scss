@@ -17,17 +17,17 @@
         }
 
         &--img {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 16px;
 
             @include devices(sm) {
-                flex-direction: column;
-                align-items: center;
+                grid-template-columns: 1fr;
             }
 
             &-item {
                 position: relative;
-                width: 416px;
+                // width: 416px;
                 max-width: 100%;
                 height: 320px;
                 border-radius: 14px;
@@ -130,16 +130,22 @@
 
         &--card {
             margin-top: 20px;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 16px;
-            flex-wrap: wrap;
             justify-content: center;
 
-            @include devices(md) {}
+            @include devices(sm) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include devices(xs) {
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
 
             &-item {
                 border-radius: 14px;
-                width: 308px;
                 background-color: #FFFFFF;
                 border: 1px solid #E9EAEB;
 
@@ -152,7 +158,7 @@
                     z-index: 1;
                     display: flex;
                     flex-direction: column;
-                    justify-content: end;
+                    justify-content: flex-end;
                     overflow: hidden;
 
                     &::before {

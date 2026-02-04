@@ -1,3 +1,171 @@
-.events {
-  
+.upcoming {
+    position: relative;
+    margin-top: 40px;
+    padding: 40px 0;
+    overflow: hidden;
+
+    @include devices(md) {
+        margin-top: 0px;
+        padding: 20px 0;
+    }
+
+    @include devices(sm) {
+        margin-top: 20px;
+    }
+
+    &__back {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -10;
+    }
+
+    &__overlay {
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #F4D2BA66;
+        // opacity: 0.4;
+    }
+
+    &__content {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+
+        @include devices(md) {
+            grid-template-columns: 1fr;
+            margin-top: 20px;
+        }
+
+        &--item.one {
+            .upcoming__content--item-left {
+                background-color: #ECFDF3;
+            }
+        }
+
+        &--item.two {
+            .upcoming__content--item-left {
+                background-color: #1C77761A;
+            }
+        }
+
+        &--item.three {
+            .upcoming__content--item-left {
+                background-color: #EFF8FF;
+            }
+        }
+
+        &--item.four {
+            .upcoming__content--item-left {
+                background-color: #FFFAEB;
+            }
+        }
+
+        &--item {
+            padding: 16px;
+            background-color: #FFFFFF;
+            border-radius: 14px;
+            display: flex;
+            gap: 16px;
+
+            @media (max-width: 400px) {
+                flex-direction: column;
+            }
+
+
+            &-left {
+                border-radius: 12px;
+                // background-color: #ECFDF3;
+                padding: 20px 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                aspect-ratio: 1/1;
+
+                @media (max-width: 400px) {
+                    aspect-ratio: auto;
+                }
+
+                p {
+                    display: flex;
+                    gap: 2px;
+                    // align-items: center;
+
+                    i {
+                        font-size: 20px;
+                        color: #5454E3;
+                        width: 20px;
+                    }
+
+                    @include font500(#535862, 16px)
+                }
+
+                span {
+                    @include font600(#181D27, 24px)
+                }
+            }
+
+            &-right {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 5px;
+
+                h4 {
+                    @include font500(#000000, 24px);
+
+                    @include devices(lg) {
+                        font-size: 18px;
+                    }
+
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    /* nechta qator */
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+
+                p {
+                    @include font400(#535862, 16px);
+                    line-height: 1.3;
+
+                    @include devices(lg) {
+                        font-size: 14px;
+                        line-height: 1.3;
+                    }
+
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    /* nechta qator */
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+
+                div {
+                    width: 100%;
+                    height: 1px;
+                    background-color: #E9EAEB;
+                }
+
+                span {
+                    @include font400(#5454E3, 14px);
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+
+                    i {
+                        vertical-align: middle;
+                        margin-right: 4px;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -189,7 +189,7 @@
                 &-img {
                     margin-top: 15px;
                     display: flex;
-                    justify-content: end;
+                    justify-content: flex-end;
 
                     @include devices (sm) {
                         margin-top: 10px;

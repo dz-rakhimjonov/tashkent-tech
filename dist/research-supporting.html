@@ -28,7 +28,7 @@
 </head>
 
 <body>
-    <header class="header inset">
+    <header class="header light">
     <div class="container">
         <div class="header__top">
 
@@ -68,28 +68,30 @@
                 <a href="#">
                     <i class="i-telegram"></i>
                 </a>
-                <div class="header__top--right-item">
-                    <div class="header__top--right-item-lang">
-                        <img id="selectedFlag" src="../../images/flag-en.png">
-                        <span id="selectedLang">English </span>
-                        <i class="i-dropdown"></i>
-                    </div>
-
-                    <ul class="language-dropdown">
-                        <li data-lang="Uzbek" data-flag="../../images/flag-uz.png">
-                            <img src="../../images/flag-uz.png"> <span>
-                                Uzbek
-                            </span>
+                <div class="header__lang">
+                    <button data-bs-toggle="dropdown" class="header__lang-btn" type="button" aria-haspopup="true"
+                        aria-expanded="false">
+                        <img src="./images/flag-uz.png" alt="uz">
+                        O'zb<span class="i-dropdown"></span>
+                    </button>
+                    <ul class="dropdown-menu header__lang-dropdown">
+                        <li class="header__lang-item">
+                            <a class="header__lang-link header__lang-link--active" href="#">
+                                <img src="./images/flag-uz.png" alt="uz">
+                                O'zb
+                            </a>
                         </li>
-                        <li data-lang="Russian" data-flag="../../images/flag-ru.png">
-                            <img src="../../images/flag-ru.png"> <span>
-                                Russian
-                            </span>
+                        <li class="header__lang-item">
+                            <a class="header__lang-link" href="#">
+                                <img src="./images/flag-ru.png" alt="ru">
+                                Рус
+                            </a>
                         </li>
-                        <li data-lang="English" data-flag="../../images/flag-en.png">
-                            <img src="../../images/flag-en.png"><span>
-                                English
-                            </span>
+                        <li class="header__lang-item">
+                            <a class="header__lang-link" href="#">
+                                <img src="./images/flag-en.png" alt="en">
+                                Eng
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -467,48 +469,11 @@
     </div>
 </header>
 <script>
-    const langBtn = document.querySelector('.header__top--right-item-lang');
-    const dropdown = document.querySelector('.language-dropdown');
-    const selectedFlag = document.getElementById('selectedFlag');
-    const selectedLang = document.getElementById('selectedLang');
-
-    langBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-    });
-
-    dropdown.addEventListener('click', function (e) {
-        const item = e.target.closest('li');
-        if (!item) return;
-
-        const lang = item.dataset.lang;
-        const flag = item.dataset.flag;
-
-        selectedLang.innerHTML = lang + ' <i class="i-dropdown"></i>';
-        selectedFlag.src = flag;
-
-        dropdown.style.display = 'none';
-    });
-
-    document.addEventListener('click', function (e) {
-        if (!e.target.closest('.header__top--right-item')) {
-            dropdown.style.display = 'none';
-        }
-    });
-    document.addEventListener('DOMContentLoaded', () => {
-        const header = document.querySelector('.header');
-        if (!header) return;
-
-        function onScroll() {
-            const trigger = 170;
-            header.classList.toggle('bloor-header', window.scrollY >= trigger);
-        }
-
-        onScroll();
-        window.addEventListener('scroll', onScroll);
-    });
-
-
+    document.querySelectorAll('img').forEach(i => {
+        const w = 400 + Math.random() * 400 | 0
+        const h = 300 + Math.random() * 300 | 0
+        i.src = `https://placehold.co/${w}x${h}`
+    })
 </script>
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu"
     aria-labelledby="offcanvasMenuLabel">
@@ -1062,7 +1027,9 @@
     </div>
 </div>
     <footer class="footer">
-    <div class="footer__overlay"></div>
+    <div class="footer__overlay">
+        <img src="../../images/footer-img.png">
+    </div>
     <div class="footer__content container">
         <div class="footer__content--logorow">
             <a href="#">

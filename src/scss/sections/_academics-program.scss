@@ -95,17 +95,23 @@
 
     &__card {
         margin-top: 30px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 16px;
+
+        @include devices(md) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include devices(xs) {
+            grid-template-columns: 1fr;
+        }
 
         &--item {
             position: relative;
             overflow: hidden;
             border-radius: 14px;
-            width: 308px;
-            max-width: 350px;
+            // max-width: 350px;
             height: 300px;
             display: flex;
             align-items: flex-end;
