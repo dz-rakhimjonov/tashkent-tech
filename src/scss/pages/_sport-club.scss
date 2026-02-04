@@ -12,10 +12,13 @@
         grid-template-columns: 1fr 1fr;
     }
 
-
+    @include devices(xs) {
+        gap: 7px;
+    }
 
     &__item {
-        max-width: 300px;
+        // max-width: 300px;
+        width: 100%;
         padding: 10px;
         border-radius: 14px;
         border: 1px solid #E9EAEB;

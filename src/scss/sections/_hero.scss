@@ -185,7 +185,7 @@
                 align-items: flex-end;
                 position: relative;
                 z-index: 1;
-                aspect-ratio: 1/1;
+                aspect-ratio: 2/1.5;
 
                 @include devices(xl) {
                     aspect-ratio: 1/1;

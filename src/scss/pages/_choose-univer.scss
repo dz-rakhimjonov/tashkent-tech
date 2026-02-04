@@ -31,6 +31,7 @@
             @include font600(#181D27, 22px);
             position: relative;
             z-index: 3;
+            margin-top: 0;
 
             @include devices(sm) {
                 font-size: 20px;
@@ -85,7 +86,8 @@
         }
 
         &--table {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 16px;
 
             @include devices (md) {
@@ -192,7 +194,7 @@
         }
     }
 
-    h4 {
+    &__admission {
         @include font600(#181D27, 22px);
         margin-top: 20px;
     }
