@@ -1275,6 +1275,19 @@
 <script src="./assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
 <script src="./assets/libs/owl-carousel/owl.carousel.min.js"></script>
 <script src="./assets/js/main.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const header = document.querySelector('.header');
+        if (!header) return;
+
+        function onScroll() {
+            header.classList.remove('light');
+        }
+
+        onScroll();
+        window.addEventListener('scroll', onScroll);
+    });
+</script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const header = document.querySelector('.header');
