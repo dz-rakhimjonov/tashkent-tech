@@ -468,17 +468,40 @@
         </div>
     </div>
 </header>
-<script>
-    document.querySelectorAll('img').forEach(i => {
-        const w = 400 + Math.random() * 400 | 0
-        const h = 300 + Math.random() * 300 | 0
-        i.src = `https://placehold.co/${w}x${h}`
-    })
-</script>
+
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu"
     aria-labelledby="offcanvasMenuLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menyu</h5>
+        <div class="offcanvas-header-logo">
+            <img src="./images/footer-logo.svg">
+        </div>
+        <div class="header__lang menu-lang">
+            <button data-bs-toggle="dropdown" class="header__lang-btn" type="button" aria-haspopup="true"
+                aria-expanded="false">
+                <img src="./images/flag-uz.png" alt="uz">
+                O'zb<span class="i-dropdown"></span>
+            </button>
+            <ul class="dropdown-menu header__lang-dropdown">
+                <li class="header__lang-item">
+                    <a class="header__lang-link header__lang-link--active" href="#">
+                        <img src="./images/flag-uz.png" alt="uz">
+                        O'zb
+                    </a>
+                </li>
+                <li class="header__lang-item">
+                    <a class="header__lang-link" href="#">
+                        <img src="./images/flag-ru.png" alt="ru">
+                        Рус
+                    </a>
+                </li>
+                <li class="header__lang-item">
+                    <a class="header__lang-link" href="#">
+                        <img src="./images/flag-en.png" alt="en">
+                        Eng
+                    </a>
+                </li>
+            </ul>
+        </div>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
@@ -834,6 +857,25 @@
                 </ul>
             </li>
         </ul>
+    </div>
+    <div class="offcanvas-footer">
+        <div class="offcanvas-footer-icons">
+            <a href="#">
+                <i class="i-instagram-menu"></i>
+            </a>
+            <a href="#">
+                <i class="i-telegram-menu"></i>
+            </a>
+            <a href="#">
+                <i class="i-facebook-menu"></i>
+            </a>
+            <a href="#">
+                <i class="i-linkedin-menu"></i>
+            </a>
+        </div>
+        <div class="offcanvas-footer-logo">
+            <img src="./images/TT-logo.svg">
+        </div>
     </div>
 </div>
     <div class="layout">

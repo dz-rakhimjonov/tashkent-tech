@@ -11,7 +11,7 @@
         position: absolute;
         inset: 0;
         background: linear-gradient(to bottom,
-                rgba(0, 0, 0, 0.8) 0%,
+                rgba(0, 0, 0, 0.7) 0%,
                 rgba(0, 0, 0, 0.6) 60%,
                 rgba(0, 0, 0, 0.5) 80%,
                 rgba(0, 0, 0, 0.3) 90%,
@@ -25,7 +25,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        min-height: 100vh;
 
         @include devices(sm) {
             flex-direction: column;
@@ -65,6 +65,14 @@
 
                 @include devices(sm) {
                     font-size: 27px;
+                }
+
+                span {
+                    background: linear-gradient(to bottom, #E54519 0%, #FFA288 100%);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    color: transparent;
                 }
             }
 
@@ -155,11 +163,6 @@
             width: 42%;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            // aspect-ratio: 0.8;
-
-            // position: relative;
-            // z-index: 1;
-
 
             @include devices(xl) {
                 width: 50%;
@@ -185,11 +188,9 @@
                 align-items: flex-end;
                 position: relative;
                 z-index: 1;
-                aspect-ratio: 2/1.5;
+                height: 200px;
 
-                @include devices(xl) {
-                    aspect-ratio: 1/1;
-                }
+
 
                 @include devices(md) {
                     padding: 10px 7px;
@@ -208,13 +209,14 @@
                     content: "";
                     position: absolute;
                     background-color: #FFFFFF;
-                    width: 13px;
-                    height: 13px;
+                    width: 8px;
+                    height: 8px;
                     border-radius: 50%;
                     z-index: 5;
-                    left: 20px;
-                    top: 20px;
+                    left: 10px;
+                    top: 10px;
                     opacity: 0;
+                    transition: ease 0.4s;
                 }
 
                 &::after {
@@ -229,6 +231,7 @@
                     background: rgba(255, 255, 255, 0.1);
                     opacity: 0;
                     transition: opacity 0.3s ease;
+                    transition: ease 0.4s;
                 }
 
                 &:hover::after {
@@ -259,10 +262,12 @@
 
                 }
 
+
                 span {
                     font-size: 32px;
                     position: relative;
                     z-index: 3;
+                    font-weight: 600;
 
 
                     @include devices(lg) {
@@ -278,6 +283,7 @@
                     }
                 }
 
+
                 p {
 
 
@@ -286,6 +292,7 @@
                     position: relative;
                     z-index: 3;
                     text-align: end;
+                    line-height: 1.1;
 
                     @include devices(md) {
                         font-size: 10px;
@@ -301,7 +308,7 @@
                 }
 
                 &-left {
-                    height: 195px;
+                    height: 220px;
                     position: relative;
 
                     @include devices(sm) {
@@ -319,8 +326,8 @@
                         background: linear-gradient(to top,
                                 rgba(113, 118, 128, 1) 0%,
                                 rgba(113, 118, 128, 0.4) 50%,
-                                rgba(113, 118, 128, 0.2) 70%,
-                                rgba(113, 118, 128, 0.1) 80%,
+                                rgba(113, 118, 128, 0.4) 70%,
+                                rgba(113, 118, 128, 0.2) 80%,
                                 rgba(113, 118, 128, 0.01) 90%,
                             )
                     }
@@ -346,8 +353,8 @@
                         background: linear-gradient(to top,
                                 rgba(113, 118, 128, 1) 0%,
                                 rgba(113, 118, 128, 0.4) 50%,
-                                rgba(113, 118, 128, 0.2) 70%,
-                                rgba(113, 118, 128, 0.1) 80%,
+                                rgba(113, 118, 128, 0.4) 70%,
+                                rgba(113, 118, 128, 0.2) 80%,
                                 rgba(113, 118, 128, 0.01) 90%,
                             )
                     }
@@ -363,8 +370,8 @@
                         background: linear-gradient(to top,
                                 rgba(113, 118, 128, 1) 0%,
                                 rgba(113, 118, 128, 0.4) 50%,
-                                rgba(113, 118, 128, 0.2) 70%,
-                                rgba(113, 118, 128, 0.1) 80%,
+                                rgba(113, 118, 128, 0.4) 70%,
+                                rgba(113, 118, 128, 0.2) 80%,
                                 rgba(113, 118, 128, 0.01) 90%,
                             )
                     }
@@ -377,7 +384,7 @@
 
 
                 &-left {
-                    height: 195px;
+                    height: 170px;
                     position: relative;
 
 
@@ -393,8 +400,8 @@
                         background: linear-gradient(to bottom,
                                 rgba(113, 118, 128, 1) 0%,
                                 rgba(113, 118, 128, 0.4) 50%,
-                                rgba(113, 118, 128, 0.2) 70%,
-                                rgba(113, 118, 128, 0.1) 80%,
+                                rgba(113, 118, 128, 0.4) 70%,
+                                rgba(113, 118, 128, 0.2) 80%,
                                 rgba(113, 118, 128, 0.01) 90%,
                             );
 
@@ -424,8 +431,8 @@
                         background: linear-gradient(to bottom,
                                 rgba(113, 118, 128, 1) 0%,
                                 rgba(113, 118, 128, 0.4) 50%,
-                                rgba(113, 118, 128, 0.2) 70%,
-                                rgba(113, 118, 128, 0.1) 80%,
+                                rgba(113, 118, 128, 0.4) 70%,
+                                rgba(113, 118, 128, 0.2) 80%,
                                 rgba(113, 118, 128, 0.01) 90%,
                             );
 
@@ -445,8 +452,8 @@
                         background: linear-gradient(to bottom,
                                 rgba(113, 118, 128, 1) 0%,
                                 rgba(113, 118, 128, 0.4) 50%,
-                                rgba(113, 118, 128, 0.2) 70%,
-                                rgba(113, 118, 128, 0.1) 80%,
+                                rgba(113, 118, 128, 0.4) 70%,
+                                rgba(113, 118, 128, 0.2) 80%,
                                 rgba(113, 118, 128, 0.01) 90%,
                             );
 

@@ -468,17 +468,40 @@
         </div>
     </div>
 </header>
-<script>
-    document.querySelectorAll('img').forEach(i => {
-        const w = 400 + Math.random() * 400 | 0
-        const h = 300 + Math.random() * 300 | 0
-        i.src = `https://placehold.co/${w}x${h}`
-    })
-</script>
+
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu"
     aria-labelledby="offcanvasMenuLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menyu</h5>
+        <div class="offcanvas-header-logo">
+            <img src="./images/footer-logo.svg">
+        </div>
+        <div class="header__lang menu-lang">
+            <button data-bs-toggle="dropdown" class="header__lang-btn" type="button" aria-haspopup="true"
+                aria-expanded="false">
+                <img src="./images/flag-uz.png" alt="uz">
+                O'zb<span class="i-dropdown"></span>
+            </button>
+            <ul class="dropdown-menu header__lang-dropdown">
+                <li class="header__lang-item">
+                    <a class="header__lang-link header__lang-link--active" href="#">
+                        <img src="./images/flag-uz.png" alt="uz">
+                        O'zb
+                    </a>
+                </li>
+                <li class="header__lang-item">
+                    <a class="header__lang-link" href="#">
+                        <img src="./images/flag-ru.png" alt="ru">
+                        Рус
+                    </a>
+                </li>
+                <li class="header__lang-item">
+                    <a class="header__lang-link" href="#">
+                        <img src="./images/flag-en.png" alt="en">
+                        Eng
+                    </a>
+                </li>
+            </ul>
+        </div>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
@@ -835,6 +858,25 @@
             </li>
         </ul>
     </div>
+    <div class="offcanvas-footer">
+        <div class="offcanvas-footer-icons">
+            <a href="#">
+                <i class="i-instagram-menu"></i>
+            </a>
+            <a href="#">
+                <i class="i-telegram-menu"></i>
+            </a>
+            <a href="#">
+                <i class="i-facebook-menu"></i>
+            </a>
+            <a href="#">
+                <i class="i-linkedin-menu"></i>
+            </a>
+        </div>
+        <div class="offcanvas-footer-logo">
+            <img src="./images/TT-logo.svg">
+        </div>
+    </div>
 </div>
     <main class="hero">
     <div class="hero__overlay"></div>
@@ -867,22 +909,30 @@
             </div>
             <div class="hero__content--right-item">
                 <img src="../images/magistr.svg">
-                <span class="gradient-text">Undergraduate</span>
+                <h1>
+                    <span class="gradient-text">Undergraduate</span>
+                </h1>
                 <p>Start your journey with quality bachelor’s programs.</p>
             </div>
             <div class="hero__content--right-item">
                 <img src="../images/magistr.svg">
+
                 <span class="gradient-text">Graduate</span>
+                </h1>
                 <p>Grow your expertise with advanced master’s degrees.</p>
             </div>
             <div class="hero__content--right-item">
                 <img src="../images/medal-alt.svg">
-                <span class="gradient-text">PhD and DSc</span>
+                <h1>
+                    <span class="gradient-text">PhD and DSc</span>
+                </h1>
                 <p>Lead research and innovation at the highest level.</p>
             </div>
             <div class="hero__content--right-item">
                 <img src="../images/book-open.svg">
-                <span class="gradient-text">Undergraduate</span>
+                <h1>
+                    <span class="gradient-text">Undergraduate</span>
+                </h1>
                 <p>Lead research and innovation at the highest level.</p>
             </div>
             <div class="hero__content--right-bottom-left">
@@ -892,155 +942,174 @@
         </div>
     </div>
 </main>
-    <div class="decree container">
-    <div class="decree__wrapper">
-        <div class="decree__wrapper--img">
-            <img src="../../images/preseident-decree.png">
+    <div class="president-section container">
+    <div class="president-section__left">
+
+        <div class="president-section__left--text">
+            <div class="president-section__left--text-top-dot">
+                <img src="../../images/homa-page-pre.png">
+            </div>
+            <h2>Prezident ToshTech universitetini tashkil etish
+                toʻgʻrisidagi
+                farmonni imzoladi.</h2>
+            <p>Yangi tashkil etilgan universitet moliyaviy, akademik va tashkiliy mustaqillikka ega bo‘ladi. Joriy yilda
+                bir yillik
+                o‘quv kurslari yo‘lga qo‘yiladi. Kelgusi yildan bakalavriat yo‘nalishlari ochiladi, 2027 yildan esa
+                magistratura va
+                aspirantura bosqichlariga qabul boshlanadi. Ta’lim grant va kontrakt asosida, o‘zbek hamda chet
+                tillarida olib boriladi.
+                2029/2030 yilgacha qabul qilingan talabalar davlat granti bilan ta’minlanadi.</p>
+            <div class="president-section__left--text-bottom-dot">
+                <img src="../../images/homa-page-pre.png">
+            </div>
         </div>
-        <div class="decree__wrapper--text">
-            <img class="decree__wrapper--text-gerb" src="../../images/Gerb.svg">
-            <p>Prezident ToshTech universitetini tashkil etish toʻgʻrisidagi farmonni imzoladi.</p>
-            <p>Yangi tashkil etilgan universitet moliyaviy, akademik va tashkiliy mustaqillikka ega bo'ladi. Birinchi
-                bosqichda joriy
-                yilda bir yillik o‘quv kurslari yo‘lga qo‘yiladi.
-                Kelgusi yildan boshlab universitet bakalavriat yo‘nalishlari bo‘yicha mutaxassislar tayyorlaydi. 2027
-                yildan boshlab
-                talabalar magistratura va aspiranturaga oʻqishga kirishlari mumkin boʻladi.
-                Talabalar grant va kontrakt asosida oʻzbek va chet tillarida oʻqitiladi. 2029/2030 yilgacha qabul
-                qilingan talabalar
-                davlat grantiga ega bo‘ladilar. 
-            </p>
-            <div class="decree__wrapper--text-backimg">
-                <img src="../../images/decree.png">
-                <div></div>
+
+        <div class="president-section__left--info">
+            <img src="../../images/gerb.png">
+            <div class="president-section__left--info-right">
+                <p>Shavkat Mirziyoyev</p>
+                <span>O’zbekiston Respublikasi prezidenti</span>
             </div>
         </div>
     </div>
+    <div class="president-section__right">
+        <div class="president-section__right--top-shadow"></div>
+        <div class="president-section__right--bottom-shadow"></div>
+        <div class="president-section__right--before">
+            <div class="president-section__right--before-line"></div>
+            <div class="president-section__right--before-img">
+                <img src="../../images/logo-tashtech.png">
+            </div>
+        </div>
+        <div class="president-section__right--img">
+            <img src="../../images/preseident-decree.png">
+        </div>
+    </div>
 </div>
-    <div class="univer-news container">
+    <div class="news-section container">
     <h2 class="components-title">University <span>News</span></h2>
-    <div class="univer-news__wrapper">
-        <div class="univer-news__wrapper--img">
-            <div class="univer-news__wrapper--img-item">
-                <div class="univer-news__wrapper--img-item-overlay"></div>
-                <img src="../../images/univer-news-1.png">
-                <p>How Tax Policy Could Change Under the New Administration</p>
-                <p>SEC Targets Crypto Scams – The U.S. Securities and Exchange Commission cracks....</p>
-                <div class="univer-news__wrapper--img-item-date">
-                    <div class="univer-news__wrapper--img-item-date-data">
-                        <i class="i-calendar"></i>
-                        <p>15 May 2020 9:00</p>
-                    </div>
-                    <div class="univer-news__wrapper--img-item-date-data">
-                        <i class="i-eye"></i>
-                        <p>267</p>
-                    </div>
-                </div>
-            </div>
-            <div class="univer-news__wrapper--img-item">
-                <div class="univer-news__wrapper--img-item-overlay"></div>
-                <img src="../../images/univer-news-2.png">
-                <p>How Tax Policy Could Change Under the New Administration</p>
-                <p>SEC Targets Crypto Scams – The U.S. Securities and Exchange Commission cracks....</p>
-                <div class="univer-news__wrapper--img-item-date">
-                    <div class="univer-news__wrapper--img-item-date-data">
-                        <i class="i-calendar"></i>
-                        <p>15 May 2020 9:00</p>
-                    </div>
-                    <div class="univer-news__wrapper--img-item-date-data">
-                        <i class="i-eye"></i>
-                        <p>267</p>
-                    </div>
-                </div>
-            </div>
-            <div class="univer-news__wrapper--img-item">
-                <div class="univer-news__wrapper--img-item-overlay"></div>
+    <div class="news-section__wrapper">
+        <div class="news-section__wrapper--img">
+            <div class="news-section__wrapper--img-item">
+                <div class="news-section__wrapper--img-item-overlay"></div>
                 <img src="../../images/univer-news-3.png">
                 <p>How Tax Policy Could Change Under the New Administration</p>
                 <p>SEC Targets Crypto Scams – The U.S. Securities and Exchange Commission cracks....</p>
-                <div class="univer-news__wrapper--img-item-date">
-                    <div class="univer-news__wrapper--img-item-date-data">
+                <div class="news-section__wrapper--img-item-date">
+                    <div class="news-section__wrapper--img-item-date-data">
                         <i class="i-calendar"></i>
                         <p>15 May 2020 9:00</p>
                     </div>
-                    <div class="univer-news__wrapper--img-item-date-data">
+                    <div class="news-section__wrapper--img-item-date-data">
+                        <i class="i-eye"></i>
+                        <p>267</p>
+                    </div>
+                </div>
+            </div>
+            <div class="news-section__wrapper--img-item">
+                <div class="news-section__wrapper--img-item-overlay"></div>
+                <img src="../../images/univer-news-1.png">
+                <p>How Tax Policy Could Change Under the New Administration</p>
+                <p>SEC Targets Crypto Scams – The U.S. Securities and Exchange Commission cracks....</p>
+                <div class="news-section__wrapper--img-item-date">
+                    <div class="news-section__wrapper--img-item-date-data">
+                        <i class="i-calendar"></i>
+                        <p>15 May 2020 9:00</p>
+                    </div>
+                    <div class="news-section__wrapper--img-item-date-data">
+                        <i class="i-eye"></i>
+                        <p>267</p>
+                    </div>
+                </div>
+            </div>
+            <div class="news-section__wrapper--img-item">
+                <div class="news-section__wrapper--img-item-overlay"></div>
+                <img src="../../images/univer-news-2.png">
+                <p>How Tax Policy Could Change Under the New Administration</p>
+                <p>SEC Targets Crypto Scams – The U.S. Securities and Exchange Commission cracks....</p>
+                <div class="news-section__wrapper--img-item-date">
+                    <div class="news-section__wrapper--img-item-date-data">
+                        <i class="i-calendar"></i>
+                        <p>15 May 2020 9:00</p>
+                    </div>
+                    <div class="news-section__wrapper--img-item-date-data">
                         <i class="i-eye"></i>
                         <p>267</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="univer-news__wrapper--card">
-            <div class="univer-news__wrapper--card-item">
-                <div class="univer-news__wrapper--card-item-img">
+        <div class="news-section__wrapper--card">
+            <div class="news-section__wrapper--card-item">
+                <div class="news-section__wrapper--card-item-img">
                     <img src="../../images/univer-card-1.png">
                 </div>
-                <div class="univer-news__wrapper--card-item-text">
+                <div class="news-section__wrapper--card-item-text">
                     <p class="line-clamp-2">Twitter sues Elon Musk to enforce original merger</p>
                     <p>SEC Targets Crypto Scams – The U.S. Securities....</p>
-                    <div class="univer-news__wrapper--card-item-text-date">
-                        <div class="univer-news__wrapper--card-item-text-date-data">
+                    <div class="news-section__wrapper--card-item-text-date">
+                        <div class="news-section__wrapper--card-item-text-date-data">
                             <i class="i-calendar"></i>
                             <p>15 May 2020 9:00</p>
                         </div>
-                        <div class="univer-news__wrapper--card-item-text-date-data">
+                        <div class="news-section__wrapper--card-item-text-date-data">
                             <i class="i-eye"></i>
                             <p>267</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="univer-news__wrapper--card-item">
-                <div class="univer-news__wrapper--card-item-img">
+            <div class="news-section__wrapper--card-item">
+                <div class="news-section__wrapper--card-item-img">
                     <img src="../../images/univer-card-2.png">
                 </div>
-                <div class="univer-news__wrapper--card-item-text">
+                <div class="news-section__wrapper--card-item-text">
                     <p>Twitter sues Elon Musk to enforce original merger</p>
                     <p>SEC Targets Crypto Scams – The U.S. Securities....</p>
-                    <div class="univer-news__wrapper--card-item-text-date">
-                        <div class="univer-news__wrapper--card-item-text-date-data">
+                    <div class="news-section__wrapper--card-item-text-date">
+                        <div class="news-section__wrapper--card-item-text-date-data">
                             <i class="i-calendar"></i>
                             <p>15 May 2020 9:00</p>
                         </div>
-                        <div class="univer-news__wrapper--card-item-text-date-data">
+                        <div class="news-section__wrapper--card-item-text-date-data">
                             <i class="i-eye"></i>
                             <p>267</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="univer-news__wrapper--card-item">
-                <div class="univer-news__wrapper--card-item-img">
+            <div class="news-section__wrapper--card-item">
+                <div class="news-section__wrapper--card-item-img">
                     <img src="../../images/univer-card-3.png">
                 </div>
-                <div class="univer-news__wrapper--card-item-text">
+                <div class="news-section__wrapper--card-item-text">
                     <p>Twitter sues Elon Musk to enforce original merger</p>
                     <p>SEC Targets Crypto Scams – The U.S. Securities....</p>
-                    <div class="univer-news__wrapper--card-item-text-date">
-                        <div class="univer-news__wrapper--card-item-text-date-data">
+                    <div class="news-section__wrapper--card-item-text-date">
+                        <div class="news-section__wrapper--card-item-text-date-data">
                             <i class="i-calendar"></i>
                             <p>15 May 2020 9:00</p>
                         </div>
-                        <div class="univer-news__wrapper--card-item-text-date-data">
+                        <div class="news-section__wrapper--card-item-text-date-data">
                             <i class="i-eye"></i>
                             <p>267</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="univer-news__wrapper--card-item">
-                <div class="univer-news__wrapper--card-item-img">
+            <div class="news-section__wrapper--card-item">
+                <div class="news-section__wrapper--card-item-img">
                     <img src="../../images/univer-card-4.png">
                 </div>
-                <div class="univer-news__wrapper--card-item-text">
+                <div class="news-section__wrapper--card-item-text">
                     <p>Twitter sues Elon Musk to enforce original merger</p>
                     <p>SEC Targets Crypto Scams – The U.S. Securities....</p>
-                    <div class="univer-news__wrapper--card-item-text-date">
-                        <div class="univer-news__wrapper--card-item-text-date-data">
+                    <div class="news-section__wrapper--card-item-text-date">
+                        <div class="news-section__wrapper--card-item-text-date-data">
                             <i class="i-calendar"></i>
                             <p>15 May 2020 9:00</p>
                         </div>
-                        <div class="univer-news__wrapper--card-item-text-date-data">
+                        <div class="news-section__wrapper--card-item-text-date-data">
                             <i class="i-eye"></i>
                             <p>267</p>
                         </div>
@@ -1050,68 +1119,68 @@
         </div>
     </div>
 </div>
-    <div class="about">
-    <div class="about__logo--top">
+    <div class="about-section">
+    <div class="about-section__logo--top">
         <img src="../../images/logo-tt.png">
     </div>
-    <div class="about__wrapper container">
+    <div class=" container">
         <h2 class="components-title">About The <span>University</span></h2>
-        <div class="about__wrapper--univer">
-            <div class="about__wrapper--univer-text">
-                <div class="about__wrapper--univer-text-name">
+        <div class="about-section__wrapper">
+            <div class="about-section__wrapper-text">
+                <div class="about-section__wrapper-text-name">
                     <h3>Tashkent University of Technology</h3>
                     <p>In a laoreet purus. Integer turpis q
                         uam, laoreet id orci nec, ultrices lacinia nunc. Aliquam erat
                         vo Aliquam pulvinar
                         vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus.</p>
                 </div>
-                <div class="about__wrapper--univer-text-btn">
+                <div class="about-section__wrapper-text-btn">
                     <button>Learn More <i class="i-arrow-right"></i></button>
                 </div>
-                <div class="about__wrapper--univer-text-grid">
-                    <div class="about__wrapper--univer-text-grid-item">
-                        <div class="about__wrapper--univer-text-grid-item-img student">
+                <div class="about-section__wrapper-text-grid">
+                    <div class="about-section__wrapper-text-grid-item">
+                        <div class="about-section__wrapper-text-grid-item-img student">
                             <img src="../../images/Stats-magistr.svg">
                         </div>
-                        <div class="about__wrapper--univer-text-grid-item-info">
+                        <div class="about-section__wrapper-text-grid-item-info">
                             <p>22,500</p>
                             <span>Students</span>
                         </div>
                     </div>
-                    <div class="about__wrapper--univer-text-grid-item">
-                        <div class="about__wrapper--univer-text-grid-item-img staff">
+                    <div class="about-section__wrapper-text-grid-item">
+                        <div class="about-section__wrapper-text-grid-item-img staff">
                             <img src="../../images/Stats-student.svg">
                         </div>
-                        <div class="about__wrapper--univer-text-grid-item-info">
+                        <div class="about-section__wrapper-text-grid-item-info">
                             <p>112</p>
                             <span>Staff</span>
                         </div>
                     </div>
-                    <div class="about__wrapper--univer-text-grid-item">
-                        <div class="about__wrapper--univer-text-grid-item-img school">
+                    <div class="about-section__wrapper-text-grid-item">
+                        <div class="about-section__wrapper-text-grid-item-img school">
                             <img src="../../images/Stats-bino.svg">
                         </div>
-                        <div class="about__wrapper--univer-text-grid-item-info">
+                        <div class="about-section__wrapper-text-grid-item-info">
                             <p>6</p>
                             <span>Schools</span>
                         </div>
                     </div>
-                    <div class="about__wrapper--univer-text-grid-item">
-                        <div class="about__wrapper--univer-text-grid-item-img faculty">
+                    <div class="about-section__wrapper-text-grid-item">
+                        <div class="about-section__wrapper-text-grid-item-img faculty">
                             <img src="../../images/faculty.png">
                         </div>
-                        <div class="about__wrapper--univer-text-grid-item-info">
+                        <div class="about-section__wrapper-text-grid-item-info">
                             <p>68</p>
                             <span>Faculty</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="about__wrapper--univer-img">
-                <div class="about__wrapper--univer-img-grid">
+            <div class="about-section__wrapper-img">
+                <div class="about-section__wrapper-img-grid">
                     <img src="../../images/About-grid-1.svg">
                 </div>
-                <div class="about__wrapper--univer-img-grid">
+                <div class="about-section__wrapper-img-grid">
                     <img src="../../images/About-grid2.svg">
                     <img src="../../images/About-grid3.svg">
                 </div>
@@ -1119,14 +1188,56 @@
             </div>
         </div>
     </div>
-    <div class="about__logo--bottom">
+    <div class="about-section__logo--bottom">
         <img src="../../images/logo-tt.png">
     </div>
 </div>
-    <div class="academics container">
+<!-- <div class="about-section">
+    <div class="about-section__logo--top">
+        <img src="{{ asset('front') }}/images/logo-mini.svg">
+    </div>
+    <div class="container">
+        <h2 class="components-title">{!!sectionValue($about->first(), "title")!!}</h2>
+        <div class="about-section__wrapper">
+            <div class="about-section__wrapper-text">
+                <div class="about-section__wrapper-text-name">
+                    <h3>{{sectionValue($about->first(), "subtitle")}}</h3>
+                    <p>{{sectionValue($about->first(), "desc")}}</p>
+                </div>
+                <div class="about-section__wrapper-text-btn">
+                    <button>{{staticValue("learn-more")}}<i class="i-arrow-right"></i></button>
+                </div>
+                <div class="about-section__wrapper-text-grid">
+                    @foreach ($about[0]->children as $child)
+                    <div class="about-section__wrapper-text-grid-item">
+                        <div class="about-section__wrapper-text-grid-item-img">
+                            <img src="{{ sectionImages($child, true) }}">
+                        </div>
+                        <div class="about-section__wrapper-text-grid-item-info">
+                            <p>{{sectionValue($child, "count")}}</p>
+                            <span>{{sectionValue($child , "title")}}</span>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+            <div class="about-section__wrapper-img">
+                <div class="about-section__wrapper-img-grid">
+                    <img src="{{ sectionImages($about , true) }}">
+                </div>
+                <div class="about-section__wrapper-img-grid">
+
+
+                </div>
+            </div>
+        </div>
+        <div class="about-section__logo--bottom">
+            <img src="{{ asset('front') }}/images/logo-mini.svg">
+        </div> -->
+    <div class="academics-section container">
     <h2 class="components-title">Academics & <span>Program</span></h2>
-    <div class="academics__carousel">
-        <div class="academics__carousel--left">
+    <div class="academics-section__carousel">
+        <div class="academics-section__carousel--left">
             <button class="active">
                 <p>Undergraduate</p>
             </button>
@@ -1140,7 +1251,7 @@
                 <p>Courses</p>
             </button>
         </div>
-        <div class="academics__carousel--select">
+        <div class="academics-section__carousel--select">
             <select>
                 <option value="0">
                     Undergraduate
@@ -1161,121 +1272,121 @@
         </div>
     </div>
     <div class="tab-contents">
-        <div class="academics__carousel--content active">
-            <div class="academics__card">
-                <div class="academics__card--item">
+        <div class="academics-section__carousel--content active">
+            <div class="academics-section__card">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-1.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>B.Sc. Chemical & Materials Engineering</p>
                 </div>
-                <div class="academics__card--item">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-2.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>M.Sc. in Mechanical Engineering</p>
                 </div>
-                <div class="academics__card--item">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-3.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>PhD Programmes</p>
                 </div>
-                <div class="academics__card--item">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-4.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>SAT Math</p>
                 </div>
-                <div class="academics__card--item">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-5.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>M.Sc. in Sustainable Chemical Engineering & Materials</p>
                 </div>
-                <div class="academics__card--item">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-6.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>SAT English</p>
                 </div>
-                <div class="academics__card--item">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-7.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>B.Sc. Cyber Security</p>
                 </div>
-                <div class="academics__card--item">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-8.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>DSc Programmes</p>
                 </div>
             </div>
         </div>
-        <div class="academics__carousel--content">
-            <div class="academics__card">
+        <div class="academics-section__carousel--content">
+            <div class="academics-section__card">
 
-                <div class="academics__card--item">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-5.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>M.Sc. in Sustainable Chemical Engineering & Materials</p>
                 </div>
-                <div class="academics__card--item">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-6.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>SAT English</p>
                 </div>
-                <div class="academics__card--item">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-7.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>B.Sc. Cyber Security</p>
                 </div>
-                <div class="academics__card--item">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-8.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>DSc Programmes</p>
                 </div>
             </div>
         </div>
-        <div class="academics__carousel--content">
-            <div class="academics__card">
-                <div class="academics__card--item">
+        <div class="academics-section__carousel--content">
+            <div class="academics-section__card">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-1.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>B.Sc. Chemical & Materials Engineering</p>
                 </div>
-                <div class="academics__card--item">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-2.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>M.Sc. in Mechanical Engineering</p>
                 </div>
-                <div class="academics__card--item">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-3.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>PhD Programmes</p>
                 </div>
-                <div class="academics__card--item">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-4.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>SAT Math</p>
                 </div>
 
             </div>
         </div>
-        <div class="academics__carousel--content">
-            <div class="academics__card">
-                <div class="academics__card--item">
+        <div class="academics-section__carousel--content">
+            <div class="academics-section__card">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-1.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>B.Sc. Chemical & Materials Engineering</p>
                 </div>
-                <div class="academics__card--item">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-2.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>M.Sc. in Mechanical Engineering</p>
                 </div>
 
-                <div class="academics__card--item">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-7.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>B.Sc. Cyber Security</p>
                 </div>
-                <div class="academics__card--item">
+                <div class="academics-section__card--item">
                     <img src="../../images/academics-8.jpg">
-                    <div class="academics__card--item-overlay"></div>
+                    <div class="academics-section__card--item-overlay"></div>
                     <p>DSc Programmes</p>
                 </div>
             </div>
@@ -1284,9 +1395,9 @@
 
 </div>
 <script>
-    // const buttonsa = document.querySelectorAll('.academics__carousel--left button');
-    // const contenta = document.querySelectorAll('.academics__carousel--content');
-    // const selecta = document.querySelector('.academics__carousel--select select');
+    // const buttonsa = document.querySelectorAll('.academics-section__carousel--left button');
+    // const contenta = document.querySelectorAll('.academics-section__carousel--content');
+    // const selecta = document.querySelector('.academics-section__carousel--select select');
 
     // buttonsa.forEach((btn, index) => {
     //     btn.addEventListener('click', () => {
@@ -1300,9 +1411,9 @@
 
     //     });
     // });
-    const buttonsa = document.querySelectorAll('.academics__carousel--left button');
-    const contenta = document.querySelectorAll('.academics__carousel--content');
-    const selecta = document.querySelector('.academics__carousel--select select');
+    const buttonsa = document.querySelectorAll('.academics-section__carousel--left button');
+    const contenta = document.querySelectorAll('.academics-section__carousel--content');
+    const selecta = document.querySelector('.academics-section__carousel--select select');
 
     buttonsa.forEach((btn, index) => {
         btn.addEventListener('click', () => {
@@ -1334,56 +1445,56 @@
     });
 
 </script>
-    <div class="carousel ">
-    <img class="carousel__back-img" src="../../images/carousel-back.jpg">
-    <div class="carousel__overlay"></div>
+    <div class="campus-section ">
+    <img class="campus-section__back-img" src="../../images/carousel-back.jpg">
+    <div class="campus-section__overlay"></div>
     <h2 class="components-title">Campus <span>Life</span></h2>
-    <div class="carousel__card container owl-carousel owl-theme">
-        <div class="carousel__card--item item">
+    <div class="campus-section__card container owl-carousel owl-theme">
+        <div class="campus-section__card--item item">
             <img src="../../images/carousel-1.jpg">
-            <div class="carousel__card--item-overlay"></div>
+            <div class="campus-section__card--item-overlay"></div>
             <p>
                 Sport
             </p>
         </div>
-        <div class="carousel__card--item item">
+        <div class="campus-section__card--item item">
             <img src="../../images/carousel-2.jpg">
-            <div class="carousel__card--item-overlay"></div>
+            <div class="campus-section__card--item-overlay"></div>
             <p>
                 Library
             </p>
         </div>
-        <div class="carousel__card--item item">
+        <div class="campus-section__card--item item">
             <img src="../../images/carousel-3.jpg">
-            <div class="carousel__card--item-overlay"></div>
+            <div class="campus-section__card--item-overlay"></div>
             <p>
                 Student Clubs
             </p>
         </div>
-        <div class="carousel__card--item item">
+        <div class="campus-section__card--item item">
             <img src="../../images/carousel-4.jpg">
-            <div class="carousel__card--item-overlay"></div>
+            <div class="campus-section__card--item-overlay"></div>
             <p>
                 Cafeteria
             </p>
         </div>
-        <div class="carousel__card--item item">
+        <div class="campus-section__card--item item">
             <img src="../../images/carousel-2.jpg">
-            <div class="carousel__card--item-overlay"></div>
+            <div class="campus-section__card--item-overlay"></div>
             <p>
                 Library
             </p>
         </div>
-        <div class="carousel__card--item item">
+        <div class="campus-section__card--item item">
             <img src="../../images/carousel-3.jpg">
-            <div class="carousel__card--item-overlay"></div>
+            <div class="campus-section__card--item-overlay"></div>
             <p>
                 Student Clubs
             </p>
         </div>
-        <div class="carousel__card--item item">
+        <div class="campus-section__card--item item">
             <img src="../../images/carousel-4.jpg">
-            <div class="carousel__card--item-overlay"></div>
+            <div class="campus-section__card--item-overlay"></div>
             <p>
                 Cafeteria
             </p>
@@ -1393,7 +1504,7 @@
 <script>
     console.log("owl carouselll");
 
-    $('.carousel__card').owlCarousel({
+    $('.campus-section__card').owlCarousel({
         loop: true,
         dots: true,
         margin: 10,
@@ -1418,40 +1529,40 @@
         }
     })
 </script>
-    <div class="partners container">
+    <div class="partners-section container">
     <h2 class="components-title">University <span>Partners</span></h2>
-    <div class="partners__top owl-carousel owl-theme">
-        <div class="partners__top--item">
+    <div class="partners-section__top owl-carousel owl-theme">
+        <div class="partners-section__top--item">
             <img src="../../images/partnors-t1.svg">
         </div>
-        <div class="partners__top--item">
+        <div class="partners-section__top--item">
             <img src="../../images/partners-t2.svg">
         </div>
-        <div class="partners__top--item">
+        <div class="partners-section__top--item">
             <img src="../../images/partners-t3.svg">
         </div>
-        <div class="partners__top--item">
+        <div class="partners-section__top--item">
             <img src="../../images/partners-t4.svg">
         </div>
     </div>
-    <div class="partners__bottom owl-carousel owl-theme">
-        <div class="partners__bottom--item">
+    <div class="partners-section__bottom owl-carousel owl-theme">
+        <div class="partners-section__bottom--item">
             <img src="../../images/partner-global.png">
         </div>
-        <div class="partners__bottom--item">
+        <div class="partners-section__bottom--item">
             <img src="../../images/partners-b1.svg">
         </div>
-        <div class="partners__bottom--item">
+        <div class="partners-section__bottom--item">
             <img src="../../images/partners-b2.svg">
         </div>
-        <div class="partners__bottom--item">
+        <div class="partners-section__bottom--item">
             <img src="../../images/partners-b3.svg">
         </div>
 
     </div>
 </div>
 <script>
-    $('.partners__top').owlCarousel({
+    $('.partners-section__top').owlCarousel({
         loop: true,
         margin: 16,
         nav: true,
@@ -1473,7 +1584,7 @@
         }
     })
 
-    $('.partners__bottom').owlCarousel({
+    $('.partners-section__bottom').owlCarousel({
         loop: true,
         center: true,
         items: 3,
@@ -1503,17 +1614,17 @@
 
 
 </script>
-    <div class="upcoming">
-    <div class="upcoming__back"><img src="../../images/upcoming-back.svg"></div>
-    <div class="upcoming__overlay"></div>
+    <div class="events-section">
+    <div class="events-section__back"><img src="../../images/upcoming-back.svg"></div>
+    <div class="events-section__overlay"></div>
     <h2 class="components-title">Upcoming <span>Events</span></h2>
-    <div class="upcoming__content container">
-        <div class="upcoming__content--item one">
-            <div class="upcoming__content--item-left">
+    <div class="events-section__content container">
+        <div class="events-section__content--item">
+            <div class="events-section__content--item-left">
                 <p><i class="i-calendar"></i>Today</p>
                 <span>17:00</span>
             </div>
-            <div class="upcoming__content--item-right">
+            <div class="events-section__content--item-right">
                 <h4>Inflammation & Immune Regulation</h4>
                 <p>Vestibulum eu quam nec neque pellentesque
                     efficitur id eget nisl. Proin porta est
@@ -1523,12 +1634,12 @@
                 <span> <i class="i-location"></i>Tashkent University of Technology</span>
             </div>
         </div>
-        <div class="upcoming__content--item two">
-            <div class="upcoming__content--item-left">
+        <div class="events-section__content--item ">
+            <div class="events-section__content--item-left">
                 <p><i class="i-calendar"></i>14Dec</p>
                 <span>16:00</span>
             </div>
-            <div class="upcoming__content--item-right">
+            <div class="events-section__content--item-right">
                 <h4>Cellular Mechanisms in Pathology</h4>
                 <p>Aliquam erat volutpat. Nunc fringilla lectus sit amet odio placerat, non tempor dui euismod.
                 </p>
@@ -1536,12 +1647,12 @@
                 <span> <i class="i-location"></i>Tashkent University of Technology</span>
             </div>
         </div>
-        <div class="upcoming__content--item three">
-            <div class="upcoming__content--item-left">
+        <div class="events-section__content--item ">
+            <div class="events-section__content--item-left">
                 <p><i class="i-calendar"></i>13Dec</p>
                 <span>17:00</span>
             </div>
-            <div class="upcoming__content--item-right">
+            <div class="events-section__content--item-right">
                 <h4>Inflammation & Immune Regulation</h4>
                 <p>Vestibulum eu quam nec neque pellentesque efficitur id eget nisl. Proin porta est convallis lacus bl
                 </p>
@@ -1549,12 +1660,12 @@
                 <span> <i class="i-location"></i>Tashkent University of Technology</span>
             </div>
         </div>
-        <div class="upcoming__content--item four">
-            <div class="upcoming__content--item-left">
+        <div class="events-section__content--item ">
+            <div class="events-section__content--item-left">
                 <p><i class="i-calendar"></i>15Dec</p>
                 <span>15:00</span>
             </div>
-            <div class="upcoming__content--item-right">
+            <div class="events-section__content--item-right">
                 <h4>Advances in Genetic Research</h4>
                 <p>Curabitur dictum ligula vitae nunc sollicitudin, vel varius nisl imperdiet. Integer vitae nisi ut dui
                     vestibulum.

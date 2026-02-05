@@ -1,4 +1,4 @@
-.carousel {
+.campus-section {
     position: relative;
     overflow: hidden;
     margin-top: 40px;
@@ -34,7 +34,10 @@
         margin-top: 50px;
         display: flex;
         justify-content: space-between;
-        // overflow: hidden;
+
+        @media (max-width: 1600px) {
+            padding: 0 60px;
+        }
 
         @include devices(xl) {
             padding: 0 60px;
@@ -70,6 +73,10 @@
                     right: -40px;
                     top: 40%;
 
+                    @media (max-width: 1600px) {
+                        right: 10px;
+                    }
+
                     @include devices(xl) {
                         right: 10px;
                     }
@@ -99,6 +106,10 @@
                     left: -40px;
                     top: 40%;
                     transform: rotate(180deg);
+
+                    @media (max-width: 1600px) {
+                        right: 10px;
+                    }
 
                     @include devices(xl) {
                         left: 10px;
