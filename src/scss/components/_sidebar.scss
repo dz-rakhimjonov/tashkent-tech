@@ -41,18 +41,20 @@
                 padding-right: 18px;
             }
 
-            &:last-child:hover .sidebar__link::after {
-                content: "";
-                position: absolute;
-                left: -13px;
-                bottom: -13px;
-                width: 110%;
-                height: 1px;
-                background: red; // oxirgi item maxsus hover
-            }
+            // &:last-child:hover .sidebar__link::after {
+            //     content: "";
+            //     position: absolute;
+            //     left: -13px;
+            //     bottom: -13px;
+            //     width: 110%;
+            //     height: 1px;
+            //     background: red; // oxirgi item maxsus hover
+            // }
 
             &:hover:not(.has-dropdown),
             &.active:not(.has-dropdown) {
+                border-bottom: 1px solid transparent;
+
                 .sidebar__link {
                     padding-left: 22px;
                     color: var(--primary);
@@ -89,38 +91,38 @@
 
 
 
-                &.has-dropdown {
-                    padding: 0;
+                // &.has-dropdown {
+                //     padding: 0;
 
-                    >.sidebar__button {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        padding: 12px;
-                        width: 100%;
-                    }
+                //     >.sidebar__button {
+                //         display: flex;
+                //         align-items: center;
+                //         justify-content: space-between;
+                //         padding: 12px;
+                //         width: 100%;
+                //     }
 
-                    &:hover {
-                        .sidebar__button {
-                            color: var(--primary);
-                        }
+                //     &:hover {
+                //         .sidebar__button {
+                //             color: var(--primary);
+                //         }
 
-                        .arrow {
-                            border-top-color: var(--primary);
-                        }
-                    }
+                //         .arrow {
+                //             border-top-color: var(--primary);
+                //         }
+                //     }
 
-                    &.open {
-                        .arrow {
-                            transform: rotate(180deg);
-                        }
+                //     &.open {
+                //         .arrow {
+                //             transform: rotate(180deg);
+                //         }
 
-                        .sidebar__dropdown {
-                            max-height: 500px;
-                            opacity: 1;
-                        }
-                    }
-                }
+                //         .sidebar__dropdown {
+                //             max-height: 500px;
+                //             opacity: 1;
+                //         }
+                //     }
+                // }
             }
         }
 
@@ -129,6 +131,9 @@
         }
 
         &--item:last-child:hover {
+            .sidebar__list {
+                border-bottom: 1px solid blue;
+            }
 
             &:hover:not(.has-dropdown),
             &.active:not(.has-dropdown) {
@@ -154,7 +159,7 @@
                         content: "";
                         position: absolute;
                         left: -7px;
-                        bottom: -13px;
+                        bottom: -14px;
                         width: 110%;
                         height: 1px;
                         border-radius: 14px;

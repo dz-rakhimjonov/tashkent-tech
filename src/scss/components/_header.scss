@@ -3,6 +3,7 @@
     --default-hr: #E9EAEB;
     --default-black: #181D27;
     --bg-header: #FFFFFF;
+    --header-icon: #5454E3;
 }
 
 .header {
@@ -20,7 +21,7 @@
         --default-lan: #535862;
         --default-black: #FFFFFF;
         --bg-header: inherit;
-
+        --header-icon: #FFFFFF;
 
         background: transparent !important;
         position: fixed !important;
@@ -80,7 +81,7 @@
 
                     i {
                         font-size: 20px;
-                        color: #FFFFFF;
+                        color: var(--header-icon);
                     }
 
                     img {
@@ -113,7 +114,7 @@
 
                 i {
                     font-size: 20px;
-                    color: #FFFFFF;
+                    color: var(--header-icon);
                 }
 
                 @include devices(xs) {
