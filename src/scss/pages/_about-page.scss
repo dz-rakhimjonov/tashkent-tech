@@ -6,6 +6,7 @@
         padding: 20px;
         z-index: 1;
         overflow: hidden;
+        border: 1px solid #E9EAEB;
 
 
         &--tt {
@@ -118,7 +119,7 @@
                     }
                 }
 
-                &-text {
+                &-info {
                     p {
                         @include font600(#FFFFFF, 20px);
                     }
