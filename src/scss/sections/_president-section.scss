@@ -5,6 +5,8 @@
     margin-top: 80px;
     height: 415px;
 
+
+
     @include devices(lg) {
         height: 380px;
     }
@@ -295,6 +297,7 @@
         &--img {
             position: relative;
             z-index: 3;
+            width: 100%;
 
             @include devices(sm) {
                 width: 100%;

@@ -125,7 +125,7 @@
     }
 
     &.mini {
-        margin-top: calc(var(--height-header) + 10px);
+        margin-top: var(--height-header);
         // margin-bottom: 12px;
         margin-bottom: 0;
         background: transparent;
@@ -155,7 +155,7 @@
         }
 
         .breadcrumbs__link {
-            @include font500(#667085, 15px);
+            @include font400(#667085, 15px);
         }
 
         .breadcrumbs__title {
@@ -221,7 +221,7 @@
     }
 
     &__link {
-        @include font500(var(--white), 18px);
+        @include font400(var(--white), 18px);
         text-decoration: none;
 
         @include devices(md) {
@@ -235,6 +235,8 @@
         &.active {
             pointer-events: none;
             cursor: default;
+            font-weight: 500 !important;
+            color: #E54519 !important;
         }
 
         &:hover {

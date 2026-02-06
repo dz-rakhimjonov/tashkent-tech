@@ -80,7 +80,7 @@
 
                     i {
                         font-size: 20px;
-                        color: #5454E3;
+                        color: #FFFFFF;
                     }
 
                     img {
@@ -113,7 +113,7 @@
 
                 i {
                     font-size: 20px;
-                    color: #5454E3;
+                    color: #FFFFFF;
                 }
 
                 @include devices(xs) {
@@ -136,6 +136,10 @@
         justify-content: space-between;
         padding: 20px 0;
 
+        @include devices(lg) {
+            padding: 14px 0;
+        }
+
         @include devices(md) {
             display: none;
         }
@@ -148,12 +152,21 @@
                 background: linear-gradient(to right, #E54519, #FF8C6C);
                 @include font500(#FFFFFF, 16px);
 
+                @include devices(lg) {
+                    padding: 8px 6px;
+                    font-size: 14px;
+                }
+
                 a {
                     color: white;
                     display: flex;
                     align-items: center;
                     gap: 8px;
                     transition: ease 0.4s;
+
+                    @include devices(lg) {
+                        gap: 3px;
+                    }
 
                     i {
                         font-size: 20px;
@@ -318,6 +331,14 @@
         padding: 0;
         gap: 24px;
 
+        @include devices(xl) {
+            gap: 16px;
+        }
+
+        @include devices(lg) {
+            gap: 6px;
+        }
+
         @include devices(md) {
             display: none;
         }
@@ -366,6 +387,11 @@
         transition: all 0.3s ease;
         white-space: nowrap;
         padding: 10px 10px;
+
+        @include devices(lg) {
+            gap: 3px;
+            font-size: 14px;
+        }
 
         &:has(i) {
             padding: 12px 8px;

@@ -145,6 +145,30 @@
                     gap: 12px;
                     align-items: center;
 
+                    &:nth-child(1) {
+                        .about-section__wrapper-text-grid-item-img {
+                            background-color: #ECFDF3;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        .about-section__wrapper-text-grid-item-img {
+                            background-color: #FFFAEB;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        .about-section__wrapper-text-grid-item-img {
+                            background-color: #EFF8FF;
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        .about-section__wrapper-text-grid-item-img {
+                            background-color: #1C77761A;
+                        }
+                    }
+
                     @include devices(md) {
                         padding: 10px;
                         gap: 10px;
@@ -153,31 +177,13 @@
 
                     &-img {
                         border-radius: 12px;
-                        // background-color: #ECFDF3;
                         padding: 15px;
-
 
 
                         img {
                             width: 40px;
                             height: 40px;
                         }
-                    }
-
-                    &-img.student {
-                        background-color: #ECFDF3;
-                    }
-
-                    &-img.staff {
-                        background-color: #FFFAEB;
-                    }
-
-                    &-img.school {
-                        background-color: #EFF8FF;
-                    }
-
-                    &-img.faculty {
-                        background-color: #1C77761A;
                     }
 
                     &-info {

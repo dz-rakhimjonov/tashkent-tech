@@ -1,4 +1,4 @@
-.about-univer {
+.about-page {
     &__info {
         position: relative;
         border-radius: 14px;
@@ -55,45 +55,44 @@
                 grid-template-columns: 1fr 1fr;
             }
 
-            &-item.student {
-                background: linear-gradient(to right, #E54519CC, #FFA288);
-
-                .about-univer__info--card-item-img {
-                    background: linear-gradient(to right, #FFA288, #E54519CC);
-                }
-            }
-
-            &-item.staff {
-                background: linear-gradient(to right, #039855E5, #32D583CC);
-
-                .about-univer__info--card-item-img {
-                    background: linear-gradient(to right, #32D583CC, #039855E5);
-                }
-            }
-
-            &-item.school {
-                background: linear-gradient(to right, #444CE7E5, #8098F9E5);
-
-                .about-univer__info--card-item-img {
-                    background: linear-gradient(to right, #8098F9E5, #444CE7E5);
-                }
-            }
-
-            &-item.faculty {
-                background: linear-gradient(to right, #1C7776E5, #34DDDBCC);
-
-                .about-univer__info--card-item-img {
-                    background: linear-gradient(to right, #34DDDBCC, #1C7776E5);
-                }
-            }
-
 
             &-item {
-
                 padding: 15px;
                 display: flex;
                 gap: 12px;
                 border-radius: 14px;
+
+                &:nth-child(1) {
+                    background: linear-gradient(to right, #E54519CC, #FFA288);
+
+                    .about-page__info--card-item-img {
+                        background: linear-gradient(to right, #FFA288, #E54519CC);
+                    }
+                }
+
+                &:nth-child(2) {
+                    background: linear-gradient(to right, #039855E5, #32D583CC);
+
+                    .about-page__info--card-item-img {
+                        background: linear-gradient(to right, #32D583CC, #039855E5);
+                    }
+                }
+
+                &:nth-child(3) {
+                    background: linear-gradient(to right, #444CE7E5, #8098F9E5);
+
+                    .about-page__info--card-item-img {
+                        background: linear-gradient(to right, #8098F9E5, #444CE7E5);
+                    }
+                }
+
+                &:nth-child(4) {
+                    background: linear-gradient(to right, #1C7776E5, #34DDDBCC);
+
+                    .about-page__info--card-item-img {
+                        background: linear-gradient(to right, #34DDDBCC, #1C7776E5);
+                    }
+                }
 
                 @include devices(md) {
 
@@ -215,10 +214,10 @@
             @include font600(#000000, 22px);
         }
 
-        &--top {
+        &--wrap {
             margin-top: 30px;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(6, 1fr);
             gap: 16px;
 
             @include devices(md) {
@@ -230,20 +229,7 @@
             }
         }
 
-        &--bottom {
-            margin-top: 16px;
-            display: grid;
-            gap: 16px;
-            grid-template-columns: 1fr 1fr 1fr;
 
-            @include devices(sm) {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            @include devices(xs) {
-                grid-template-columns: 1fr;
-            }
-        }
     }
 
     &__card {
@@ -252,6 +238,18 @@
         padding: 20px;
         background-color: #FFFFFF;
         overflow: hidden;
+        border: 1px solid #F5F5F5;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            grid-column: span 3;
+        }
+
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5) {
+            grid-column: span 2;
+        }
 
         @include devices(md) {
             padding: 15px;
@@ -326,10 +324,10 @@
         margin-top: 40px;
         text-align: center;
 
-        &--top {
+        &--wrap {
             margin-top: 30px;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(6, 1fr);
             gap: 16px;
 
             @include devices(sm) {
@@ -337,15 +335,6 @@
             }
         }
 
-        &--bottom {
-            margin-top: 16px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 16px;
 
-            @include devices(sm) {
-                grid-template-columns: 1fr;
-            }
-        }
     }
 }
