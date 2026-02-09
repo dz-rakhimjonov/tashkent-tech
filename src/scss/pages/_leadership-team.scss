@@ -48,6 +48,7 @@
                     width: 240px;
                     height: 260px;
                     border-radius: 8px;
+                    object-fit: cover;
 
                     @include devices(xs) {
                         width: 100%;
@@ -205,7 +206,7 @@
 
             &-ttbottom {
                 position: absolute;
-                left: -8px;
+                right: -8px;
                 bottom: 0;
                 z-index: 0;
 
