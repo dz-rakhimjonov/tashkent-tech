@@ -92,6 +92,8 @@
         border-radius: 14px;
         padding: 15px;
         border: 1px solid #E9EAEB;
+        position: sticky;
+        top: calc(10px + var(--height-header) + 16px);
 
         @include devices(md) {
             order: 1;
@@ -100,10 +102,26 @@
         &--images {
             width: 100%;
             height: 330px;
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 100%;
+                height: 6px;
+                position: absolute;
+                background: linear-gradient(to right, #E54519, #FF7048);
+                bottom: 0px;
+                left: 0;
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+            }
 
             img {
                 width: 100%;
                 height: 100%;
+                object-fit: cover;
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
             }
         }
 

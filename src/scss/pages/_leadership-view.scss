@@ -1,6 +1,6 @@
-.albert-flores {
+.leadership-view {
     display: flex;
-    align-items: flex-start;
+    // align-items: flex-start;
     gap: 16px;
 
     @include devices(md) {
@@ -72,15 +72,17 @@
                 gap: 6px;
 
                 p {
-                    display: flex;
-                    gap: 6px;
-                    align-items: center;
-                    @include font400(#000000, 16px);
+                    a {
+                        display: flex;
+                        gap: 6px;
+                        align-items: center;
+                        @include font400(#000000, 16px);
 
-                    i {
-                        font-size: 20px;
-                        width: 20px;
-                        color: #5454E3;
+                        i {
+                            font-size: 20px;
+                            width: 20px;
+                            color: #5454E3;
+                        }
                     }
                 }
             }
@@ -102,6 +104,12 @@
     &__info {
         @include devices(md) {
             order: 2;
+        }
+
+        &--about {
+            div {
+                @include font400(#252B37, 16px)
+            }
         }
 
         &--experience {
