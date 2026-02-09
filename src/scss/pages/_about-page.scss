@@ -223,9 +223,10 @@
 
             @include devices(md) {
                 margin-top: 10px;
+                grid-template-columns: 1fr 1fr;
             }
 
-            @include devices(xs) {
+            @include devices(sm) {
                 grid-template-columns: 1fr;
             }
         }
@@ -234,6 +235,7 @@
     }
 
     &__card {
+        width: 100%;
         position: relative;
         border-radius: 14px;
         padding: 20px;
@@ -244,6 +246,15 @@
         &:nth-child(1),
         &:nth-child(2) {
             grid-column: span 3;
+        }
+
+        @include devices(md) {
+
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5) {
+                grid-column: span 3;
+            }
         }
 
         &:nth-child(3),
@@ -331,11 +342,13 @@
             grid-template-columns: repeat(6, 1fr);
             gap: 16px;
 
+            @include devices(md) {
+                grid-template-columns: 1fr 1fr;
+            }
+
             @include devices(sm) {
                 grid-template-columns: 1fr;
             }
         }
-
-
     }
 }

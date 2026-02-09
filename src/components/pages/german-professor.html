@@ -63,18 +63,53 @@
             </p>
         </div>
     </div>
-    <div class="german-professor__carousel">
-        <div class="german-professor__carousel--item">
+    <div class="german-professor__carousel owl-carousel owl-theme">
+        <div class="german-professor__carousel--item item">
             <img src="../../images/german-carousel.png">
         </div>
-        <div class="german-professor__carousel--item">
+        <div class="german-professor__carousel--item item">
             <img src="../../images/german-carousel.png">
         </div>
-        <div class="german-professor__carousel--item">
+        <div class="german-professor__carousel--item item">
             <img src="../../images/german-carousel.png">
         </div>
-        <div class="german-professor__carousel--item">
+        <div class="german-professor__carousel--item item">
+            <img src="../../images/german-carousel.png">
+        </div>
+        <div class="german-professor__carousel--item item">
+            <img src="../../images/german-carousel.png">
+        </div>
+        <div class="german-professor__carousel--item item">
+            <img src="../../images/german-carousel.png">
+        </div>
+        <div class="german-professor__carousel--item item">
+            <img src="../../images/german-carousel.png">
+        </div>
+        <div class="german-professor__carousel--item item">
             <img src="../../images/german-carousel.png">
         </div>
     </div>
 </div>
+<script>
+    $('.german-professor__carousel').owlCarousel({
+        loop: true,
+        margin: 16,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        smartSpeed: 800,
+        responsive: {
+            0: {
+                items: 2
+            },
+            660: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            }
+        }
+    });
+
+</script>
