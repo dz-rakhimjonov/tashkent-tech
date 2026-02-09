@@ -1,4 +1,4 @@
-<div class="partners-section container">
+<div class="partners-section ">
     <h2 class="components-title">University <span>Partners</span></h2>
     <div class="partners-section__top owl-carousel owl-theme">
         <div class="partners-section__top--item">
@@ -31,12 +31,13 @@
     </div>
 </div>
 <script>
+
     $('.partners-section__top').owlCarousel({
         loop: true,
         margin: 16,
         nav: true,
         autoplay: true,
-        autoplayTimeout: 3000,
+        autoplayTimeout: 0,
         responsive: {
             0: {
                 items: 2
@@ -53,33 +54,32 @@
         }
     })
 
+
     $('.partners-section__bottom').owlCarousel({
         loop: true,
-        center: true,
-        items: 3,
         margin: 16,
-        stagePadding: 16,
         nav: true,
         autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        rtl: true,
+        autoplayTimeout: 0,
         responsive: {
             0: {
-                items: 2,
-                stagePadding: 16
+                items: 2
             },
-            600: {
-                items: 3,
-                stagePadding: 16
+            660: {
+                items: 3
             },
             1000: {
-                items: 4,
-                stagePadding: 16
+                items: 4
+            },
+            1000: {
+                items: 4
             }
         }
     });
-
-
+    $('.partners-section__top').on('mouseenter', function () {
+        $(this).trigger('stop.owl.autoplay');
+    }).on('mouseleave', function () {
+        $(this).trigger('play.owl.autoplay', [1000]);
+    });
 
 </script>
