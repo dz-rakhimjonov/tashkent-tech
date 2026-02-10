@@ -119,6 +119,9 @@
                         position: absolute;
                         z-index: 2;
                         transition: ease 0.3s;
+                        object-fit: cover;
+                        object-position: top;
+                        border-radius: 50%;
                     }
                 }
 

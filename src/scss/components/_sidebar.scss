@@ -4,7 +4,6 @@
     border-radius: 14px;
     overflow: hidden;
     overflow: hidden;
-    // background: var(--white);
     padding: 0px;
 
 
@@ -32,13 +31,13 @@
         border-bottom: 1px solid #E9EAEB;
 
         &--item {
-            padding: 12px;
+            // padding: 12px;
             cursor: pointer;
             border-bottom: 1px solid #E9EAEB;
 
             .sidebar__link {
                 transition: all 0.2s ease;
-                padding-right: 18px;
+                padding: 12px 18px 12px 12px;
             }
 
             // &:last-child:hover .sidebar__link::after {
@@ -56,7 +55,7 @@
                 border-bottom: 1px solid transparent;
 
                 .sidebar__link {
-                    padding-left: 22px;
+                    padding-left: 26px;
                     color: var(--primary);
                     padding-right: 0;
                     @include font500(#E54519, 16px);
@@ -64,6 +63,9 @@
 
 
                     &::before {
+                        content: "";
+                        position: absolute;
+                        left: 10px;
                         flex: 0 0 14px;
                         opacity: 1;
                         height: 8px;
@@ -77,7 +79,7 @@
                         content: "";
                         position: absolute;
                         left: -13px;
-                        bottom: -13px;
+                        bottom: -2px;
                         width: 110%;
                         height: 1px;
                         background: linear-gradient(to right,
@@ -131,14 +133,12 @@
         }
 
         &--item:last-child:hover {
-            .sidebar__list {
-                border-bottom: 1px solid blue;
-            }
+
 
             &:hover:not(.has-dropdown),
             &.active:not(.has-dropdown) {
                 .sidebar__link {
-                    padding-left: 22px;
+                    padding-left: 26px;
                     color: var(--primary);
                     padding-right: 0;
                     @include font500(#E54519, 16px);
@@ -146,6 +146,9 @@
 
 
                     &::before {
+                        content: "";
+                        position: absolute;
+                        left: 10px;
                         flex: 0 0 14px;
                         opacity: 1;
                         height: 8px;
@@ -159,7 +162,7 @@
                         content: "";
                         position: absolute;
                         left: -7px;
-                        bottom: -14px;
+                        bottom: -2px;
                         width: 110%;
                         height: 1px;
                         border-radius: 14px;

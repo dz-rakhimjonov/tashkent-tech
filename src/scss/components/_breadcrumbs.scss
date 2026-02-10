@@ -212,8 +212,8 @@
 
             i {
                 font-size: 16px;
-                color: #fff;
-                transform: rotate(-90deg)
+                color: var(--white);
+                transform: rotate(-90deg);
             }
 
         }
@@ -235,8 +235,8 @@
         &.active {
             pointer-events: none;
             cursor: default;
-            font-weight: 500 !important;
-            color: #E54519 !important;
+            font-weight: 700 !important;
+            color: var(--white) !important;
         }
 
         &:hover {
